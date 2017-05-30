@@ -11,6 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require tether
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
+//= require pace/pace
+//= require bootstrap-notify
+//= require bootstrap-wysihtml5
 //= require_tree .

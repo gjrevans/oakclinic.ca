@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ayla</title>
-    <%= csrf_meta_tags %>
+<head>
+    <title>Oak Clinic</title>
+    <meta name="author" content="Gordon Evans">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Oak Clinic">
+    <meta name="keywords" content="Dawson Creek">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- =================
+    FAV AND TOUCH ICONS
+    ====================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <%= favicon_link_tag 'favicons/favicon-32x32.png' %>
+    <%= favicon_link_tag 'favicons/favicon-16x16.png' %>
+    <link rel="manifest" href="/assets/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= csrf_meta_tags %>
 
-  <body>
+    <%= javascript_include_tag :modernizr %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body id="<%= 'home' if current_page?(root_path) %>">
+    <%= render partial: 'layouts/notify', flash: flash %>
+    <% safe_id = params[:id] || 0 %>
+    <%= render partial: "layouts/header" %>
     <%= yield %>
-  </body>
+    <%= render partial: "layouts/footer" %>
+</body>
 </html>

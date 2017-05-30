@@ -1,0 +1,13 @@
+<div id="pageContent" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Editing Project</h1>
+
+            <%= render 'form', project: @project %>
+            <div class="float-xs-left">
+                <%= link_to 'Show', @project, class: "btn btn-primary" %>
+                <%= link_to 'Back', projects_path, class: "btn btn-primary" %>
+            </div>
+        </div>
+    </div>
+</div>
