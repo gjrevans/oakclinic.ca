@@ -1,43 +1,14 @@
 /* -- PAGE JS --*/
 $(document).ready(function(){
     $.backstretch([
-        "http://dl.dropbox.com/u/515046/www/outside.jpg"
-      , "http://dl.dropbox.com/u/515046/www/garfield-interior.jpg"
-      , "http://dl.dropbox.com/u/515046/www/cheers.jpg"
-    ], {duration: 3000, fade: 750});
-    /*
-    var index = 0;
-    var colors = [
-        '#971B4D',
-        '#81C564',
-        '#CF649A',
-    ]
-    var images = [
-        'https://static.pexels.com/photos/375760/pexels-photo-375760.jpeg',
-        'https://static.pexels.com/photos/302478/pexels-photo-302478.jpeg',
-        'https://static.pexels.com/photos/27599/pexels-photo-27599.jpg',
-    ]
+        'https://s3.amazonaws.com/oakclinic.ca/berries.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/nuts.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/bees.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/oak.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/thistle.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/veggies.jpg'
+    ], {duration: 5000, fade: 750});
 
-    setInterval(function() {
-        $('.l-home').css({
-            '-webkit-transition': 'background-image 0.2s ease-in-out',
-            'transition': 'background-image 0.2s ease-in-out',
-            'background': 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('+images[index]+')',
-            'background-size': 'cover',
-            'background-position': 'center',
-            'background-attachment': 'fixed',
-            'background-repeat': 'no-repeat'
-        });
-        $('.btn-primary').css({
-            'background': colors[index],
-            'border-color': colors[index]
-        });
-        if (index === images.length - 1){
-            return index = 0;
-        }
-        index += 1;
-    }, 5000);
-    */
     $(function () {
         $('[data-toggle="popover"]').popover();
     });

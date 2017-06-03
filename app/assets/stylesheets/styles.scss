@@ -31,7 +31,7 @@ nav {
             float: left;
             a {
                 @extend .transition;
-                color: white;
+                color: rgba(255,255,255,0.8);
                 margin: 0 0 0 2em;
                 &:hover {
                     text-decoration: none;
@@ -52,7 +52,7 @@ nav {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     //background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),image-url('background-8.jpg');
 }
 
@@ -70,7 +70,19 @@ nav {
 
 /* -- Bootstrap -- */
 .btn {
+    font-family: $font-family-sans-serif;
     @extend .transition;
+}
+.btn.btn-main {
+    @extend .btn;
+    color: $brand-main;
+    background: transparent;
+    border: 2px solid $brand-main;
+    border-radius: $border-radius;
+    &:hover {
+        color: $brand-primary;
+        background: $brand-main;
+    }
 }
 .navbar-transparent .navbar-nav .nav-link {
     color: #FFF;
