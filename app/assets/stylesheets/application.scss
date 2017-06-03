@@ -1,8 +1,7 @@
 /* Fonts */
 @import "ionicons";
 @import "font-awesome";
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600');
-
+@import url('https://fonts.googleapis.com/css?family=Lato|Buda:300,400,700,900');
 /* Libraries */
 @import "pace/blue/pace-theme-minimal";
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
@@ -11,5 +10,5 @@
 @import "bootstrap";
 
 /* Styles */
-@import "global";
+@import "helpers";
 @import "styles";

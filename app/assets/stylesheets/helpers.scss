@@ -1,0 +1,10 @@
+/* -- Helpers -- */
+.vh {
+    height: 100vh;
+}
+
+/* -- Transitions -- */
+.transition {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}

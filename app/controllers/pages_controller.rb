@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
     def index
-        @projects = nil
+        #@contact = Contact.new
     end
 end
