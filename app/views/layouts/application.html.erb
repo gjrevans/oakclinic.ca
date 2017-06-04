@@ -8,6 +8,7 @@
     <meta name="description" content="Oak Clinic">
     <meta name="keywords" content="Dawson Creek">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#FFF">
 
     <!-- =================
     THE GOOGLERZ
@@ -21,8 +22,7 @@
     <%= favicon_link_tag 'favicons/favicon-32x32.png' %>
     <%= favicon_link_tag 'favicons/favicon-16x16.png' %>
     <link rel="manifest" href="/assets/favicons/manifest.json">
-    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5BBAD5">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#971B4D">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
@@ -35,6 +35,7 @@
     <%= render partial: 'layouts/notify', flash: flash %>
     <%= render partial: "layouts/navigation" %>
     <%= render partial: "layouts/header" %>
+    <%= render partial: "layouts/modal" %>
     <%= yield %>
 </body>
 </html>

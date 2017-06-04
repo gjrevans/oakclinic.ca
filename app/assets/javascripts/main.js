@@ -14,18 +14,12 @@ $(document).on('turbolinks:load', function() {
             $(".m-nav__top").css("background", "none").removeClass("box-shadow");
             $(".m-nav__logo").css("color", "#FFF");
             $(".m-nav__link a").css("color", "#FFF");
-            $(".m-nav__avatar img").css({
-                "width": "4rem",
-                "height": "4rem",
-            });
+            $(".m-nav__link i").css("color", "#FFF");
         } else if (scroll >= 100) {
             $(".m-nav__top").css("background", "white").addClass("box-shadow");
             $(".m-nav__logo").css("color", "#971B4D");
             $(".m-nav__link a").css("color", "#971B4D");
-            $(".m-nav__avatar img").css({
-                "width": "3rem",
-                "height": "3rem",
-            });
+            $(".m-nav__link i").css("color", "#971B4D");
         }
     });
 

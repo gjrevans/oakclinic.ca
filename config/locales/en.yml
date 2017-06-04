@@ -39,12 +39,13 @@ en:
     header:
       about: "About"
       naturopathic_medicine: "Naturopathic Medicine"
+    modal:
+      mailer_modal_title: "Oak Clinic Mailing List"
+      mailer_modal_body: "Register for Oak Clinic's mailing list to be notified of upcoming events and to stay informed of our opening date."
   pages:
     index:
       header_body: "Our naturopathic clinic will be opening in Dawson Creek, British Columbia in Winter 2017."
       button_text: "Register"
-      mailer_modal_title: "Oak Clinic Mailing List"
-      mailer_modal_body: "Register for Oak Clinic's mailing list to be notified of upcoming events and to stay informed of our opening date."
     about:
       header_title: "About"
       s_one_header: "The Oak Clinic"
@@ -55,4 +56,5 @@ en:
       s_one_body: "Naturopathic Medicine is a complementary addition to your current health care team. We work in collaboration with YOU and whoever else may be in your roster. Naturopathy looks at the human body as a whole working system. Unlike common current practices which only focus on one system or worse one symptom, we will get down to the root cause of the problem. We use a natural and scientific approach to improving biochemical and physiological imbalances. We are trained in common medical diagnoses and eastern equivalents. Along with treating specific conditions we also emphasize illness prevention and healthy diet and lifestyle. We pride ourselves in individualized care and realize that what works for one person may not work for another. The most important person in our appointment is YOU, we are simply here to help guide you along the healing journey.\n\nAlright, thats fine and dandy but what does this mean for you?\n\nInitial appointments are an hour long and we generally like to see you after a couple weeks to ensure things are moving in the correct direction. At the base of every plan is diet and lifestyle changes that you and the doctor will plan together to ensure the goals are realistic and attainable for you. Depending on the complaint we will build a specific treatment protocol which can include specific supplementation of vitamins, minerals, plants, herbs or physical therapies. We may also recommend a more integrative approach and refer you for additional treatment from your MD, physiotherapist, chiropractor, acupuncturist, etc. The goal of the treatment plan is to be as sustainable as possible. We would prefer for you to be on as few supplements for as short of time as possible."
       s_two_header: "Treatment"
       s_two_body: "My goal will alway be to be as transparent and open about what to expect from naturopathic medicine. We can help anyone live a healthier, happier and more fulfilling life if they are willing to make the changes. There are some specific areas where Naturopathic Medicine really shines."
-      s_two_closing: "I am so very excited to be a part of this profession and can’t wait to answer all of your questions."
+      s_two_call_to_action: "If you're ready to take your healh to a new level, register with us today."
+      button_text: "Register"
