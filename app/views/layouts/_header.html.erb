@@ -1,10 +1,15 @@
 <nav class="m-nav__top m-nav__root">
     <div class="container">
         <div class="row flex-items-sm-middle">
-            <div class="col-sm-12">
+            <div class="col-4">
+                <%= link_to root_path do %>
+                    <h2 class="m-nav__logo"><%= t("oak")%></h2>
+                <% end %>
+            </div>
+            <div class="col-8">
                 <ul class="m-nav__list">
-                    <li class="m-nav__link"><%= link_to "Naturopahic Medicine", "/#about" %></li>
-                    <li class="m-nav__link"><%= link_to "About", "/#stories" %></li>
+                    <li class="m-nav__link"><%= link_to t(".about"), about_path %></li>
+                    <li class="m-nav__link"><%= link_to t(".naturopathic_medicine"), naturopathic_medicine_path %></li>
                 </ul>
             </div>
         </div>

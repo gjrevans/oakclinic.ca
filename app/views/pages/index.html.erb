@@ -1,18 +1,14 @@
-<section class="l-home animated fadeIn">
+<section class="l-home animated fadeIn d-flex align-items-center justify-content-center">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 offset-md-4">
-                <div class="l-header">
-                    <div class="l-header__content">
-                        <h1 class="l-header__logo">Oak</h1>
-                        <p class="l-header__body">
-                            Our naturopathic clinic will be opening in Dawson Creek, British Columbia in Winter 2017.
-                        </h4>
-                        <div class="row">
-                            <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-                                <button type="button" name="button" class="btn btn-main btn-block" data-toggle="modal" data-target="#mailingList">Register</button>
-                            </div>
-                        </div>
+        <div class="m-header">
+            <div class="m-header__content">
+                <h1 class="m-header__title"><%= t('oak') %></h1>
+                <p class="m-header__body">
+                    <%= t(".header_body") %>
+                </h4>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
+                        <button type="button" name="button" class="btn btn-main btn-block" data-toggle="modal" data-target="#mailingList"><%= t('.button_text')%></button>
                     </div>
                 </div>
             </div>
@@ -25,13 +21,13 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="mailingListLabel">Oak Clinic Mailing List</h5>
+                <h5 class="modal-title" id="mailingListLabel"><%= t('.mailer_modal_title') %></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <i class="fa fa-times fa-fw"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <p>Register for Oak Clinic's mailing list to be notified of upcoming events and to stay informed of our opening date.</p>
+                <p><%= t('.mailer_modal_body') %></p>
                 <!-- <%#= form_for @contact do |f| %>
                     <div class="form-group">
                         <%#= f.label :name %>
@@ -49,9 +45,21 @@
                 <%# end %> -->
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t('close')%></button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"><%= t('submit')%></button>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $.backstretch([
+        'https://s3.amazonaws.com/oakclinic.ca/berries.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/nuts.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/bees.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/oak.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/thistle.jpg',
+        'https://s3.amazonaws.com/oakclinic.ca/veggies.jpg'
+    ], {duration: 5000, fade: 750});
+});
+</script>

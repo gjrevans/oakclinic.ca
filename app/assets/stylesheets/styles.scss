@@ -12,14 +12,13 @@ nav {
         -webkit-transition: all .8s;
         transition: all .8s;
     }
-    .m-nav__avatar {
-        z-index: 1000;
-        img {
-            @extend .transition;
-            border-radius: 50%;
-            height: $avatar-size;
-            width: $avatar-size;
-        }
+    .m-nav__logo {
+        @extend .logo__text;
+        color: #FFF;
+        float: left;
+        font-size: 2rem;
+        padding-top: 0.75rem;
+        padding-left: 0;
     }
     .m-nav__list {
         padding-top: 1rem;
@@ -45,6 +44,7 @@ nav {
     }
 }
 
+/* Layouts */
 .l-home {
     @extend .vh;
     @extend .transition;
@@ -53,18 +53,47 @@ nav {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    //background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),image-url('background-8.jpg');
 }
 
-.l-header {
+.l-content {
+    padding: 3rem 0;
+    &__white {
+        background: #FFF;
+    }
+    &__body {
+        line-height: 2rem;
+    }
+}
+
+/* Modules */
+.m-banner {
+    @extend .transition;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &--about {
+        @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/oak.jpg') ;
+    }
+    &--medicine {
+        @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/nuts.jpg') ;
+    }
+}
+
+.m-header {
     color: #FFF;
     text-align: center;
-    &__content {
-        margin-top: 270px;
-    }
-    &__logo {
-        font-size: 4.5rem;
-        font-family: $font-family-serif;
+    max-width: 30rem;
+    &__title {
+        @extend .logo__text;
+        font-size: 4rem;
+        &--md {
+            @extend .logo__text;
+            font-size: 3rem;
+        }
+        &--sm {
+            @extend .logo__text;
+            font-size: 2rem;
+        }
     }
 }
 

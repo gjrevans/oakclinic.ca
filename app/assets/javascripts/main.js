@@ -1,14 +1,5 @@
 /* -- PAGE JS --*/
 $(document).ready(function(){
-    $.backstretch([
-        'https://s3.amazonaws.com/oakclinic.ca/berries.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/nuts.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/bees.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/oak.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/thistle.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/veggies.jpg'
-    ], {duration: 5000, fade: 750});
-
     $(function () {
         $('[data-toggle="popover"]').popover();
     });
@@ -17,14 +8,16 @@ $(document).ready(function(){
         var scroll = $(window).scrollTop();
         if (scroll <= 100) {
             $(".m-nav__top").css("background", "none").removeClass("box-shadow");
-            $(".m-nav__link a").css("color", "white");
+            $(".m-nav__logo").css("color", "#FFF");
+            $(".m-nav__link a").css("color", "#FFF");
             $(".m-nav__avatar img").css({
                 "width": "4rem",
                 "height": "4rem",
             });
         } else if (scroll >= 100) {
             $(".m-nav__top").css("background", "white").addClass("box-shadow");
-            $(".m-nav__link a").css("color", "#03a9f4");
+            $(".m-nav__logo").css("color", "#971B4D");
+            $(".m-nav__link a").css("color", "#971B4D");
             $(".m-nav__avatar img").css({
                 "width": "3rem",
                 "height": "3rem",
