@@ -20,7 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  oak: "Oak"
+  brand: "Oak"
+  brand_long: "Oak Clinic"
+  address: "Address"
+  street_address: "Dawson Creek, British Columbia Canada"
+  phone_number: "306-717-8679"
+  email_address: "hello@oakclinic.ca"
   close: "Close"
   submit: "Submit"
   digestion: "Digestion Issues"
@@ -57,7 +62,8 @@ en:
       s_two_header: "Our Team"
       s_two_body: "The Oak Clinic team is excited to serve you through your medical needs. The team is made of a dynamic combination of naturopathic doctors focused on many different modalities of health."
       s_three_header: "Location"
-      s_three_body: "Visit us at the Oak Naturopathic Clinic"
+      s_three_body: "The final location of the Oak Naturopathic Clinic is currently being finalized. %{subscribe} to our mailing list to stay up to date on the latest news, location updates and more."
+      s_three_link: "Subscribe"
     naturopathic_medicine:
       header_title: "Naturopathic Medicine"
       s_one_header: "What is Naturopathic Medicine?"

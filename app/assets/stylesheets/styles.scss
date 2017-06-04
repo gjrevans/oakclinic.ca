@@ -107,6 +107,7 @@ nav {
         line-height: 2rem;
     }
     &__image {
+        @extend .box-shadow;
         width: 80%;
         border-top-right-radius: 3rem;
         border-bottom-left-radius: 3rem;
