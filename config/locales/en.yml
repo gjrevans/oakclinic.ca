@@ -35,6 +35,8 @@ en:
   pain: "General or Specific Pain"
   energy: "Low Energy"
   insomnia: "Insomnia"
+  latitude: "55.75962740000001"
+  longitude: "-120.23766230000001"
   alerts:
     subscribe_success: "You have successfully subscribed to our mailing list!"
   layouts:
@@ -50,8 +52,12 @@ en:
       button_text: "Register"
     about:
       header_title: "About"
-      s_one_header: "The Oak Clinic"
+      s_one_header: "Oak Naturopathic Clinic"
       s_one_body: "We are so excited to announce that there will be a naturopathic clinic opening up in Dawson Creek, British Columbia! There are a lot of moving parts to opening this clinic, so we ask that you wait patiently while they all come into place. In the mean time we have created this landing page to keep you all informed on the timeline and any changes that may be taking place. As of right now, we are aiming to open in November 2017 in the down town core. The clinic will be lead by Ayla Andrus who is finishing her examinations and registering with the Collage of Naturopathic Physicians of British Columbia.\n\nAyla Andrus was born and raised in Dawson Creek. She is currently living in Toronto while finishing her licensing. She graduated from the Canadian College of Naturopathic Medicine in 2017 with the Degree, Doctor of Naturopathy. She completed her Bachelor of Science at the University of Saskatchewan in 2013, majoring in Anatomy and Cell Biology. She is excited to come home and join the Peace Region community again. She has spent many hours precepting (shadowing) local physicians and health care providers to better understand how to service the community. She looks forward to engaging with residents and local businesses in integrative health care. At the root to any good health plan is tasty food, exercise and love, which she is excited to incorporate into everyday living with Dawson Creek-ers."
+      s_two_header: "Our Team"
+      s_two_body: "The Oak Clinic team is excited to serve you through your medical needs. The team is made of a dynamic combination of naturopathic doctors focused on many different modalities of health."
+      s_three_header: "Location"
+      s_three_body: "Visit us at the Oak Naturopathic Clinic"
     naturopathic_medicine:
       header_title: "Naturopathic Medicine"
       s_one_header: "What is Naturopathic Medicine?"

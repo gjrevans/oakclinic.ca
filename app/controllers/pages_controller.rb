@@ -3,9 +3,10 @@ class PagesController < ApplicationController
     end
 
     def about
+        @team_members = JSON.parse(File.read('public/json/team_members.json'))
     end
 
     def naturopathic_medicine
-        @elements = JSON.parse(File.read('public/json/elements.json'))
+        @treatments = JSON.parse(File.read('public/json/treatments.json'))
     end
 end
