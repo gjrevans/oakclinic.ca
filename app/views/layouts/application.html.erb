@@ -33,6 +33,7 @@
 
 <body id="<%= 'home' if current_page?(root_path) %>">
     <%= render partial: 'layouts/notify', flash: flash %>
+    <%= render partial: "layouts/navigation" %>
     <%= render partial: "layouts/header" %>
     <%= yield %>
 </body>

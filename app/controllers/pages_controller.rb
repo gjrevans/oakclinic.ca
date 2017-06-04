@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
     def index
-        #@contact = Contact.new
     end
 
     def about
@@ -8,6 +7,6 @@ class PagesController < ApplicationController
     end
 
     def naturopathic_medicine
-        #@contact = Contact.new
+        @elements = JSON.parse(File.read('public/json/elements.json'))
     end
 end

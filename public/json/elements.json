@@ -1,0 +1,14 @@
+[
+    {"image": "icons/digestion.jpg", "name": "digestion"},
+    {"image": "icons/female_health.jpg", "name": "female_health"},
+    {"image": "icons/infertility.jpg", "name": "infertility"},
+    {"image": "icons/skin_issues.jpg", "name": "skin_issues"},
+    {"image": "icons/allergies.jpg", "name": "allergies"},
+    {"image": "icons/mental.jpg", "name": "mental"},
+    {"image": "icons/diabetes.jpg", "name": "diabetes"},
+    {"image": "icons/high_blood_pressure.jpg", "name": "high_blood_pressure"},
+    {"image": "icons/headaches.jpg", "name": "headaches"},
+    {"image": "icons/pain.jpg", "name": "pain"},
+    {"image": "icons/energy.jpg", "name": "energy"},
+    {"image": "icons/insomnia.jpg", "name": "insomnia"}
+]

@@ -1,7 +1,11 @@
 /* -- PAGE JS --*/
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
     $(function () {
         $('[data-toggle="popover"]').popover();
+    });
+    // Toggle navigation
+    $('.js-toggle-navigation').on('click', function() {
+        $('.l-navigation').toggleClass('hidden-xs-up');
     });
     // Minipulate navigation style based on position
     $(window).scroll(function(){

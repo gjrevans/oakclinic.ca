@@ -8,8 +8,15 @@
             </div>
             <div class="col-8">
                 <ul class="m-nav__list">
-                    <li class="m-nav__link"><%= link_to t(".about"), about_path %></li>
-                    <li class="m-nav__link"><%= link_to t(".naturopathic_medicine"), naturopathic_medicine_path %></li>
+                    <li class="m-nav__link hidden-xs-down <%= 'm-nav__link--active' if current_page?(about_path) %>">
+                        <%= link_to t(".about"), about_path %>
+                    </li>
+                    <li class="m-nav__link hidden-xs-down <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
+                        <%= link_to t(".naturopathic_medicine"), naturopathic_medicine_path %>
+                    </li>
+                    <li class="m-nav__link js-toggle-navigation">
+                        <i class="fa fa-bars fa-fw"></i>
+                    </li>
                 </ul>
             </div>
         </div>

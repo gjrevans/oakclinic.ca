@@ -1,0 +1,30 @@
+<div class="l-navigation hidden-xs-up animated fadeIn">
+    <nav class="m-nav__top m-nav__root">
+        <div class="container">
+            <div class="row flex-items-sm-middle">
+                <div class="col-12">
+                    <ul class="m-nav__list">
+                        <li class="m-nav__link"><a href="#" class="js-toggle-navigation"><i class="fa fa-times fa-fw"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="l-navigation__content">
+        <div class="l-navigation__link animated fadeInRight">
+            <%= link_to about_path do %>
+                <%= t("layouts.header.home")%>
+            <% end %>
+        </div>
+        <div class="l-navigation__link animated fadeInLeft">
+            <%= link_to about_path do %>
+                <%= t("layouts.header.about")%>
+            <% end %>
+        </div>
+        <div class="l-navigation__link animated fadeInRight">
+            <%= link_to about_path do %>
+                <%= t("layouts.header.naturopathic_medicine")%>
+            <% end %>
+        </div>
+    </div>
+</div>
