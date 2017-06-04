@@ -35,6 +35,8 @@ en:
   pain: "General or Specific Pain"
   energy: "Low Energy"
   insomnia: "Insomnia"
+  alerts:
+    subscribe_success: "You have successfully subscribed to our mailing list!"
   layouts:
     header:
       about: "About"

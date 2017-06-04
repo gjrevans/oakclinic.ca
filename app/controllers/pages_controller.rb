@@ -3,7 +3,6 @@ class PagesController < ApplicationController
     end
 
     def about
-        #@contact = Contact.new
     end
 
     def naturopathic_medicine
