@@ -2,7 +2,6 @@
 <div class="modal animated fadeInUp" id="mailingList" tabindex="-1" role="dialog" aria-labelledby="mailingList" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <%= form_tag create_contact_path(@conversation), method: :post do %>
             <div class="modal-header">
                 <h5 class="modal-title" id="mailingListLabel"><%= t(".mailer_modal_title") %></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -12,6 +11,7 @@
             <div class="modal-body">
                 <p><%= t(".mailer_modal_body") %></p>
                 <hr>
+                <%= form_tag create_contact_path, method: :post do %>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -26,17 +26,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <%= label_tag :email %>
                     <%= email_field_tag :email, nil, class: "form-control", placeholder: "doughboy@booblybob.com", required: true %>
                 </div>
+                <%= button_tag t("submit"), data: {disable_with: "<i class='fa fa-spinner fa-pulse'></i>".html_safe}, class: "btn btn-primary btn-full-width" %>
+                <% end %>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t("close")%></button>
-                <%= button_tag t("submit"), data: {disable_with: "<i class='fa fa-spinner fa-pulse'></i>".html_safe}, class: "btn btn-primary btn-full-width" %>
             </div>
-            <% end %>
         </div>
     </div>
 </div>
