@@ -17,9 +17,9 @@ $(document).on('turbolinks:load', function() {
             $(".m-nav__link i").css("color", "#FFF");
         } else if (scroll >= 100) {
             $(".m-nav__top").css("background", "white").addClass("box-shadow");
-            $(".m-nav__logo").css("color", "#971B4D");
-            $(".m-nav__link a").css("color", "#971B4D");
-            $(".m-nav__link i").css("color", "#971B4D");
+            $(".m-nav__logo").css("color", "#009688");
+            $(".m-nav__link a").css("color", "#009688");
+            $(".m-nav__link i").css("color", "#009688");
         }
     });
 
