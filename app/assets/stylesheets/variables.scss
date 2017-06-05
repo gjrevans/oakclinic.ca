@@ -570,14 +570,14 @@ $zindex-modal:             1050 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 $zindex-hero:              -1 !default;
-$zindex-floater:          1080 !default;
+$zindex-floater:           1080 !default;
 
 
 // 16. Navbar
 
 $navbar-border-radius:              0 !default;
 $navbar-padding-x:                  $spacer !default;
-$navbar-padding-y:                  1rem !default;
+$navbar-padding-y:                  0.5rem !default;
 
 $navbar-brand-padding-y:            .25rem !default;
 

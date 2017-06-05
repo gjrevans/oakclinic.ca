@@ -15,11 +15,19 @@ $(document).on('turbolinks:load', function() {
             $(".m-nav__logo").css("color", "#FFF");
             $(".m-nav__link a").css("color", "#FFF");
             $(".m-nav__link i").css("color", "#FFF");
+            $(".m-nav__logo").css({
+                "font-size": "2rem",
+                "padding-top": "0.75rem"
+            });
         } else if (scroll >= 100) {
             $(".m-nav__top").css("background", "white").addClass("box-shadow");
             $(".m-nav__logo").css("color", "#009688");
             $(".m-nav__link a").css("color", "#009688");
             $(".m-nav__link i").css("color", "#009688");
+            $(".m-nav__logo").css({
+                "font-size": "1.5rem",
+                "padding-top": "1rem"
+            });
         }
     });
 
