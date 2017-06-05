@@ -44,6 +44,7 @@ en:
   longitude: "-120.23766230000001"
   alerts:
     subscribe_success: "You have successfully subscribed to our mailing list!"
+    subscribe_failure_missing_fields: "Uh Oh, looks like something's missing. Please include email, first name and last name."
   layouts:
     header:
       about: "About"

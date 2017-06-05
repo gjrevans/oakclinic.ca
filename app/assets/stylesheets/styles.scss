@@ -93,6 +93,9 @@ nav {
 .l-home {
     @extend .vh;
     @extend .transition;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
