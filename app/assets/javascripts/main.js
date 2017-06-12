@@ -21,9 +21,9 @@ $(document).on('turbolinks:load', function() {
             });
         } else if (scroll >= 100) {
             $(".m-nav__top").css("background", "white").addClass("box-shadow");
-            $(".m-nav__logo").css("color", "#009688");
-            $(".m-nav__link a").css("color", "#009688");
-            $(".m-nav__link i").css("color", "#009688");
+            $(".m-nav__logo").css("color", "#657BAE");
+            $(".m-nav__link a").css("color", "#657BAE");
+            $(".m-nav__link i").css("color", "#657BAE");
             $(".m-nav__logo").css({
                 "font-size": "1.5rem",
                 "padding-top": "1rem"

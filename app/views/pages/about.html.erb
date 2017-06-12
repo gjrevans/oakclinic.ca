@@ -15,7 +15,13 @@
                 <h2 class="text-primary"><%= t('.s_one_header')%></h2>
                 <hr>
                 <div class="l-content__body">
-                    <p><%= t('.s_one_body').gsub(/\n/, '<br/>').html_safe %></p>
+                    <p><%= t('.s_one_body_one').gsub(/\n/, '<br/>').html_safe %></p>
+                    <div class="col-md-8 offset-md-2 text-center">
+                        <%= image_tag('backgrounds/corrected.jpg', class: "l-content__image my-4 w-100") %>
+                        <h4 class="mb-1">Ayla Andrus</h4>
+                        <p class="text-muted">Dawson Creek</p>
+                    </div>
+                    <p><%= t('.s_one_body_two').gsub(/\n/, '<br/>').html_safe %></p>
                 </div>
             </div>
         </div>
