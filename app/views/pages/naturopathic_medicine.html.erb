@@ -14,7 +14,21 @@
                 <h2 class="text-primary"><%= t('.s_one_header')%></h2>
                 <hr>
                 <div class="l-content__body">
-                    <p><%= t('.s_one_body').gsub(/\n/, '<br/>').html_safe %></p>
+                    <h5><%= t('.s_one_title_one') %></h5>
+                    <p><%= t('.s_one_body_one').gsub(/\n/, '<br/>').html_safe %></p>
+                    <br>
+                    <h5><%= t('.s_one_title_two') %></h5>
+                    <p><%= t('.s_one_body_two').gsub(/\n/, '<br/>').html_safe %></p>
+                    <br>
+                    <h5><%= t('.s_one_title_three') %></h5>
+                    <p><%= t('.s_one_body_three').gsub(/\n/, '<br/>').html_safe %></p>
+                    <br>
+                    <h5><%= t('.s_one_title_four') %></h5>
+                    <p><%= t('.s_one_body_four').gsub(/\n/, '<br/>').html_safe %></p>
+                </div>
+                <div class="l-content__outline">
+                    <p><%= t('.s_one_call_to_action') %></p>
+                    <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#mailingList"><%= t('.button_text')%></button>
                 </div>
             </div>
         </div>
@@ -37,12 +51,9 @@
                     </div>
                     <% end %>
                 </div>
-                <hr>
-                <div class="l-content__body text-center">
+                <div class="l-content__outline">
                     <p><%= t('.s_two_call_to_action') %></p>
-                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-                        <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#mailingList"><%= t('.button_text')%></button>
-                    </div>
+                    <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#mailingList"><%= t('.button_text')%></button>
                 </div>
             </div>
         </div>

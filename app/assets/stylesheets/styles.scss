@@ -111,6 +111,12 @@ nav {
     &__body {
         line-height: 2rem;
     }
+    &__outline {
+        padding: 2rem;
+        text-align: center;
+        border-radius: 4px;
+        border: 1px dashed rgba($brand-primary, 0.3);
+    }
     &__image {
         @extend .box-shadow;
         width: 80%;
