@@ -1,24 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   brand: "Oak"
   brand_long: "Oak Clinic"
@@ -60,8 +39,8 @@ en:
       header_title: "About"
       s_one_header: "Oak Naturopathic Clinic"
       s_one_body_one: "We are excited to announce that a Naturopathic Clinic will be opening in Dawson Creek, British Columbia. We ask that you patiently wait over the next few months while we finalize the many moving parts. In the mean time, we have created this landing page to provide updates on our timeline and information regarding changes that may be happening. At this point in time, our clinic is scheduled to open November 2017, in the Dawson Downtown Core. The clinic will be lead by Ayla Andrus, a recent graduate of the Canadian College of Naturopathic Medicine. Ayla is currently completing her board and licensing exams, so that she may practice in BC."
-      s_one_body_two: "Ayla Andrus was born and raised in Dawson Creek. She obtained her Bachelor of Science, in Anatomy and Cell Biology, from the University of Saskatchewan and then went on to compete her Doctor of Naturopathy Degree at the Canadian College of Naturopathic Medicine."
-      s_one_body_three: "Ayla has connected with and shadowed many of The Peace Region’s local physicians and health care professionals to understand how she can best service the local community. She is keen to begin engaging with residents and local businesses through her integrative approach to health care. Ayla believes that tasty food, exercise and love should reside at the core of any health plan. She is excited to share her personal practices and beliefs with local Dawson Creek-ers and inspire wellness across her community."
+      s_one_body_two: "Ayla Andrus was born and raised in Dawson Creek. She obtained her Bachelor of Science, in Anatomy and Cell Biology, from the University of Saskatchewan and then went on to complete her Doctor of Naturopathy Degree at the Canadian College of Naturopathic Medicine."
+      s_one_body_three: "Ayla has connected with and shadowed many of the Peace Region’s local physicians and health care professionals to understand how she can best service the local community. She is keen to begin engaging with residents and local businesses through her integrative approach to health care. Ayla believes that tasty food, exercise and love should reside at the core of any health plan. She is excited to share her personal practices and beliefs with local Dawson Creek-ers and inspire wellness across her community."
       s_one_body_four: "Ayla will soon be a practicing member of the Naturopathic Community and cannot wait to answer any and all of your questions.  Inquiries regarding Naturopathic Medicine or whether Naturopathy is right for you can be sent to %{email}. Please keep in mind Ayla cannot answer any specific questions regrading your health until your initial appointment. Furthermore, if you are having a medical emergency please go to the nearest hospital."
       s_one_body_five: "Register today for priority booking and to stay informed regarding our clinic opening date."
       s_two_header: "Our Team"
@@ -74,13 +53,13 @@ en:
       header_title: "Naturopathic Medicine"
       s_one_header: "Common Questions"
       s_one_title_one: "What is Naturopathy?"
-      s_one_body_one: "Naturopathic Medicine is a complementary addition to your current health care system. We work in collaboration with YOU and any other health care provider you may have in your roster. Naturopathy looks at the human body as a whole working system.\n\nNaturopathy differentiates itself from the general health care system by identifying and healing the root cause of a given health problem as opposed to focusing on the most prevalent or present symptom. Naturopathic Doctors use a natural and scientific approach to improving biochemical and physiological imbalances. They are trained in common medical diagnoses as well as their eastern medicine equivalents. Along with treating specific conditions, they also emphasize illness prevention as well as a healthy diet and lifestyle. Naturopaths pride themselves on individualized care and understand that what may work for one individual may not work for another. The most important person in an appointment is YOU, a Naturopathic Doctor is simply there to help guide you through your healing journey."
+      s_one_body_one: "Naturopathic Medicine is a complementary addition to your current health care system. We work in collaboration with YOU and any other health care provider you may have on your roster. Naturopathy looks at the human body as a whole working system.\n\nNaturopathy differentiates itself from the general health care system by identifying and healing the root cause of a given health problem as opposed to focusing on the most prevalent or present symptom. Naturopathic Doctors use a natural and scientific approach to improving biochemical and physiological imbalances. They are trained in common medical diagnoses as well as their eastern medicine equivalents. Along with treating specific conditions, they also emphasize illness prevention as well as a healthy diet and lifestyle. Naturopaths pride themselves on individualized care and understand that what may work for one individual may not work for another. The most important person in an appointment is YOU, a Naturopathic Doctor is simply there to help guide you through your healing journey."
       s_one_title_two: "What Does it Take to Become a Naturopathic Doctor?"
       s_one_body_two: "To become a Naturopathic Doctor, an individual must complete an undergraduate program with the required prerequisites. That individual must then complete a 4 year program at an Accredited Naturopathic College, of which there are only 2 in Canada. The Canadian College of Naturopathic Medicine delivers more than 3,000 hours of in-classroom training and 1,200 hours of clinical experience in biomedical sciences, clinical medicine, clinical nutrition, Traditional Asian Medicine, acupuncture, botanical medicine, physical medicine, physical exams and labs. After finishing their 8 years educational journey a Naturopathic Doctor finalizes the process by writing a series of board exams. All Naturopathic Doctors are required to continue their education throughout their career."
       s_one_title_three: "Is it Covered by My Health Plan?"
       s_one_body_three: "Naturopathic Medicine is a protected and regulated medical profession and therefore, most extended health care plans will cover some if not all of your visits with a Naturopathic Doctor."
       s_one_title_four: "Is Naturopathic Medicine for Me?"
-      s_one_body_four: "At the base of every health plan is diet and lifestyle change. Changes that you and your doctor will plan together to ensure your goals are realistic and attainable. Depending on your ailment or desired outcome, the Doctor will work with you to create an individualized treatment protocol, which can include specific supplementation of vitamins, minerals, plants, herbs or physical therapies. The Doctor may also recommend a more integrative approach and refer you for additional treatment from your MD, physiotherapist, chiropractor, acupuncturist, etc. The goal of the treatment plan is to be as sustainable and manageable as possible."
+      s_one_body_four: "At the base of every health plan is diet and lifestyle change; changes that you and your doctor will plan together to ensure your goals are realistic and attainable. Depending on your ailment or desired outcome, the Doctor will work with you to create an individualized treatment protocol, which can include specific supplementation of vitamins, minerals, plants, herbs or physical therapies. The Doctor may also recommend a more integrative approach and refer you for additional treatment from your MD, physiotherapist, chiropractor, acupuncturist, etc. The goal of the treatment plan is to be as sustainable and manageable as possible."
       s_one_call_to_action: "Register today for priority booking and to stay informed regarding our clinic opening date."
       s_two_header: "Common Concerns"
       s_two_body: "At Oak Clinic it is our goal to be transparent and open about what to expect from Naturopathic Medicine. We truly believe that we can help anyone live a healthier, happier and more fulfilling life, if they are willing to grow and take control of their own health. Below we’ve documented some of the areas we believe Naturopathy can make an impact on your health and overall well-being."
