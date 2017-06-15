@@ -1,0 +1,99 @@
+<!-- Style Override for Background Image -->
+<style media="screen">
+    .m-banner--article { background-image: url(<%= @article.image %>); }
+</style>
+
+<!-- Begin Article -->
+<section class="m-banner m-banner--article">
+    <div class="container-fluid">
+        <div class="m-header">
+            <div class="m-header__content">
+                <h1 class="m-header__title--md"><%= @article.title %></h1>
+                <h6><%= @article.created_at %></h6>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="breadcrumb mb-0 mt-3">
+                    <%= link_to t("brand_long"), root_path, class: "breadcrumb-item" %>
+                    <%= link_to @article.title, "#", class: "breadcrumb-item active" %>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="l-content l-content__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="l-content__body">
+                    <h5><%= @article.title %></h5>
+                    <p><%= simple_format(@article.body) %></p>
+                </div>
+                <div class="l-content__outline">
+                    <p><%= t('.call_to_action') %></p>
+                    <%= button_tag t('.call_to_action_button'), class: "btn btn-primary px-5", data: {toggle:"modal", target:"#mailingList"}, type: "button" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        // Add Responsive Class
+        $("#articleDescription img").addClass("img-fluid");
+
+        // Basic Word Count
+        var $wordsPerMinute = 150;
+        $("#timeLeft").html((<%= @word_count %> / $wordsPerMinute).toFixed(2));
+
+        // Calulate Read Time on load, scroll & resize
+        $(window).scroll(function (event) {
+            calculateReadTime();
+        });
+
+        function calculateReadTime() {
+            // Constants
+            var $topOffest = $("#articleDescription").offset().top;
+            var $lineHeight = 34;
+
+            // Window Width
+            var $windowWidth = $(window).width();
+
+            // Words per line based on screen width (!very arbitrary cunt!)
+            if ( $windowWidth > 1200) {
+                var $wordPerLine =  21;
+            } else if ( $windowWidth > 991) {
+                var $wordPerLine =  17;
+            } else if ( $windowWidth > 768) {
+                var $wordPerLine =  14;
+            } else if ( $windowWidth > 500) {
+                var $wordPerLine =  10;
+            } else {
+                var $wordPerLine =  7;
+            }
+
+            // Calculate time left based on scroll postion
+            var $scroll = $(window).scrollTop();
+            var $distanceToEnd = $("#endOfarticle").offset().top - $scroll;
+            var $timeLeft = (((($distanceToEnd - $topOffest) / $lineHeight) * $wordPerLine) / $wordsPerMinute).toFixed(2);
+
+            // Put updated time into the floater
+            $("#timeLeft").html($timeLeft);
+
+            // Fade out when you reach the bottom
+            if ($timeLeft < 0.1) {
+                $(".read-time-floater").fadeOut(200);
+            } else {
+                $(".read-time-floater").fadeIn(200);
+            }
+        };
+    });
+</script>

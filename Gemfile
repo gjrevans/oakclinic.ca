@@ -22,6 +22,7 @@ gem 'devise'
 gem 'friendly_id'
 gem "figaro"
 gem 'gibbon'
+gem 'filestack-rails', require: 'filepicker-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

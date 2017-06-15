@@ -138,6 +138,9 @@ nav {
     &--medicine {
         @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/dandi.jpg') ;
     }
+    &--article {
+        @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/dandi.jpg') ;
+    }
 }
 
 .m-header {
@@ -163,6 +166,7 @@ nav {
     font-family: $font-family-sans-serif;
     @extend .transition;
 }
+
 .btn.btn-main {
     @extend .btn;
     color: $brand-main;
@@ -174,6 +178,7 @@ nav {
         background: $brand-main;
     }
 }
+
 .navbar-transparent .navbar-nav .nav-link {
     color: #FFF;
     @extend .transition;

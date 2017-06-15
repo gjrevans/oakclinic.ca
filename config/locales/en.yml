@@ -31,6 +31,10 @@ en:
     modal:
       mailer_modal_title: "Oak Clinic Mailing List"
       mailer_modal_body: "Register for Oak Clinic's mailing list to obtain priority booking, be notified of upcoming events, and to stay informed of our opening date."
+  articles:
+    show:
+      call_to_action: "Register today for priority booking and to stay informed regarding our clinic opening date."
+      call_to_action_button: "Register Today"
   pages:
     index:
       header_body: "Our naturopathic clinic will be opening in Dawson Creek, British Columbia in Winter 2018. Register below for priority booking and to be notified of our opening date."
