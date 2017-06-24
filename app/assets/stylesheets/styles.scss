@@ -124,6 +124,9 @@ nav {
 }
 
 /* Modules */
+.m-page-header {
+    padding: 1rem 0;
+}
 .m-banner {
     @extend .transition;
     @extend .d-flex;
@@ -177,6 +180,11 @@ nav {
         color: $brand-primary;
         background: $brand-main;
     }
+}
+
+.card-img-top {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .navbar-transparent .navbar-nav .nav-link {
