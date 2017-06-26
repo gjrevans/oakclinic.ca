@@ -1,4 +1,9 @@
-<nav class="m-nav__top m-nav__root">
+<% safe_id = params[:id] || 0 %>
+<div class="m-nav m-nav__top m-nav__root <%= current_page?(articles_path) ||
+                                             current_page?(edit_user_registration_path) ||
+                                             current_page?(controller: "/articles", action: "new") ||
+                                             current_page?(controller: "/articles", action: "edit", id: safe_id) ?
+                                             'm-nav--inverse' : 'm-nav__transition' %>">
     <div class="container">
         <div class="row flex-items-sm-middle">
             <div class="col-4">
@@ -15,7 +20,7 @@
                         <%= link_to t(".naturopathic_medicine"), naturopathic_medicine_path %>
                     </li>
                     <li class="m-nav__link hidden-xs-down <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
-                        <%= link_to t(".blog"), articles_path %>
+                        <%= link_to t(".articles"), articles_path %>
                     </li>
                     <li class="m-nav__link js-toggle-navigation">
                         <i class="fa fa-bars fa-fw"></i>
@@ -24,4 +29,4 @@
             </div>
         </div>
     </div>
-</nav>
+</div>

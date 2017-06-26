@@ -1,9 +1,8 @@
 <!-- Style Override for Background Image -->
 <style media="screen">
-    .m-banner--article { background-image: url(<%= @article.image %>); }
+    .m-banner--article { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(<%= @article.image %>); }
 </style>
 
-<!-- Begin Article -->
 <section class="m-banner m-banner--article">
     <div class="container-fluid">
         <div class="m-header">
@@ -20,18 +19,19 @@
             <div class="col-md-12">
                 <nav class="breadcrumb mb-0 mt-3">
                     <%= link_to t("brand_long"), root_path, class: "breadcrumb-item" %>
-                    <%= link_to @article.title, "#", class: "breadcrumb-item active" %>
+                    <%= link_to t("layouts.header.articles"), articles_path, class: "breadcrumb-item" %>
+                    <%= link_to @article.user.first_name + ' ' + @article.user.last_name, "#", class: "breadcrumb-item active" %>
                 </nav>
             </div>
         </div>
     </div>
 </section>
-<section class="l-content l-content__white">
+<section class="l-content l-content--white">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="l-content__body">
-                    <h5><%= @article.title %></h5>
+                    <h3 class="l-content__title"><%= @article.title %></h3>
                     <p><%= simple_format(@article.body) %></p>
                 </div>
                 <div class="l-content__outline">
@@ -42,58 +42,22 @@
         </div>
     </div>
 </section>
-
-
+<section class="l-content l-content--grey l-content--bordered">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="l-content__title"><%= t(".related_articles") %></h3>
+            </div>
+        </div>
+        <div class="row">
+            <%= render partial: "article_card_small" %>
+        </div>
+    </div>
+</section>
 
 <script type="text/javascript">
     $(document).ready(function(){
         // Add Responsive Class
         $("#articleDescription img").addClass("img-fluid");
-
-        // Basic Word Count
-        var $wordsPerMinute = 150;
-        $("#timeLeft").html((<%= @word_count %> / $wordsPerMinute).toFixed(2));
-
-        // Calulate Read Time on load, scroll & resize
-        $(window).scroll(function (event) {
-            calculateReadTime();
-        });
-
-        function calculateReadTime() {
-            // Constants
-            var $topOffest = $("#articleDescription").offset().top;
-            var $lineHeight = 34;
-
-            // Window Width
-            var $windowWidth = $(window).width();
-
-            // Words per line based on screen width (!very arbitrary cunt!)
-            if ( $windowWidth > 1200) {
-                var $wordPerLine =  21;
-            } else if ( $windowWidth > 991) {
-                var $wordPerLine =  17;
-            } else if ( $windowWidth > 768) {
-                var $wordPerLine =  14;
-            } else if ( $windowWidth > 500) {
-                var $wordPerLine =  10;
-            } else {
-                var $wordPerLine =  7;
-            }
-
-            // Calculate time left based on scroll postion
-            var $scroll = $(window).scrollTop();
-            var $distanceToEnd = $("#endOfarticle").offset().top - $scroll;
-            var $timeLeft = (((($distanceToEnd - $topOffest) / $lineHeight) * $wordPerLine) / $wordsPerMinute).toFixed(2);
-
-            // Put updated time into the floater
-            $("#timeLeft").html($timeLeft);
-
-            // Fade out when you reach the bottom
-            if ($timeLeft < 0.1) {
-                $(".read-time-floater").fadeOut(200);
-            } else {
-                $(".read-time-floater").fadeIn(200);
-            }
-        };
     });
 </script>

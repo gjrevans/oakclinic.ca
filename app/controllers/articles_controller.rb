@@ -1,9 +1,9 @@
 class ArticlesController < ApplicationController
-    before_action :authenticate_user!, except: [:show]
+    before_action :authenticate_user!, except: [:index, :show]
     before_action :set_article, only: [:show, :edit, :update, :destroy]
 
     def index
-        @articles = Article.all
+        @articles = Article.all.order("created_at DESC")
     end
 
     def show
@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
     end
 
     def create
-        @article = Article.new(article_params)
+        @article = current_user.articles.new(article_params)
         if @article.save
             flash[:success] = 'Article was successfully created!'
             redirect_to @article
@@ -33,6 +33,10 @@ class ArticlesController < ApplicationController
     end
 
     def update
+        # Explicitly set slug to nil so that the friendly id is regenerated
+        @article.slug = nil
+
+        # Save the article with the new nil slug
         if @article.update(article_params)
             flash[:success] = 'Article was successfully updated!'
             redirect_to @article
@@ -50,8 +54,7 @@ class ArticlesController < ApplicationController
     private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-        @article = Article.find(params[:id])
-        #@article = Article.friendly.find(params[:id])
+        @article = Article.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

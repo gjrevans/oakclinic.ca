@@ -19,7 +19,7 @@ gem 'mail_form'
 gem 'bootstrap-growl-rails'
 gem 'bootstrap-wysihtml5-rails'
 gem 'devise'
-gem 'friendly_id'
+gem 'friendly_id', '~> 5.1.0'
 gem "figaro"
 gem 'gibbon'
 gem 'filestack-rails', require: 'filepicker-rails'

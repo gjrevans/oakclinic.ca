@@ -1,5 +1,6 @@
 <% @articles.each do |article| %>
-        <div class="m-article">
+    <div class="col-md-4">
+        <div class="m-article mb-0">
             <div class="m-article__block">
                 <div class="d-flex align-items-center">
                     <%= image_tag article.user.image, class: "m-article__user-image rounded-circle", alt: article.user.first_name %>
@@ -22,4 +23,5 @@
                 <% end %>
             </div>
         </div>
+    </div>
 <% end %>

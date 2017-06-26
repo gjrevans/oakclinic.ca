@@ -11,7 +11,7 @@
     }
 }
 
-nav {
+.m-nav {
     padding: 1rem 0;
     &.m-nav__top {
         position: fixed;
@@ -55,9 +55,32 @@ nav {
             }
         }
     }
+    &--inverse {
+        &.m-nav__top {
+            background: #FFF;
+            border-bottom: 1px solid $gray-lighter;
+        }
+        .m-nav__logo {
+            color: $brand-primary;
+        }
+        .m-nav__list {
+            .m-nav__link {
+                a, i {
+                    color: $brand-primary;
+                }
+                &--active a{
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
 }
 
 /* Layouts */
+.l-session {
+    padding: 4rem 0 10rem 0;
+}
+
 .l-navigation {
     @extend .d-flex;
     @extend .align-items-center;
@@ -105,8 +128,20 @@ nav {
 
 .l-content {
     padding: 1.5rem 0;
-    &__white {
+    &--white {
         background: #FFF;
+    }
+    &--grey {
+        background: $gray-lightest;
+    }
+    &--bordered {
+        border-bottom: 1px solid $gray-lighter;
+    }
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+    &__offset {
+        padding-top: 7rem;
     }
     &__body {
         line-height: 2rem;
@@ -161,6 +196,42 @@ nav {
             @extend .logo__text;
             font-size: 2rem;
         }
+    }
+}
+
+.m-article {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid $gray-lighter;
+    border-radius: 0.25rem;
+    &__image {
+        max-width: 100%;
+        padding: 1.2rem 0;
+    }
+    &__block {
+        padding: 1.25rem;
+        flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        -webkit-box-flex: 1;
+    }
+    &__link:hover {
+        text-decoration: none;
+    }
+    &__user-meta {
+        font-size: 0.8rem;
+    }
+    &__user-image {
+        @extend .mr-3;
+        border: 1px solid $gray-lighter;
+        width: 2.5rem;
     }
 }
 

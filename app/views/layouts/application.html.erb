@@ -59,15 +59,14 @@
     <!-- RENDER CONTENT -->
     <%= render partial: "layouts/notify", flash: flash %>
     <%= render partial: "layouts/navigation" %>
-    <%= render partial: "layouts/header" if not current_page?(controller: "articles", action: "new") ||
-                                                current_page?(controller: "articles", action: "edit", id: safe_id) ||
-                                                current_page?(articles_path) %>
+    <%= render partial: "layouts/header" %>
     <%= render partial: "layouts/modal" %>
     <%= yield %>
     <%= render partial: "layouts/footer" if not current_page?(root_path) ||
-                                                current_page?(controller: "articles", action: "new") ||
-                                                current_page?(controller: "articles", action: "edit", id: safe_id) ||
-                                                current_page?(articles_path) %>
+                                                current_page?(new_user_session_path) ||
+                                                current_page?(edit_user_registration_path) ||
+                                                current_page?(controller: "/articles", action: "new") ||
+                                                current_page?(controller: "/articles", action: "edit", id: safe_id) %>
 
     <!-- =================
     JAVASCRIPT

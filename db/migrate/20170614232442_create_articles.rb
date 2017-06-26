@@ -4,10 +4,11 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.string :title
       t.string :body
       t.string :image
+      t.string :user_id
       t.integer :status
       t.string :slug
 
       t.timestamps
-    end
+    end    
   end
 end
