@@ -1,3 +1,10 @@
+<!-- Style Override for Background Image -->
+<% image_url = @article.image || "http://via.placeholder.com/1200x800?text=Select%20An%20Image" %>
+
+<style media="screen">
+    .m-banner--article { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(<%= image_url %>); }
+</style>
+
 <%= form_for(article) do |f| %>
 <div class="row">
     <div class="col-md-8">
@@ -24,19 +31,34 @@
     </div>
 </div>
 
+<!-- Image -->
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
+        <%= f.label :image %>
+        <div class="m-banner m-banner--article js-image-preview mb-3">
+            <div class="m-header">
+                <div class="m-header__content">
+                    <h1 class="m-header__title--md"><%= @article.title %></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4 offset-md-4 text-center">
         <div class="form-group">
-            <% image_url = @article.image || "" %>
-            <%= image_tag image_url, class: "js-image-preview rounded-circle mb-3", alt: "User Image" %><br>
             <%= f.filepicker_field :image, mimetypes:'image/*', onchange: 'onPhotoUpload(event)', required: true  %>
         </div>
     </div>
 </div>
 
+<!-- Buttons -->
+<hr>
 <div class="row">
     <div class="col-md-12">
-        <div class="float-xs-right">
+        <div class="text-center">
             <%= link_to 'Back', articles_path, class: "btn btn-outline-primary px-5" %>
             <%= f.submit "Save", class: "btn btn-primary px-5", required: true %>
         </div>
@@ -46,12 +68,13 @@
 
 <script type="text/javascript">
 function onPhotoUpload(event) {
-    $('.js-image-preview').attr('src', event.fpfile.url);
+    $('.js-image-preview').css("background-image", "url(" + event.fpfile.url + ")");
+    console.log(event.fpfile.url);
 }
 </script>
 
 <script type="text/javascript">
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
 
     // INITIALIZE WYSIWYG
     $('.wysihtml5').wysihtml5();
