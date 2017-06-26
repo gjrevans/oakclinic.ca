@@ -11,20 +11,20 @@ $(document).on('turbolinks:load', function() {
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll <= 100) {
-            $(".m-nav__top").css("background", "none").removeClass("box-shadow");
-            $(".m-nav__logo").css("color", "#FFF");
-            $(".m-nav__link a").css("color", "#FFF");
-            $(".m-nav__link i").css("color", "#FFF");
-            $(".m-nav__logo").css({
+            $(".m-nav__transition.m-nav__top").css("background", "none").removeClass("box-shadow");
+            $(".m-nav__transition .m-nav__logo").css("color", "#FFF");
+            $(".m-nav__transition .m-nav__link a").css("color", "#FFF");
+            $(".m-nav__transition .m-nav__link i").css("color", "#FFF");
+            $(".m-nav__transition .m-nav__logo").css({
                 "font-size": "2rem",
                 "padding-top": "0.75rem"
             });
         } else if (scroll >= 100) {
-            $(".m-nav__top").css("background", "white").addClass("box-shadow");
-            $(".m-nav__logo").css("color", "#657BAE");
-            $(".m-nav__link a").css("color", "#657BAE");
-            $(".m-nav__link i").css("color", "#657BAE");
-            $(".m-nav__logo").css({
+            $(".m-nav__transition.m-nav__top").css("background", "white").addClass("box-shadow");
+            $(".m-nav__transition .m-nav__logo").css("color", "#657BAE");
+            $(".m-nav__transition .m-nav__link a").css("color", "#657BAE");
+            $(".m-nav__transition .m-nav__link i").css("color", "#657BAE");
+            $(".m-nav__transition .m-nav__logo").css({
                 "font-size": "1.5rem",
                 "padding-top": "1rem"
             });
