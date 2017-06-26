@@ -31,6 +31,9 @@ en:
       about: "About"
       naturopathic_medicine: "Naturopathic Medicine"
       articles: "Articles"
+      new_article: "New Article"
+      sign_in: "Sign In"
+      sign_out: "Sign Out"
     modal:
       mailer_modal_title: "Oak Clinic Mailing List"
       mailer_modal_body: "Register for Oak Clinic's mailing list to obtain priority booking, be notified of upcoming events, and to stay informed of our opening date."

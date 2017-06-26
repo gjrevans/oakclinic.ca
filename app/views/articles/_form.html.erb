@@ -27,7 +27,8 @@
 <div class="row">
     <div class="col-md-4">
         <div class="form-group">
-            <%= image_tag @user.try(:image), class: "js-image-preview rounded-circle mb-3", alt: "User Image" %>
+            <% image_url = @article.image || "" %>
+            <%= image_tag image_url, class: "js-image-preview rounded-circle mb-3", alt: "User Image" %><br>
             <%= f.filepicker_field :image, mimetypes:'image/*', onchange: 'onPhotoUpload(event)', required: true  %>
         </div>
     </div>
