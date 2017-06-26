@@ -10,7 +10,7 @@
                 <%= link_to t("layouts.header.naturopathic_medicine"), naturopathic_medicine_path, class: "nav-link" %>
             </li>
             <% if user_signed_in? %>
-            <li class="nav-item">
+            <li class="nav-item <%= "active" if current_page?(edit_user_registration_path) %>" >
                 <%= link_to t("layouts.header.profile"), edit_user_registration_path, class: "nav-link" %>
             </li>
             <li class="nav-item">

@@ -8,7 +8,6 @@
         <div class="m-header">
             <div class="m-header__content">
                 <h1 class="m-header__title--md"><%= @article.title %></h1>
-                <h6><%= @article.created_at.to_formatted_s(:long) %></h6>
             </div>
         </div>
     </div>
@@ -32,6 +31,7 @@
             <div class="col-md-12">
                 <div class="l-content__body">
                     <h3 class="l-content__title"><%= @article.title %></h3>
+                    <h6 class="text-muted"><%= @article.created_at.to_formatted_s(:long) %></h6>
                     <p><%= simple_format(@article.body) %></p>
                 </div>
                 <div class="l-content__outline">
