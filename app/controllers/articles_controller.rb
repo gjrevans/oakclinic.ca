@@ -3,7 +3,11 @@ class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update, :destroy]
 
     def index
-        @articles = Article.all.order("created_at DESC")
+        if current_user
+            @articles = Article.all.order("created_at DESC")
+        else
+            @articles = Article.where(status: :published).order("created_at DESC")
+        end
     end
 
     def show

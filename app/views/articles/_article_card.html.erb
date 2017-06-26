@@ -1,6 +1,12 @@
 <% @articles.each do |article| %>
         <div class="m-article">
             <div class="m-article__block">
+                <!-- Status -->
+                <% if current_user %>
+                <span class="top-right badge badge-pill badge-<%= article.status == "unpublished" ? "danger" : "primary" %> text-capitalize px-3 py-2"><%= article.status %></span>
+                <% end %>
+
+                <!-- Article Info -->
                 <div class="d-flex align-items-center">
                     <%= image_tag article.user.image, class: "m-article__user-image rounded-circle", alt: article.user.first_name %>
                     <div class="m-article__user-meta">

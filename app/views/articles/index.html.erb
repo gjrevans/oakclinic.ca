@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-8 col-md-12">
-                <% if @articles.length < 0 %>
+                <% if @articles.length > 0 %>
                 <%= render partial: "article_card" %>
                 <% else %>
                 <div class="l-content__outline mb-3">
