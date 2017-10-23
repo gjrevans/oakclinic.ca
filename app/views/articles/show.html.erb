@@ -32,6 +32,7 @@
                 <div class="l-content__body">
                     <h3 class="l-content__title"><%= @article.title %></h3>
                     <h6 class="text-muted"><%= @article.created_at.to_formatted_s(:long) %></h6>
+                    <hr>
                     <p><%= simple_format(@article.body) %></p>
                 </div>
                 <div class="l-content__outline">

@@ -1,0 +1,16 @@
+// 4. Summernote
+.btn-default {
+  @extend .btn-primary;
+}
+
+.note-popover,
+.dropdown-toggle::after {
+  display: none;
+}
+
+.note-popover .popover-content,
+.panel-heading.note-toolbar {
+  border-bottom: 1px solid $gray-lighter;
+  padding: 0.75rem 0.5rem !important;
+  background: $gray-lightest;
+}

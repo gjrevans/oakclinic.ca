@@ -5,11 +5,13 @@
 
 /* Libraries */
 @import "pace/yellow/pace-theme-minimal";
-@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 @import "animate";
 @import "variables";
 @import "bootstrap";
+@import "summernote";
+
 
 /* Styles */
 @import "helpers";
+@import "libraries";
 @import "styles";

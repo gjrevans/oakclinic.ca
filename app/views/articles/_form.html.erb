@@ -26,7 +26,7 @@
     <div class="col-md-12">
         <div class="form-group">
             <%= f.label :body %>
-            <%= f.text_area :body, class: "form-control wysihtml5", required: true %>
+            <%= f.text_area :body, class: "form-control", id: "summernote", required: true %>
         </div>
     </div>
 </div>
@@ -68,29 +68,32 @@
 
 <script type="text/javascript">
 function onPhotoUpload(event) {
-    $('.js-image-preview').css("background-image", "url(" + event.fpfile.url + ")");
-    console.log(event.fpfile.url);
+  $('.js-image-preview').css("background-image", "url(" + event.fpfile.url + ")");
 }
 </script>
 
 <script type="text/javascript">
 $(document).on('turbolinks:load', function() {
-
-    // INITIALIZE WYSIWYG
-    $('.wysihtml5').wysihtml5();
-    // BS3 FIXES FOR WYSIWYG
-    $(".btn-default").removeClass("btn-default").addClass("btn-secondary");
-    $(".glyphicon").removeClass("glyphicon").addClass("fa");
-    // ICONS
-    $(".glyphicon-font").removeClass("glyphicon-font").addClass("fa-font");
-    $(".glyphicon-quote").removeClass("glyphicon-quote").addClass("fa-quote-right");
-    $(".glyphicon-list").removeClass("glyphicon-list").addClass("fa-list-ul");
-    $(".glyphicon-th-list").removeClass("glyphicon-th-list").addClass("fa-list-ol");
-    $(".glyphicon-indent-right").removeClass("glyphicon-indent-right").addClass("fa-arrow-left");
-    $(".glyphicon-indent-left").removeClass("glyphicon-indent-left").addClass("fa-arrow-right");
-    $(".glyphicon-share").removeClass("glyphicon-share").addClass("fa-link");
-    $(".glyphicon-picture").removeClass("glyphicon-picture").addClass("fa-picture-o");
-    // MENU ITEMS
-    $(".dropdown-menu li a").addClass("dropdown-item");
+  $('#summernote').summernote({
+    height: 400,
+    toolbar: [
+      ["style", ["style"]],
+      ["font", ["bold", "italic", "underline", "clear"]],
+      ["fontname", "Avenir"],
+      ["fontsize", ["fontsize"]],
+      ["color", ["color"]],
+      ["para", ["ul", "ol", "paragraph"]],
+      ["height", ["height"]],
+      ["table", ["table"]],
+      ["insert", ["link", "picture", "hr"]],
+      ["view", ["fullscreen", "codeview", "help"]],
+    ],
+    codemirror: {
+      theme: "monokai"
+    },
+    onCreateLink : function(originalLink) {
+      return originalLink; // return original link
+    }
+  });
 });
 </script>

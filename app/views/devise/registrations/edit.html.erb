@@ -9,7 +9,8 @@
                         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
                         <%= devise_error_messages! %>
                         <div class="form-group text-center">
-                            <%= image_tag @user.try(:image), class: "js-image-preview rounded-circle w-25 mb-3", alt: "User Image" %><br>
+                            <% image_url = @user.try(:image).present? ? @user.try(:image) : "https://www.neto.com.au/assets/images/default_product.gif" %>
+                            <%= image_tag image_url, class: "js-image-preview rounded-circle w-25 mb-3", alt: "User Image" %><br>
                             <%= f.filepicker_field :image, mimetypes: "image/*", data: {"fp-crop-ratio": "4/4", "fp-crop-min": "400, 400", "fp-crop-max": "1200, 1200"}, onchange: "onPhotoUpload(event)", required: true  %>
                         </div>
                         <div class="form-group">
