@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function() {
     });
     // Toggle navigation
     $('.js-toggle-navigation').on('click', function() {
-        $('.l-navigation').toggleClass('hidden-xs-up');
+        $('.l-navigation').toggleClass('d-flex');
     });
     // Minipulate navigation style based on position
     $(window).scroll(function(){
@@ -21,9 +21,9 @@ $(document).on('turbolinks:load', function() {
             });
         } else if (scroll >= 100) {
             $(".m-nav__transition.m-nav__top").css("background", "white").addClass("box-shadow");
-            $(".m-nav__transition .m-nav__logo").css("color", "#657BAE");
-            $(".m-nav__transition .m-nav__link a").css("color", "#657BAE");
-            $(".m-nav__transition .m-nav__link i").css("color", "#657BAE");
+            $(".m-nav__transition .m-nav__logo").css("color", window.BRAND_COLORS["primary"]);
+            $(".m-nav__transition .m-nav__link a").css("color", window.BRAND_COLORS["primary"]);
+            $(".m-nav__transition .m-nav__link i").css("color", window.BRAND_COLORS["primary"]);
             $(".m-nav__transition .m-nav__logo").css({
                 "font-size": "1.5rem",
                 "padding-top": "1rem"

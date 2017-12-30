@@ -48,8 +48,10 @@ en:
       call_to_action_button: "Register Today"
   pages:
     index:
-      header_body: "Our naturopathic clinic will be opening in Dawson Creek, British Columbia in Winter 2018. Register below for priority booking and to be notified of our opening date."
+      header_body: "Commited to bringing new wellness opportunities to the Peace County."
       button_text: "Register"
+      intro_1: "Oak Naturopathic Clinic is a general family practice with a special interest in female reproductive health and digestive concerns. We offer a variety of [products] and [services] to provide you with effective treatments for your unique health care needs. We currently offer consultations, acupuncture, facial acupuncture series, lab testing and we carry a dispensary of professional grade supplements and personalised botanical prescriptions."
+      intro_2: "Our clinic is owned and operated by Dr. Ayla Andrus Naturopathic Physician and we want to work with your current health care team. If you ever have any questions, don’t be afraid to reach out by email to hello@oakclinic.ca."
     about:
       header_title: "About"
       s_one_header: "Oak Naturopathic Clinic"

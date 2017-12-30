@@ -1,30 +1,73 @@
 <section class="l-home">
-    <div class="container-fluid">
-        <div class="m-header">
-            <div class="m-header__content">
-                <h1 class="m-header__title"><%= t("brand") %></h1>
-                <p class="m-header__body">
-                    <%= t(".header_body") %>
-                </h4>
-                <div class="row">
-                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-                        <button type="button" name="button" class="btn btn-main btn-block" data-toggle="modal" data-target="#mailingList"><%= t(".button_text")%></button>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="m-header">
+    <div class="m-header__content">
+      <h3 class="m-header__body lh-2">
+        <%= t(".header_body") %>
+      </h3>
     </div>
+  </div>
 </section>
 
-<script type="text/javascript">
-$(document).ready(function(){
-    $.backstretch([
-        'https://s3.amazonaws.com/oakclinic.ca/berries.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/nuts.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/bees.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/logs.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/thistle.jpg',
-        'https://s3.amazonaws.com/oakclinic.ca/veggies.jpg'
-    ], {duration: 5000, fade: 750});
-});
-</script>
+<section class="l-content l-content--overlay l-content--xs">
+  <div class="container">
+    <div class="m-floater">
+      <div class="row">
+        <div class="col-lg-4 m-floater__section">
+          <h5>Hours of Operation</h5>
+          <div class="text-white-muted">
+            <ul>
+              <li><span class="text-white">Monday:</span>9am - 5pm</li>
+              <li><span class="text-white">Tuesday:</span> 9am - 5pm</li>
+              <li><span class="text-white">Wednesday:</span>9am - 5pm</li>
+              <li><span class="text-white">Thursday:</span>9am - 5pm</li>
+              <li><span class="text-white">Friday:</span>9am - 5pm</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 m-floater__section">
+          <h5>Appointments</h5>
+          <div class="text-white-muted mb-4">
+              Oak Clinic is commited to helping you do you boo boo.
+          </div>
+          <a href="#" class="btn btn-outline-white btn-sm btn-block">Book Now</a>
+        </div>
+        <div class="col-lg-4 m-floater__section">
+          <h5>Our Mission</h5>
+          <div class="text-white-muted">
+              Oak Clinic is commited to helping you do you boo boo.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="l-content l-content--white l-content--xl">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h4 class="text-primary">About Us</h4>
+        <p><%= t(".intro_1") %></p>
+        <p><%= t(".intro_2") %></p>
+        <%#= image_tag('backgrounds/corrected.jpg', class: "my-4 w-100") %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="l-content l-content--xx l-content--light">
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <%= image_tag('backgrounds/bg_12.jpg', class: "w-100") %>
+    </div>
+    <div class="col-md-8">
+      <div class="container">
+        <div class="my-4">
+          <h4>Dr. Ayla Andrus</h4>
+          <p class="text-muted"><%= t(".intro_1") %></p>
+          <p class="text-muted"><%= t(".intro_2") %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

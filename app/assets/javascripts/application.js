@@ -17,5 +17,5 @@
 //= require turbolinks
 //= require pace/pace
 //= require bootstrap-notify
-//= require summernote
+//= require summernote/summernote-bs4
 //= require_tree .
