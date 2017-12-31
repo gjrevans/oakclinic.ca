@@ -145,6 +145,12 @@
       }
     }
   }
+  &__button {
+    color: $white;
+    border-radius: 0.25rem;
+    padding: 0.1rem 0.6rem;
+    border: 1px solid $white;
+  }
   &--inverse {
     &.m-nav__top {
       background: #FFF;

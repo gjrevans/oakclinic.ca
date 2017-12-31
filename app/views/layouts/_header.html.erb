@@ -1,36 +1,39 @@
 <% safe_id = params[:id] || 0 %>
 <div class="m-nav m-nav__top m-nav__root <%= current_page?(articles_path) ||
-                                             current_page?(edit_user_registration_path) ||
-                                             current_page?(controller: "/articles", action: "new") ||
-                                             current_page?(controller: "/articles", action: "edit", id: safe_id) ?
-                                             'm-nav--inverse' : 'm-nav__transition' %>">
-    <div class="container">
-        <div class="row d-flex justify-content-between align-items-center">
-          <div class="col-12">
-            <div class="d-block">
-                <%= link_to root_path do %>
-                    <h2 class="m-nav__logo"><%= t("brand_long")%></h2>
-                <% end %>
-            </div>
-            <div class="d-block">
-                <ul class="m-nav__list">
-                    <li class="m-nav__link d-none d-sm-flex <%= 'm-nav__link--active' if current_page?(about_path) %>">
-                        <%= link_to t(".about"), about_path %>
-                    </li>
-                    <li class="m-nav__link d-none d-sm-flex <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
-                        <%= link_to t(".naturopathic_medicine"), naturopathic_medicine_path %>
-                    </li>
-                    <li class="m-nav__link d-none d-sm-flex <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
-                        <%= link_to t(".articles"), articles_path %>
-                    </li>
-                    <li class="m-nav__link js-toggle-navigation">
-                        <i class="fa fa-bars fa-fw"></i>
-                    </li>
-                </ul>
-            </div>
-          </div>
-        </div>
+current_page?(edit_user_registration_path) ||
+current_page?(controller: "/articles", action: "new") ||
+current_page?(controller: "/articles", action: "edit", id: safe_id) ?
+'m-nav--inverse' : 'm-nav__transition' %>">
+<div class="container">
+  <div class="row d-flex justify-content-between align-items-center">
+    <div class="col-12">
+      <div class="d-block">
+        <%= link_to root_path do %>
+        <h2 class="m-nav__logo"><%= t("brand_long")%></h2>
+        <% end %>
+      </div>
+      <div class="d-block">
+        <ul class="m-nav__list d-flex align-items-center">
+          <li class="m-nav__link d-none d-sm-flex <%= 'm-nav__link--active' if current_page?(about_path) %>">
+            <%= link_to t(".about"), about_path %>
+          </li>
+          <li class="m-nav__link d-none d-sm-flex <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
+            <%= link_to t(".naturopathic_medicine"), naturopathic_medicine_path %>
+          </li>
+          <li class="m-nav__link d-none d-sm-flex <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
+            <%= link_to t(".articles"), articles_path %>
+          </li>
+          <li class="m-nav__link d-none d-sm-flex <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
+            <%= link_to t(".book_now"), articles_path, class: "m-nav__button" %>
+          </li>
+          <li class="m-nav__link js-toggle-navigation">
+            <i class="fa fa-bars fa-fw"></i>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
+</div>
 </div>
 
 <!-- Hidden Fields to Help With JS Styling -->
