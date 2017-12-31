@@ -91,7 +91,7 @@
 
 .nav__link {
   @extend .transition;
-  color: $transparent-white;
+  color: $white;
   text-decoration: none;
   &:hover,
   &:active,
@@ -153,11 +153,23 @@
   }
   &--inverse {
     &.m-nav__top {
-      background: #FFF;
+      background: #FFF !important;
       border-bottom: 1px solid $border-color;
+    }
+    .m-nav__button {
+      border-radius: 0.25rem;
+      padding: 0.1rem 0.6rem;
+      color: $primary;
+      border: 1px solid $primary;
+      &:hover {
+        color: $white !important;
+        background: $primary;
+      }
     }
     .m-nav__logo {
       color: $primary;
+      padding-top: 1rem;
+      font-size: 1.5rem;
     }
     .m-nav__list {
       .m-nav__link {
