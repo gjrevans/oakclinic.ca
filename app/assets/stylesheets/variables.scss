@@ -17,7 +17,7 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #464c54 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
@@ -44,8 +44,8 @@ $purple:  #6f42c1 !default;
 $pink:    #cf649a !default;
 $red:     #dc3545 !default;
 $orange:  #f16529 !default;
-$yellow:  #e3db1a !default;
-$green:   #319b54 !default;
+$yellow:  #f4d7cb !default;
+$green:   #2f7d49 !default;
 $teal:    #13bbbe !default;
 $cyan:    #00bcd4 !default;
 $violet:  #657bae !default;
@@ -69,9 +69,9 @@ $colors: map-merge((
 
 $primary:       $green !default;
 $secondary:     $gray-600 !default;
-$success:       $yellow !default;
+$success:       $blue !default;
 $info:          $teal !default;
-$warning:       $orange !default;
+$warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
@@ -143,7 +143,7 @@ $sizes: (
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:                $gray-800 !default;
 
 // Links
 //

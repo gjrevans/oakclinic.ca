@@ -14,7 +14,7 @@
             <div class="col-xl-4 col-md-12">
                 <div class="card">
                     <%= image_tag 'backgrounds/corrected.jpg', class: "card-img-top w-100", alt: t("ayla_andrus") %>
-                    <div class="card-block">
+                    <div class="card-body">
                         <h4 class="card-title"><%= t(".about_the_author") %></h4>
                         <p class="card-text text-muted">
                             <%= t('pages.about.s_one_body_four', email: mail_to(t("email_address"), t("email_address"))).gsub(/\n/, '<br/>').html_safe %>

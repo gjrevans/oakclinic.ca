@@ -265,12 +265,33 @@
   }
 }
 
+.m-footer {
+  &__title {
+    @extend .text-uppercase, .text-muted, .mb-3;
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+  &__icon {
+    @extend .mb-3;
+    width: 3.5rem;
+  }
+  .list-inline li {
+    margin: 0 0.75rem;
+  }
+}
+
 /* -- Bootstrap -- */
 .btn {
   @extend .transition;
   font-family: $font-family-sans-serif;
 }
 
+.card {
+  @extend .transition;
+  &-hover:hover {
+    @extend .box-shadow;
+  }
+}
 .card-img-top {
   max-width: 100%;
   max-height: 100%;

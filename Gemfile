@@ -11,8 +11,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'ionicons-rails'
 gem 'modernizr-rails'
-gem "font-awesome-rails"
-gem "animate-rails"
+gem 'font-awesome-rails'
+gem 'wow-rails'
+gem 'animate-rails'
 gem 'tether-rails'
 gem 'pace-rails'
 gem 'mail_form'
@@ -20,7 +21,7 @@ gem 'bootstrap-growl-rails'
 gem 'summernote-rails', '~> 0.8.8.0'
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
-gem "figaro"
+gem 'figaro'
 gem 'gibbon'
 gem 'filestack-rails'
 

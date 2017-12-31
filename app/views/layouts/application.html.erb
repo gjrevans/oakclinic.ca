@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= t("brand_long") %></title>
-    <meta name="author" content="Gordon Evans">
+  <title><%= t("brand_long") %></title>
+  <meta name="author" content="Gordon Evans">
 
-    <meta charset="UTF-8">
-    <meta name="description" content="<%= t("brand_long") %>">
-    <meta name="keywords" content="Dawson Creek Naturopathic Clinic Doctor">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#FFF">
+  <meta charset="UTF-8">
+  <meta name="description" content="<%= t("brand_long") %>">
+  <meta name="keywords" content="Dawson Creek Naturopathic Clinic Doctor">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#FFF">
 
-    <!-- =================
-    FAV AND TOUCH ICONS
-    ====================== -->
-    <%= favicon_link_tag 'favicons/favicon--120x120.png' %>
-    <%= favicon_link_tag 'favicons/favicon--64x64.png' %>
-    <%= favicon_link_tag 'favicons/favicon--32x32.png' %>
-    <%= favicon_link_tag 'favicons/favicon--16x16.png' %>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/assets/favicons/manifest.json">
-    <link rel="mask-icon" href="/assets/favicons/favicon--120x120.png" color="#657BAE">
+  <!-- =================
+  FAV AND TOUCH ICONS
+  ====================== -->
+  <%= favicon_link_tag 'favicons/favicon--120x120.png' %>
+  <%= favicon_link_tag 'favicons/favicon--64x64.png' %>
+  <%= favicon_link_tag 'favicons/favicon--32x32.png' %>
+  <%= favicon_link_tag 'favicons/favicon--16x16.png' %>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicons/manifest.json">
+  <link rel="mask-icon" href="/assets/favicons/favicon--120x120.png" color="#657BAE">
 
-    <!-- =================
-    FACEBOOK OPENGRAPH
-    ====================== -->
-    <meta property="og:url"                content="https://oakclinic.ca">
-    <meta property="og:type"               content="website">
-    <meta property="og:title"              content="Oak Naturopathic Clinic">
-    <meta property="og:description"        content="Providing Dawson Creek and surrounding area with Naturopathic Care">
-    <meta property="og:image"              content="https://s3.amazonaws.com/oakclinic.ca/corrected.jpg">
-    <meta property="og:image:url"          content="https://s3.amazonaws.com/oakclinic.ca/corrected.jpg">
-    <meta property="og:image:secure_url"   content="https://s3.amazonaws.com/oakclinic.ca/corrected.jpg">
+  <!-- =================
+  FACEBOOK OPENGRAPH
+  ====================== -->
+  <meta property="og:url"                content="https://oakclinic.ca">
+  <meta property="og:type"               content="website">
+  <meta property="og:title"              content="Oak Naturopathic Clinic">
+  <meta property="og:description"        content="Providing Dawson Creek and surrounding area with Naturopathic Care">
+  <meta property="og:image"              content="https://s3.amazonaws.com/oakclinic.ca/corrected.jpg">
+  <meta property="og:image:url"          content="https://s3.amazonaws.com/oakclinic.ca/corrected.jpg">
+  <meta property="og:image:secure_url"   content="https://s3.amazonaws.com/oakclinic.ca/corrected.jpg">
 
-    <!-- =================
-    GOOGLE ANALYTICS
-    ====================== -->
-    <% if Rails.env.production? %>
-    <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', '<%= ENV['GOOGLE_ANALYTICS_KEY'] %>', 'auto');
-    </script>
-    <% end %>
+  <!-- =================
+  GOOGLE ANALYTICS
+  ====================== -->
+  <% if Rails.env.production? %>
+  <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '<%= ENV['GOOGLE_ANALYTICS_KEY'] %>', 'auto');
+  </script>
+  <% end %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
 
-    <%= javascript_include_tag :modernizr %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag :modernizr %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
-    <!-- CREATE SAFE ID -->
-    <% safe_id = params[:id] || 0 %>
+  <!-- CREATE SAFE ID -->
+  <% safe_id = params[:id] || 0 %>
 
-    <!-- RENDER CONTENT -->
-    <%= render partial: "layouts/notify", flash: flash %>
-    <%= render partial: "layouts/navigation" %>
-    <%= render partial: "layouts/header" %>
-    <%= render partial: "layouts/modal" %>
-    <%= yield %>
-    <%= render partial: "layouts/footer" if not current_page?(root_path) ||
-                                                current_page?(new_user_session_path) ||
-                                                current_page?(controller: "/articles", action: "new") ||
-                                                current_page?(controller: "/articles", action: "edit", id: safe_id) %>
+  <!-- RENDER CONTENT -->
+  <%= render partial: "layouts/notify", flash: flash %>
+  <%= render partial: "layouts/navigation" %>
+  <%= render partial: "layouts/header" %>
+  <%= render partial: "layouts/modal" %>
+  <%= yield %>
+  <%= render partial: "layouts/footer" if current_page?(root_path) ||
+  current_page?(new_user_session_path) ||
+  current_page?(controller: "/articles", action: "new") ||
+  current_page?(controller: "/articles", action: "edit", id: safe_id) %>
 
-    <!-- =================
-    JAVASCRIPT
-    ====================== -->
-    <%= filestack_js_include_tag %>
+  <!-- =================
+  JAVASCRIPT
+  ====================== -->
+  <%= filestack_js_include_tag %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.5.0/feather.min.js"></script>
 </body>
 </html>
