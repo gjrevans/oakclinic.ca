@@ -1,46 +1,40 @@
-<section class="l-content l-content--light l-content--lg bt">
+<section class="l-content l-content--light l-content--lg">
   <div class="container">
     <div class="row">
       <!-- Logit -->
       <div class="m-footer col-md-3">
         <div class="m-footer__title"><%= t("brand_long")%></div>
         <ul class="list-unstyled lh-3">
-          <li>
-            <%= link_to about_path do %>
-            <%= t("layouts.header.about") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to t("layouts.header.naturopathic_medicine"), naturopathic_medicine_path %>
-          </li>
-        </ul>
-
-        <ul class="list-unstyled lh-3">
-          <li>
-            <span>&copy; <%= t("brand_long") %> 2017</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div class="m-footer col-md-3">
-        <div class="m-footer__title"></div>
-        <ul class="list-unstyled lh-3">
-
+          <li><%= link_to t("layouts.header.products"), products_path %></li>
+          <li><%= link_to t("layouts.header.services"), contact_path %></li>
+          <li><%= link_to t("layouts.header.news"), articles_path %></li>
+          <li><%= link_to t("layouts.header.contact"), contact_path %></li>
+          <li><%= link_to t("layouts.header.faq"), faq_path %></li>
         </ul>
       </div>
 
       <!-- Features -->
-      <div class="m-footer col-md-3">
+      <div class="m-footer col-md-4">
         <div class="m-footer__title"><%= t("Clinic Location") %></div>
         <address class="mb-4">
-          Unit 105, 816 103 Avenue<br>
-          Dawson Creek, BC V1G 2G1
+          <%= t("street_address_1") %>
+          <br>
+          <%= t("street_address_2") %>
+          <br>
+          <%= link_to t("get_directions"), t("location_link") %></a>
         </address>
         <div class="m-footer__title"><%= t("Contact Us") %></div>
         <ul class="list-unstyled lh-3">
-          <li><a href="tel:18885022361">1 (888) 502 2361</a></li>
+          <li><a href="tel:3067178679">1 (306) 717 8679</a></li>
           <li><a href="hello@oakclinic.ca">hello@oakclinic.ca</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="m-footer col-md-2">
+        <div class="m-footer__title"></div>
+        <ul class="list-unstyled lh-3">
+
         </ul>
       </div>
 
@@ -63,6 +57,12 @@
             <%= link_to t("layouts.header.sign_in"),new_user_session_path %>
           </li>
           <% end %>
+        </ul>
+
+        <ul class="list-unstyled lh-3">
+          <li>
+            <span>&copy; <%= t("brand_long") %> 2017</span>
+          </li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,22 @@
+<%= render partial: "layouts/topper", locals: {type: "contact", title: t(".header_title")} %>
+
+<!-- Location -->
+<section class="l-content l-content--white l-content--bordered l-content--lg">
+  <div class="container">
+    <div class="row top">
+      <div class="col-md-4">
+        <h5><%= t("address") %></h5>
+        <%= t("street_address_1") %>
+        <br>
+        <%= t("street_address_2") %>
+        <h5 class="mt-3"><%= t("contact") %></h5>
+        <a href="tel:<%= t("phone_number") %>"><%= t("phone_number") %></a><br>
+        <a href="mailto:<%= t("email_address") %>"><%= t("email_address") %></a>
+      </div>
+
+      <div class="col-md-8 mt-4 mt-sm-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.106295289729!2d-120.2259504435285!3d55.75665568288944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43ddd3a93966ee6b%3A0xecdc8c087748eb51!2sDawson+Creek+Medical+Clinic!5e0!3m2!1sen!2sca!4v1514757152689" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>

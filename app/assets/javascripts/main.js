@@ -16,28 +16,6 @@ $(document).on('turbolinks:load', function() {
     $('.l-navigation').toggleClass('d-flex');
   });
 
-  // Minipulate navigation style based on position
-  $(window).scroll(function(){
-    var scroll = $(window).scrollTop();
-    if (scroll <= 100) {
-      $(".m-nav").removeClass("m-nav--inverse");
-    } else if (scroll >= 100) {
-      $(".m-nav").addClass("m-nav--inverse");
-    }
-  });
-
-  // Show navigation on scroll
-  var lastScrollTop = 0;
-  $(window).scroll(function(event){
-    var st = $(this).scrollTop();
-    if (st > lastScrollTop){
-      $(".nav__top").css("top", "-200px");
-    } else {
-      $(".nav__top").css("top", "0px");
-    }
-    lastScrollTop = st;
-  });
-
   // Smooth Scrolling
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {

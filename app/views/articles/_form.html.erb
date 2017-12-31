@@ -36,11 +36,7 @@
     <div class="col-md-12">
         <%= f.label :image %>
         <div class="m-banner m-banner--article js-image-preview mb-3">
-            <div class="m-header">
-                <div class="m-header__content">
-                    <h1 class="m-header__title--md"><%= @article.title %></h1>
-                </div>
-            </div>
+          <h1 class="text-white"><%= @article.title %></h1>
         </div>
     </div>
 </div>
@@ -49,7 +45,7 @@
 <div class="row">
     <div class="col-md-4 offset-md-4 text-center">
         <div class="form-group">
-            <%= f.filepicker_field :image, mimetypes:'image/*', onchange: 'onPhotoUpload(event)', required: true  %>
+            <%= f.filestack_field :image, mimetypes:'image/*', onchange: 'onPhotoUpload(event)', required: true  %>
         </div>
     </div>
 </div>

@@ -19,7 +19,7 @@
   <%= favicon_link_tag 'favicons/favicon--16x16.png' %>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/assets/favicons/manifest.json">
-  <link rel="mask-icon" href="/assets/favicons/favicon--120x120.png" color="#657BAE">
+  <link rel="mask-icon" href="/assets/favicons/favicon--120x120.png">
 
   <!-- =================
   FACEBOOK OPENGRAPH
@@ -62,10 +62,7 @@
   <%= render partial: "layouts/header" %>
   <%= render partial: "layouts/modal" %>
   <%= yield %>
-  <%= render partial: "layouts/footer" if current_page?(root_path) ||
-  current_page?(new_user_session_path) ||
-  current_page?(controller: "/articles", action: "new") ||
-  current_page?(controller: "/articles", action: "edit", id: safe_id) %>
+  <%= render partial: "layouts/footer" %>
 
   <!-- =================
   JAVASCRIPT

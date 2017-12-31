@@ -24,11 +24,16 @@
   }
   &__link a {
     @extend .transition;
-    @extend .nav__link;
+    color: $white;
+    text-decoration: none;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: $primary;
+    }
   }
-  &__close {
-    @extend .transition;
-    @extend .nav__link;
+  &--close {
     position: absolute;
     top: 2em;
     right: 1em;
@@ -50,22 +55,6 @@
 
 .l-content {
   padding: 1.5rem 0;
-  &--overlay {
-    margin-top: -9rem;
-  }
-  &--bordered {
-    border-bottom: 1px solid $border-color;
-  }
-  @each $size, $value in $content-spacing {
-    &--#{$size} {
-      padding: $value 0 ;
-    }
-  }
-  @each $color, $value in $theme-colors {
-    &--#{$color} {
-      background: $value;
-    }
-  }
   &__title {
     margin-bottom: 1.5rem;
   }
@@ -85,101 +74,81 @@
     @extend .box-shadow;
     width: 80%;
   }
+  &--overlay {
+    margin-top: -9rem;
+  }
+  &--bordered {
+    border-bottom: 1px solid $border-color;
+  }
+  @each $size, $value in $content-spacing {
+    &--#{$size} {
+      padding: $value 0 ;
+    }
+  }
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      background: $value;
+    }
+  }
 }
 
 /* Modules */
-
-.nav__link {
-  @extend .transition;
-  color: $white;
-  text-decoration: none;
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
-    color: $primary;
-  }
-}
-
 .m-nav {
-  padding: 1rem 0;
-  &.m-nav__top {
-    position: fixed;
+  @extend .transition;
+  padding: 1.5rem 0;
+  &__top {
     top: 0;
-    z-index: $zindex-navbar;
-    background: transparent;
     width: 100%;
+    position: fixed;
+    z-index: $zindex-navbar;
   }
-  &.m-nav__root {
-    -webkit-transition: all .8s;
-    transition: all .8s;
-  }
-  .m-nav__logo {
+  &__logo {
     @extend .logo__text;
     @extend .transition;
-    color: #FFF;
-    float: left;
-    padding-left: 0;
-    font-size: 2rem;
-    padding-top: 0.75rem;
-  }
-  .m-nav__list {
-    float: right;
-    padding-left: 0;
-    padding-top: 1rem;
-    position: relative;
-    .m-nav__link {
-      display: block;
-      float: left;
-      a, i {
-        @extend .cursor;
-        @extend .transition;
-        @extend .nav__link;
-        margin: 0 0 0 2em;
-      }
-      &:first-child > a {
-        margin-left: 0;
-      }
-      &--active a{
-        color: #FFF;
-      }
-    }
-  }
-  &__button {
     color: $white;
-    border-radius: 0.25rem;
-    padding: 0.1rem 0.6rem;
-    border: 1px solid $white;
+    font-size: 2rem;
   }
-  &--inverse {
-    &.m-nav__top {
-      background: #FFF !important;
-      border-bottom: 1px solid $border-color;
+  &--transparent {
+    .m-nav__top {
+      background: transparent;
+    }
+    a, i {
+      @extend .cursor;
+      @extend .transition;
+      text-decoration: none;
+      color: rgba($white, 0.75);
+      &:hover,
+      &:active,
+      &.active {
+        color: $white;
+      }
     }
     .m-nav__button {
-      border-radius: 0.25rem;
-      padding: 0.1rem 0.6rem;
-      color: $primary;
-      border: 1px solid $primary;
-      &:hover {
-        color: $white !important;
-        background: $primary;
-      }
+      @extend .btn, .btn-outline-white;
+    }
+  }
+  &--white {
+    &.m-nav__top {
+      background: $white;
+      border-bottom: 1px solid $border-color;
     }
     .m-nav__logo {
       color: $primary;
-      padding-top: 1rem;
       font-size: 1.5rem;
     }
-    .m-nav__list {
-      .m-nav__link {
-        a, i {
-          color: $primary;
-        }
-        &--active a{
-          color: $primary;
-        }
+    a, i {
+      @extend .cursor;
+      @extend .transition;
+      text-decoration: none;
+      color: rgba($primary, 0.75);
+      &:hover,
+      &:active,
+      &.active {
+        color: $primary;
       }
+    }
+    .m-nav__button {
+      @extend .btn, .btn-primary;
     }
   }
 }
@@ -192,14 +161,20 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  &--about {
-    @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/oak.jpg') ;
+  &--contact {
+    @include banner__image(34rem, "backgrounds/bg_3.jpg") ;
   }
-  &--medicine {
-    @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/dandi.jpg') ;
+  &--products {
+    @include banner__image(34rem, "backgrounds/bg_4.jpg") ;
+  }
+  &--services {
+    @include banner__image(34rem, "backgrounds/bg_10.jpg") ;
+  }
+  &--faq {
+    @include banner__image(34rem, "backgrounds/bg_13.jpg") ;
   }
   &--article {
-    @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/dandi.jpg') ;
+    @include banner__image(34rem, "backgrounds/bg_1.jpg") ;
   }
 }
 
@@ -225,24 +200,6 @@
     list-style: none;
     li {
       @extend .d-flex, .justify-content-between;
-    }
-  }
-}
-
-.m-header {
-  color: #FFF;
-  text-align: center;
-  max-width: 30rem;
-  &__title {
-    @extend .logo__text;
-    font-size: 4rem;
-    &--md {
-      @extend .logo__text;
-      font-size: 3rem;
-    }
-    &--sm {
-      @extend .logo__text;
-      font-size: 2rem;
     }
   }
 }
