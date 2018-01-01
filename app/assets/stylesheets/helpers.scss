@@ -78,6 +78,10 @@
 .lh-2 { line-height: 150%; }
 .lh-3 { line-height: 200%; }
 
+.zi-0 { z-index: 0 }
+.zi-1 { z-index: 1 }
+.zi-2 { z-index: 2 }
+
 @mixin banner__image($height, $url){
   height: $height;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), image_url($url);
