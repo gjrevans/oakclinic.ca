@@ -48,10 +48,10 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 text-center">
-        <h4 class="text-primary">About Us</h4>
-        <p><%= t(".intro_1") %></p>
+        <h4 class="text-primary"><%= t(".intro_title") %></h4>
+        <p><%= t(".intro_1", products: link_to(t(".products"), products_path), services: link_to(t(".services"), services_path)).html_safe %></p>
         <p><%= t(".intro_2") %></p>
-        <a href="mailto:hello@oakclinic.ca" class="btn btn-sm btn-outline-primary px-4">Contact Us</a>
+        <a href="mailto:hello@oakclinic.ca" class="btn btn-sm btn-outline-primary px-4"><%= t(".contact_us") %></a>
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@
 </section>
 
 
-<section class="l-content l-content--xx white">
+<section class="l-content l-content--xx l-content--white l-content--bordered">
   <div class="row no-gutters align-items-center">
     <div class="col-md-4">
       <%= image_tag('backgrounds/bg_12.jpg', class: "w-100") %>
@@ -101,9 +101,9 @@
     <div class="col-md-8">
       <div class="container">
         <div class="my-4 px-5">
-          <h4>Dr. Ayla Andrus</h4>
-          <p class="text-muted"><%= t(".intro_1") %></p>
-          <p class="text-muted"><%= t(".intro_2") %></p>
+          <h4><%= t(".about_ayla_title") %></h4>
+          <p class="text-muted"><%= t(".about_ayla_1") %></p>
+          <p class="text-muted"><%= t(".about_ayla_2") %></p>
         </div>
       </div>
     </div>

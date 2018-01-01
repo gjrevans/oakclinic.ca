@@ -5,8 +5,8 @@
       <div class="m-footer col-md-3">
         <div class="m-footer__title"><%= t("brand_long")%></div>
         <ul class="list-unstyled lh-3">
-          <li><%= link_to t("layouts.header.products"), products_path %></li>
           <li><%= link_to t("layouts.header.services"), contact_path %></li>
+          <li><%= link_to t("layouts.header.products"), products_path %></li>
           <li><%= link_to t("layouts.header.news"), articles_path %></li>
           <li><%= link_to t("layouts.header.contact"), contact_path %></li>
           <li><%= link_to t("layouts.header.faq"), faq_path %></li>
@@ -21,7 +21,7 @@
           <br>
           <%= t("street_address_2") %>
           <br>
-          <%= link_to t("get_directions"), t("location_link") %></a>
+          <%= link_to t("get_directions"), t("location_link"), target: "_blank" %></a>
         </address>
         <div class="m-footer__title"><%= t("Contact Us") %></div>
         <ul class="list-unstyled lh-3">

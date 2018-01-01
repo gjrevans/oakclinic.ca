@@ -10,10 +10,12 @@ class PagesController < ApplicationController
     @treatments = JSON.parse(File.read('public/json/treatments.json'))
   end
 
-  def products
+  def services
+    @services = JSON.parse(File.read('public/json/services.json'))
   end
 
-  def services
+  def products
+    @logos = JSON.parse(File.read('public/json/logos.json'))
   end
 
   def contact
