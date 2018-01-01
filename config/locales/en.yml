@@ -53,15 +53,15 @@ en:
       mailer_modal_title: "Oak Clinic Mailing List"
       mailer_modal_body: "Register for Oak Clinic's mailing list to obtain priority booking, be notified of upcoming events, and to stay informed of our opening date."
   articles:
-    show:
-      recent_articles: "Recent Articles"
-      call_to_action: "Register today for priority booking and to stay informed regarding our clinic opening date."
-      call_to_action_button: "Register Today"
     index:
-      header_title: "News"
+      header_title: "News & Events"
       about_the_author: "About the Author"
       about_the_author_body: "Ayla Andrus was born and raised in Dawson Creek. She obtained her Bachelor of Science, in Anatomy and Cell Biology, from the University of Saskatchewan and then went on to complete her Doctor of Naturopathy Degree at the Canadian College of Naturopathic Medicine."
       call_to_action: "Unfortunately, we have not yet released any articles, but are excited to do so very soon. If you'd like to stay up to date with the Oak Clinic, register with us today."
+      call_to_action_button: "Register Today"
+    show:
+      recent_articles: "Recent Articles"
+      call_to_action: "Register today for priority booking and to stay informed regarding our clinic opening date."
       call_to_action_button: "Register Today"
   pages:
     index:

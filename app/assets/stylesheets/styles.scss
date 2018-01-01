@@ -166,19 +166,22 @@
   background-position: center;
   background-repeat: no-repeat;
   &--contact {
-    @include banner__image(34rem, "backgrounds/bg_3.jpg") ;
+    @include banner__image(30rem, "backgrounds/bg_3.jpg") ;
   }
   &--products {
-    @include banner__image(34rem, "backgrounds/bg_4.jpg") ;
+    @include banner__image(30rem, "backgrounds/bg_15.jpg") ;
   }
   &--services {
-    @include banner__image(34rem, "backgrounds/bg_10.jpg") ;
-  }
-  &--faq {
-    @include banner__image(34rem, "backgrounds/bg_13.jpg") ;
+    @include banner__image(30rem, "backgrounds/bg_14.jpg") ;
   }
   &--article {
-    @include banner__image(34rem, "backgrounds/bg_1.jpg") ;
+    @include banner__image(30rem, "backgrounds/bg_7.jpg") ;
+  }
+  &--faq-1 {
+    @include banner__image(30rem, "backgrounds/bg_13.jpg") ;
+  }
+  &--faq-2 {
+    @include banner__image(26rem, "backgrounds/bg_4.jpg") ;
   }
 }
 
