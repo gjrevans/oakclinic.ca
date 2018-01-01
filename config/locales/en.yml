@@ -42,6 +42,9 @@ en:
       new_article: "New Article"
       sign_in: "Sign In"
       sign_out: "Sign Out"
+    footer:
+      book_appointment: "Book an Appointment"
+      book_now_cta: "Ready to schedule an appointment?"
     mailing_list:
       title: "Join our mailing list"
       body: "Oak Clinic sends infrequent, informationl news letters to keep you updated on exciting industry trends and upcoming Oak Clinic events and talks."
