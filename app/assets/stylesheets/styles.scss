@@ -48,9 +48,11 @@
   justify-content: center;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image_url("backgrounds/bg_2.jpg");
+  @include media-breakpoint-down(sm) {
+    height: 100vh;
+  }
 }
 
 .l-content {
@@ -75,7 +77,9 @@
     width: 80%;
   }
   &--overlay {
-    margin-top: -9rem;
+    @include media-breakpoint-up(sm) {
+      margin-top: -9rem;
+    }
   }
   &--bordered {
     border-bottom: 1px solid $border-color;
@@ -104,7 +108,7 @@
   }
   &__logo {
     @extend .logo__text;
-    @extend .transition;
+    transition: color 0.25s, font-size 0.25s;
     color: $white;
     font-size: 2rem;
   }
@@ -200,6 +204,27 @@
     list-style: none;
     li {
       @extend .d-flex, .justify-content-between;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 1rem;
+    color: $gray-700;
+    box-shadow: none;
+    background: $white;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    .text-white-muted {
+      color: $gray-600;
+    }
+    .btn {
+      display: none;
+    }
+    &__section {
+      padding-bottom: 2rem;
+      &:not(:last-child) {
+        border-bottom: 1px solid $border-color;
+      }
     }
   }
 }
