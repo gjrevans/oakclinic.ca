@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def index
+    @articles = Article.where(status: :published).order("RANDOM()").limit(3)
   end
 
   def about

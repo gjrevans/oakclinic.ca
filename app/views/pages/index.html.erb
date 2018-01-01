@@ -97,7 +97,7 @@
 </section>
 
 
-<section class="l-content l-content--xx l-content--white l-content--bordered">
+<section class="l-content l-content--xx l-content--white">
   <div class="row no-gutters align-items-center">
     <div class="col-md-4">
       <%= image_tag('backgrounds/bg_12.jpg', class: "w-100") %>
@@ -113,3 +113,9 @@
     </div>
   </div>
 </section>
+
+<!-- Add Mailing List -->
+<%= render partial: "layouts/mailing_list" %>
+
+<!-- Add Recent Articles -->
+<%= render partial: "articles/recent_articles" %>

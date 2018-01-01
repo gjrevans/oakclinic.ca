@@ -230,7 +230,6 @@
 }
 
 .m-article {
-  @extend .box-shadow;
   margin-bottom: 1.5rem;
   position: relative;
   display: flex;
@@ -263,6 +262,10 @@
     @extend .mr-3;
     border: 1px solid $border-color;
     width: 2.5rem;
+  }
+  &:hover {
+    @extend .transition;
+    @extend .box-shadow;
   }
 }
 

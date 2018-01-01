@@ -31,8 +31,10 @@ $(document).on('turbolinks:load', function() {
       }
     });
   });
-
 });
+
+// Initialize Wow JS
+// new WOW().init();
 
 /**
 *  JS SVG Image Replace

@@ -54,7 +54,7 @@ en:
       mailer_modal_body: "Register for Oak Clinic's mailing list to obtain priority booking, be notified of upcoming events, and to stay informed of our opening date."
   articles:
     show:
-      related_articles: "Related Articles"
+      recent_articles: "Recent Articles"
       call_to_action: "Register today for priority booking and to stay informed regarding our clinic opening date."
       call_to_action_button: "Register Today"
     index:

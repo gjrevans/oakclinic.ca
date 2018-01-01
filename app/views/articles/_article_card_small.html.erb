@@ -1,27 +1,27 @@
 <% @articles.each do |article| %>
-    <div class="col-md-4">
-        <div class="m-article mb-0">
-            <div class="m-article__block">
-                <div class="d-flex align-items-center">
-                    <%= image_tag article.user.image, class: "m-article__user-image rounded-circle", alt: article.user.first_name %>
-                    <div class="m-article__user-meta">
-                        <h6 class="m-article__user-name mb-0"><%= article.user.first_name %> <%= article.user.last_name %></h6>
-                        <span class="text-muted"><%= article.created_at.to_formatted_s(:long) %></span>
-                    </div>
-                </div>
-                <%= link_to article_path(article), class: "m-article__link" do%>
-                    <%= image_tag article.image, class: "m-article__image", alt: article.title %>
-                    <h4 class="m-article__title"><%= article.title %></h4>
-                    <p class="m-article__body text-muted"><%= ActionView::Base.full_sanitizer.sanitize(article.body.truncate(200)) %></p>
-                <% end %>
-
-                <!-- Link to Edit -->
-                <% if user_signed_in? %>
-                <div class="text-center">
-                    <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-primary" %>
-                </div>
-                <% end %>
-            </div>
+<div class="col-sm-6 col-lg-4">
+  <div class="m-article mb-0">
+    <div class="m-article__block">
+      <div class="d-flex align-items-center">
+        <%= image_tag article.user.image, class: "m-article__user-image rounded-circle", alt: article.user.first_name %>
+        <div class="m-article__user-meta">
+          <h6 class="m-article__user-name mb-0"><%= article.user.first_name %> <%= article.user.last_name %></h6>
+          <span class="text-muted"><%= article.created_at.to_formatted_s(:long) %></span>
         </div>
+      </div>
+      <%= link_to article_path(article), class: "m-article__link" do%>
+      <%= image_tag article.image, class: "m-article__image", alt: article.title %>
+      <h4 class="m-article__title"><%= article.title %></h4>
+      <p class="m-article__body text-muted"><%= ActionView::Base.full_sanitizer.sanitize(article.body.truncate(200)) %></p>
+      <% end %>
+
+      <!-- Link to Edit -->
+      <% if user_signed_in? %>
+      <div class="text-center">
+        <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-primary" %>
+      </div>
+      <% end %>
     </div>
+  </div>
+</div>
 <% end %>
