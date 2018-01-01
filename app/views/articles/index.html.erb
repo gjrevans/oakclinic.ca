@@ -1,27 +1,28 @@
-<section class="l-content l-content--white l-content--bordered l-content__offset">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8 col-md-12">
-                <% if @articles.length > 0 %>
-                <%= render partial: "article_card" %>
-                <% else %>
-                <div class="l-content__outline mb-3">
-                    <p><%= t('.call_to_action') %></p>
-                    <%= button_tag t('.call_to_action_button'), class: "btn btn-primary px-5", data: {toggle:"modal", target:"#mailingList"}, type: "button" %>
-                </div>
-                <% end %>
-            </div>
-            <div class="col-xl-4 col-md-12">
-                <div class="card">
-                    <%= image_tag 'backgrounds/corrected.jpg', class: "card-img-top w-100", alt: t("ayla_andrus") %>
-                    <div class="card-block">
-                        <h4 class="card-title"><%= t(".about_the_author") %></h4>
-                        <p class="card-text text-muted">
-                            <%= t('pages.about.s_one_body_four', email: mail_to(t("email_address"), t("email_address"))).gsub(/\n/, '<br/>').html_safe %>
-                        </p>
-                    </div>
-                </div>
-            </div>
+<%= render partial: "layouts/topper", locals: {type: "article", title: t(".header_title")} %>
+<section class="l-content l-content--white l-content--bordered l-content--md">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-sm-12">
+        <% if @articles.length > 0 %>
+        <%= render partial: "article_card" %>
+        <% else %>
+        <div class="l-content__outline mb-3">
+          <p><%= t('.call_to_action') %></p>
+          <%= button_tag t('.call_to_action_button'), class: "btn btn-primary px-5", data: {toggle:"modal", target:"#mailingList"}, type: "button" %>
         </div>
+        <% end %>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <div class="card">
+          <%= image_tag 'backgrounds/bg_9.jpg', class: "card-img-top w-100", alt: t("ayla_andrus") %>
+          <div class="card-body">
+            <h4 class="card-title"><%= t(".about_the_author") %></h4>
+            <p class="card-text text-muted">
+              <%= t(".about_the_author_body", email: mail_to(t("email_address"), t("email_address"))).gsub(/\n/, '<br/>').html_safe %>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

@@ -13,9 +13,11 @@
 //= require jquery
 //= require tether
 //= require jquery_ujs
+//= require popper
 //= require bootstrap
 //= require turbolinks
 //= require pace/pace
 //= require bootstrap-notify
-//= require summernote
+//= require summernote/summernote-bs4
+//= require wow
 //= require_tree .

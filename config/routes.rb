@@ -5,8 +5,10 @@ Rails.application.routes.draw do
 
     # Page Routes
     root to: 'pages#index'
-    get 'about', to: 'pages#about', as: 'about'
-    get 'naturopathic_medicine', to: 'pages#naturopathic_medicine', as: 'naturopathic_medicine'
+    get 'contact', to: 'pages#contact', as: 'contact'
+    get 'products', to: 'pages#products', as: 'products'
+    get 'services', to: 'pages#services', as: 'services'
+    get 'faq', to: 'pages#faq', as: 'faq'
 
     # Article Routes
     resources :articles
