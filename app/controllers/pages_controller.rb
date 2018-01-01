@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def index
-    @articles = Article.where(status: :published).order("RANDOM()").limit(3)
+    @articles = Article.where(status: :published).order("created_at DESC").limit(3)
+    @hours = JSON.parse(File.read('public/json/hours.json'))
   end
 
   def about
@@ -20,5 +21,6 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @hours = JSON.parse(File.read('public/json/hours.json'))
   end
 end

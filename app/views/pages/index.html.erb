@@ -35,11 +35,12 @@
           <h5>Hours of Operation</h5>
           <div class="text-white-muted">
             <ul>
-              <li><span>Monday:</span>9am - 5pm</li>
-              <li><span>Tuesday:</span> 9am - 5pm</li>
-              <li><span>Wednesday:</span>9am - 5pm</li>
-              <li><span>Thursday:</span>9am - 5pm</li>
-              <li><span>Friday:</span>9am - 5pm</li>
+              <% @hours.each do |day| %>
+              <li>
+                <span class="text-capitalize"><%= day["name"]%></span>
+                <%= day["hours"] %>
+              </li>
+              <% end %>
             </ul>
           </div>
         </div>

@@ -36,6 +36,14 @@ $(document).on('turbolinks:load', function() {
 // Initialize Wow JS
 // new WOW().init();
 
+// Handle Filepicker Uploads
+function onPhotoUpload(data) {
+  url = data.filesUploaded[0].url;
+  $(".js-image-url").val(url);
+  $(".js-image-preview").attr('src', url);
+  $('.js-image-background').css("background-image", "url(" + url + ")");
+}
+
 /**
 *  JS SVG Image Replace
 *  Replace all SVG images with inline SVGs

@@ -284,6 +284,7 @@ DEPENDENCIES
   modernizr-rails
   pace-rails
   pg
+  popper_js (~> 1.12.9)
   puma (~> 3.0)
   rack-livereload
   rails (~> 5.0.0, >= 5.0.0.1)

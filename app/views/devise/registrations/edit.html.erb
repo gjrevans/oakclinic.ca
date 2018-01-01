@@ -1,66 +1,71 @@
 <section class="l-content l-content--white l-content__offset">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="logo__text text-primary text-center"><%= t("brand_long")%></h2>
-                        <hr>
-                        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-                        <%= devise_error_messages! %>
-                        <div class="form-group text-center">
-                            <% image_url = @user.try(:image).present? ? @user.try(:image) : "https://www.neto.com.au/assets/images/default_product.gif" %>
-                            <%= image_tag image_url, class: "js-image-preview rounded-circle w-25 mb-3", alt: "User Image" %><br>
-                            <%= f.filestack_field :image, mimetypes: "image/*", pickerOptions: {"fp-crop-ratio": "4/4", "fp-crop-min": "400, 400", "fp-crop-max": "1200, 1200"}, onchange: "onPhotoUpload(event)", required: true  %>
-                        </div>
-                        <div class="form-group">
-                            <%= f.label :first_name %>
-                            <%= f.text_field :first_name, class: "form-control" %>
-                        </div>
-                        <div class="form-group">
-                            <%= f.label :last_name %>
-                            <%= f.text_field :last_name, class: "form-control" %>
-                        </div>
-                        <div class="form-group">
-                            <%= f.label :email %>
-                            <%= f.email_field :email, class: "form-control", disabled: true %>
-                        </div>
-                        <hr>
-                        <div class="form-group">
-                            <%= f.label :password %>
-                            <%= f.password_field :password, class: "form-control", autocomplete: "off" %>
-                            <p class="form-text text-muted">
-                                <small><% if @minimum_password_length %>Your password must at least <%= @minimum_password_length %> characters long.<% end %> Leave this field blank if you don't need to change it.</small>
-                            </p>
-                        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="logo__text text-primary text-center"><%= t("brand_long")%></h2>
+            <hr>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="form-group text-center">
+              <% image_url = @user.try(:image).present? ? @user.try(:image) : "https://www.neto.com.au/assets/images/default_product.gif" %>
+              <%= image_tag image_url, class: "js-image-preview rounded-circle w-25 mb-3", alt: "User Image" %><br>
 
-                        <div class="form-group">
-                            <%= f.label :password_confirmation %>
-                            <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "off" %>
-                        </div>
-
-                        <hr>
-                        <div class="form-group">
-                            <%= f.label :current_password %>
-                            <%= f.password_field :current_password, class: "form-control", autocomplete: "off" %>
-                            <p class="form-text text-muted">
-                                <small>We need your current password to make changes to your profile.</small>
-                            </p>
-                        </div>
-
-                        <div class="form-group">
-                            <%= f.submit "Update", class: "btn btn-primary btn-block" %>
-                        </div>
-                        <% end %>
-                    </div>
-                </div>
+              <%= filestack_picker_element t(".upload_an_image"), "onPhotoUpload",
+              mimetypes: "image/*",
+              pickerOptions: {transformations: {crop: {aspectRatio: 1, force: true}}, imageMin: [400, 400], imageMax: [1200, 1200]},
+              class: "btn btn-primary" %>
+              <%= f.text_field :image, class: "js-image-url", hidden: true, required: true %>
             </div>
-        </div>
-    </div>
-</section>
+            <div class="form-group">
+              <%= f.label :first_name %>
+              <%= f.text_field :first_name, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :last_name %>
+              <%= f.text_field :last_name, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, class: "form-control", disabled: true %>
+            </div>
+            <hr>
+            <div class="collapse mt-3" id="changePassword">
+              <div class="form-group">
+                <label for="password"><%= t(".new_password")%></label>
+                <%= f.password_field :password, class: "form-control", autocomplete: "off" %>
+                <p class="form-text text-muted">
+                  <small><% if @minimum_password_length %>Your password must at least <%= @minimum_password_length %> characters long.<% end %> Leave this field blank if you don't need to change it.</small>
+                </p>
+              </div>
 
-<script type="text/javascript">
-function onPhotoUpload(event) {
-    $('.js-image-preview').attr('src', event.fpfile.url);
-}
-</script>
+              <div class="form-group">
+                <label for="password_confirmation"><%= t(".confirm_new_password")%></label>
+                <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "off" %>
+              </div>
+            </div>
+            <div class="text-center ">
+              <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#changePassword" aria-expanded="false" aria-controls="changePassword">
+                <%= t(".change_password") %>
+              </button>
+            </div>
+            <hr>
+            <div class="form-group">
+              <%= f.label :current_password %>
+              <%= f.password_field :current_password, class: "form-control", autocomplete: "off" %>
+              <p class="form-text text-muted">
+                <small>We need your current password to make changes to your profile.</small>
+              </p>
+            </div>
+
+            <div class="form-group">
+              <%= f.submit "Update", class: "btn btn-primary btn-block" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
