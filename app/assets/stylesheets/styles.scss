@@ -77,7 +77,7 @@
     width: 80%;
   }
   &--overlay {
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       margin-top: -9rem;
     }
   }

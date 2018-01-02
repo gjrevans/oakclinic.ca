@@ -10,9 +10,9 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
         <h2 class="m-nav__logo mb-0"><%= t("brand_long")%></h2>
         <% end %>
       </div>
-      <div class="d-block">
+      <div class="d-none d-md-block">
         <ul class="list-unstyled mb-0 d-flex align-items-center">
-          <li class="mr-4 d-none d-sm-flex">
+          <li class="mr-4">
             <%= link_to t(".services"), services_path, class: "#{'active' if current_page?(services_path)}" %>
           </li>
           <li class="mr-4 d-none d-sm-flex">
@@ -30,7 +30,11 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
           <li class="mr-4 d-none d-sm-flex">
             <%= link_to t(".book_now"), articles_path, class: "m-nav__button" %>
           </li>
-          <li class="js-toggle-navigation d-sm-none">
+        </ul>
+      </div>
+      <div class="d-md-none">
+        <ul class="list-unstyled mb-0 d-flex align-items-center">
+          <li class="js-toggle-navigation">
             <i class="fa fa-bars fa-fw"></i>
           </li>
         </ul>
@@ -40,42 +44,8 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
 </div>
 </div>
 
-<!-- Hidden Fields to Help With JS Styling -->
-<span class="d-none text-dark"></span>
-<span class="d-none text-muted"></span>
-<span class="d-none text-primary"></span>
-<span class="d-none text-info"></span>
-<span class="d-none text-success"></span>
-<span class="d-none text-warning"></span>
-<span class="d-none text-danger"></span>
-
 <script type="text/javascript">
 $(document).ready(function() {
-  // Get colors from the UI
-  function getColor(color) {
-    return color.slice(4, color.length - 1);
-  }
-
-  window.BRAND_COLORS = {
-    dark:    $(".text-dark").css("color"),
-    muted:   $(".text-muted").css("color"),
-    primary: $(".text-primary").css("color"),
-    info:    $(".text-info").css("color"),
-    success: $(".text-success").css("color"),
-    warning: $(".text-warning").css("color"),
-    danger:  $(".text-danger").css("color")
-  };
-
-  window.BRAND_COLOR_STRINGS = {
-    dark:    getColor(window.BRAND_COLORS.dark),
-    muted:   getColor(window.BRAND_COLORS.muted),
-    primary: getColor(window.BRAND_COLORS.primary),
-    info:    getColor(window.BRAND_COLORS.info),
-    success: getColor(window.BRAND_COLORS.success),
-    warning: getColor(window.BRAND_COLORS.warning),
-    danger:  getColor(window.BRAND_COLORS.danger)
-  };
-
   // Minipulate navigation style based on position
   <% unless current_page?(edit_user_registration_path) ||
   current_page?(controller: "/articles", action: "new") ||
