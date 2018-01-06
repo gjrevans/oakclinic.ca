@@ -55,6 +55,7 @@ en:
   articles:
     index:
       header_title: "News & Events"
+      header_body: "Lorem Khaled Ipsum is a major key to success."
       about_the_author: "About the Author"
       about_the_author_body: "Ayla Andrus was born and raised in Dawson Creek. She obtained her Bachelor of Science, in Anatomy and Cell Biology, from the University of Saskatchewan and then went on to complete her Doctor of Naturopathy Degree at the Canadian College of Naturopathic Medicine."
       call_to_action: "Unfortunately, we have not yet released any articles, but are excited to do so very soon. If you'd like to stay up to date with the Oak Clinic, register with us today."
@@ -86,8 +87,10 @@ en:
       about_ayla_2: "Ayla has connected with and shadowed many of the Peace Region’s local physicians and health care professionals to understand how she can best service the local community. She is keen to begin engaging with residents and local businesses through her integrative approach to health care. Ayla believes that tasty food, exercise and love should reside at the core of any health plan. She is excited to share her personal practices and beliefs with local Dawson Creek-ers and inspire wellness across her community."
     contact:
       header_title: "Contact"
+      header_body: "Lorem Khaled Ipsum is a major key to success."
     faq:
       header_title: "F.A.Q"
+      header_body: "Lorem Khaled Ipsum is a major key to success."
       s_one_header: "Frequently Asked Questions"
       s_one_title_one: "What is Naturopathy?"
       s_one_body_one: "Naturopathic Medicine is a complementary addition to your current health care system. We work in collaboration with YOU and any other health care providers you may have on your roster. Naturopathy looks at the human body as a whole working system, and believe collaboration is key to optimal health.\n\nNaturopathy differentiates itself from the general health care system by identifying and healing the root cause of a given health problem as opposed to focusing on the most prevalent or recent symptom. Naturopathic Doctors use a natural and scientific approach to improving biochemical and physiological imbalances. They are trained in common medical diagnoses as well as their eastern medicine equivalents. Along with treating specific conditions, they also emphasize illness prevention as well as a healthy diet and lifestyle. Naturopaths pride themselves on individualized care and understand that what may work for one individual may not work for another. The most important person in an appointment is YOU, a Naturopathic Doctor is simply there to help guide you through your healing journey."
@@ -104,6 +107,7 @@ en:
       button_text: "Register Today"
     products:
       header_title: "Products"
+      header_body: "Lorem Khaled Ipsum is a major key to success."
       product_logos: "Oak Clinic has partnered with some of the world's best clinical brands to make sure you become the best version of yourself."
       about_partnerships_title: "Professional Partnerships"
       about_partnerships_1: "Lorem Khaled Ipsum is a major key to success. The other day the grass was brown, now it’s green because I ain’t give up. Never surrender. Learning is cool, but knowing is better, and I know the key to success."
@@ -116,5 +120,6 @@ en:
       about_dispensary_2: "Lorem Khaled Ipsum is a major key to success. The other day the grass was brown, now it’s green because I ain’t give up. Never surrender. Learning is cool, but knowing is better, and I know the key to success."
     services:
       header_title: "Services"
+      header_body: "Lorem Khaled Ipsum is a major key to success."
       intro_title: "Ready to Book?"
       intro_body: "We've made booking easy with our online form. Simply select a service above or click the link below to being our simple booking process."

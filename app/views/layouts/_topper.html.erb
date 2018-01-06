@@ -1,3 +1,6 @@
 <section class="m-banner m-banner--<%= type %>">
-  <h1 class="text-white"><%= title unless title.nil? %></h1>
+  <div class="d-block text-center">
+    <h1 class="text-white"><%= title unless title.nil? %></h1>
+    <h5 class="text-white-muted"><%= body unless body.nil? %></h5>
+  </div>
 </section>

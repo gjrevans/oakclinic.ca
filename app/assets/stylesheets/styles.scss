@@ -51,9 +51,6 @@
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                     image_url("backgrounds/landscape/kitchen.jpg");
-  @include media-breakpoint-down(sm) {
-    height: 100vh;
-  }
 }
 
 .l-content {
