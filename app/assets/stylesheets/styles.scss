@@ -74,6 +74,14 @@
     @extend .box-shadow;
     width: 80%;
   }
+  &--pattern {
+    background: image_url("icons/oak_pattern_white.png");
+    background-repeat: repeat;
+  }
+  &--pattern-inverted {
+    background: image_url("icons/oak_pattern_green.png");
+    background-repeat: repeat;
+  }
   &--overlay {
     @include media-breakpoint-up(md) {
       margin-top: -9rem;
@@ -89,7 +97,7 @@
   }
   @each $color, $value in $theme-colors {
     &--#{$color} {
-      background: $value;
+      background-color: $value;
     }
   }
 }
@@ -164,7 +172,7 @@
   background-position: center;
   background-repeat: no-repeat;
   &--contact {
-    @include banner__image(30rem, "backgrounds/landscape/chopping.jpg") ;
+    @include banner__image(30rem, "backgrounds/landscape/holding.jpg") ;
   }
   &--products {
     // TODO: clinic_table
