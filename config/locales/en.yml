@@ -48,8 +48,11 @@ en:
       call_to_action_button: "Register Today"
   pages:
     index:
-      header_body: "Our naturopathic clinic will be opening in Dawson Creek, British Columbia in Winter 2018. Register below for priority booking and to be notified of our opening date."
-      button_text: "Register"
+      header_body: "We appreciate your patience as we revamp our website to serve you better. In the meantime you can access our online booking service below. Please feel free to %{email} or call if you have any questions or concerns."
+      button_text: "Book Now"
+      email: "email"
+      call: "call"
+      button_link: "https://oakclinic.janeapp.com"
     about:
       header_title: "About"
       s_one_header: "Oak Naturopathic Clinic"
