@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/zerosicks/font-awesome-sass.git
+  revision: 3b8e6066df6becaef729addfe3dc78ff9e176d9d
+  specs:
+    font-awesome-sass (5.0.6)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -87,8 +94,6 @@ GEM
     filestack-rails (3.1.0)
       filestack (~> 2.1.0)
       rails (>= 4.0)
-    font-awesome-sass (5.0.6)
-      sass (>= 3.2)
     formatador (0.2.5)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
@@ -271,7 +276,7 @@ DEPENDENCIES
   devise
   figaro
   filestack-rails
-  font-awesome-sass (~> 5.0.6)
+  font-awesome-sass!
   friendly_id (~> 5.1.0)
   gibbon
   guard (>= 2.2.2)
