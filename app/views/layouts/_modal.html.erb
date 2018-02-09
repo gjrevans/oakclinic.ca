@@ -3,10 +3,10 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <%= form_tag create_contact_path, method: :post do %>
-      <div class="modal-header">
+      <div class="modal-header d-flex align-items-center">
         <h5 class="modal-title" id="mailingListLabel"><%= t(".mailer_modal_title") %></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <i class="fa fa-times fa-fw"></i>
+          <%= icon("fas", "times") %>
         </button>
       </div>
       <div class="modal-body">
@@ -34,7 +34,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal"><%= t("close")%></button>
-        <%= button_tag t("submit"), data: {disable_with: "<i class='fa fa-spinner fa-pulse'></i>".html_safe}, class: "btn btn-primary btn-full-width" %>
+        <%= button_tag t("submit"), data: {disable_with: "<i class='fas fa-spinner fa-pulse'></i>".html_safe}, class: "btn btn-primary btn-full-width" %>
       </div>
       <% end %>
     </div>

@@ -87,8 +87,8 @@ GEM
     filestack-rails (3.1.0)
       filestack (~> 2.1.0)
       rails (>= 4.0)
-    font-awesome-rails (4.7.0.2)
-      railties (>= 3.2, < 5.2)
+    font-awesome-sass (5.0.6)
+      sass (>= 3.2)
     formatador (0.2.5)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
@@ -271,7 +271,7 @@ DEPENDENCIES
   devise
   figaro
   filestack-rails
-  font-awesome-rails
+  font-awesome-sass (~> 5.0.6)
   friendly_id (~> 5.1.0)
   gibbon
   guard (>= 2.2.2)

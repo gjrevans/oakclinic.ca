@@ -16,7 +16,7 @@ class ContactsController < ApplicationController
             flash[:success] = t('alerts.subscribe_success')
             redirect_to root_path
         rescue Gibbon::MailChimpError => error
-            flash[:danger] = error.detail
+            flash[:danger] = error.title
             redirect_to root_path
         end
     end
