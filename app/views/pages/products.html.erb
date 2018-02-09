@@ -9,37 +9,20 @@
       </div>
       <% end %>
     </div>
-    <div class="row justify-content-center justify-content-center">
+    <!-- <div class="row justify-content-center justify-content-center">
       <div class="col-md-8">
         <p class="text-muted mb-0"><%= t(".product_logos") %></p>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
 <section class="l-content l-content--xx l-content--white l-content--bordered">
   <div class="row no-gutters align-items-center">
-    <div class="col-md-4">
-      <%= image_tag('backgrounds/portrait/friends.jpg', class: "w-100") %>
-    </div>
-    <div class="col-md-8">
-      <div class="container">
-        <div class="my-4 my-4 px-sm-5">
-          <h4><%= t(".about_partnerships_title") %></h4>
-          <p class="text-muted"><%= t(".about_partnerships_1") %></p>
-          <p class="text-muted"><%= t(".about_partnerships_1") %></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="l-content l-content--xx l-content--white l-content--bordered">
-  <div class="row no-gutters align-items-center">
-    <div class="col-md-4 order-sm-12">
+    <div class="col-md-6 col-lg-4">
       <%= image_tag('backgrounds/portrait/supplements.jpg', class: "w-100") %>
     </div>
-    <div class="col-md-8 order-sm-1">
+    <div class="col-md-6 col-lg-8">
       <div class="container">
         <div class="my-4 my-4 px-sm-5">
           <h4><%= t(".about_supplements_title") %></h4>
@@ -54,15 +37,32 @@
 
 <section class="l-content l-content--xx l-content--white l-content--bordered">
   <div class="row no-gutters align-items-center">
-    <div class="col-md-4">
+    <div class="col-md-6 col-lg-4 order-sm-12">
       <%= image_tag('backgrounds/portrait/dispensary.jpg', class: "w-100") %>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6 col-lg-8 order-sm-1">
       <div class="container">
         <div class="my-4 my-4 px-sm-5">
           <h4><%= t(".about_dispensary_title") %></h4>
           <p class="text-muted"><%= t(".about_dispensary_1") %></p>
           <p class="text-muted"><%= t(".about_dispensary_2") %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="l-content l-content--xx l-content--white l-content--bordered">
+  <div class="row no-gutters align-items-center">
+    <div class="col-md-6 col-lg-4">
+      <%= image_tag('backgrounds/portrait/friends.jpg', class: "w-100") %>
+    </div>
+    <div class="col-md-6 col-lg-8">
+      <div class="container">
+        <div class="my-4 my-4 px-sm-5">
+          <h4><%= t(".about_partnerships_title") %></h4>
+          <p class="text-muted"><%= t(".about_partnerships_1") %></p>
+          <a href="mailto:hello@oakclinic.ca" class="btn btn-outline-primary px-4"><%= t(".contact_us") %></a>
         </div>
       </div>
     </div>

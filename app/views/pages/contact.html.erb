@@ -5,15 +5,16 @@
   <div class="container">
     <!-- Location Information -->
     <div class="row mb-5">
-      <div class="col-md-4 pr-sm-5 mb-5 mb-sm-0 br">
+      <div class="col-xl-4 col-lg-12 pr-xl-5 mb-5 mb-xl-0 br b0-lg">
         <h5><%= t("address") %></h5>
         <%= t("street_address_1") %>
         <br>
         <%= t("street_address_2") %>
+        <br>
         <%= link_to t("get_directions"), t("location_link"), class: "btn btn-primary btn-sm mt-3", target: "_blank" %></a>
       </div>
 
-      <div class="col-md-4 px-sm-5 mb-5 mb-sm-0 br">
+      <div class="col-xl-4 col-lg-12 px-xl-5 mb-5 mb-xl-0 br b0-lg">
         <h5><%= t("hours") %></h5>
         <ul class="list-unstyled">
           <% @hours.each do |day| %>
@@ -25,16 +26,17 @@
         </ul>
       </div>
 
-      <div class="col-md-4 pl-sm-5">
+      <div class="col-xl-4 col-lg-12 pl-xl-5">
         <h5><%= t("contact") %></h5>
-        <a href="tel:<%= t("phone_number") %>"><%= t("phone_number") %></a><br>
-        <a href="mailto:<%= t("email_address") %>"><%= t("email_address") %></a>
+        <%= icon("fas", "phone", class: "mr-3 text-medium") %><a href="tel:<%= t("phone_number") %>"><%= t("phone_number") %></a><br>
+        <%= icon("fas", "fax", class: "mr-3 text-medium") %><a href="tel:<%= t("fax_number") %>"><%= t("phone_number") %></a><br>
+        <%= icon("fas", "envelope", class: "mr-3 text-medium") %><a href="mailto:<%= t("email_address") %>"><%= t("email_address") %></a>
       </div>
     </div>
 
     <!-- Map of Oak Clinic -->
     <div class="row">
-      <div class="col-md-12 mt-4 mt-sm-0">
+      <div class="col-12 mt-4 mt-sm-0">
         <div id="map" class="mb-3"></div>
       </div>
     </div>

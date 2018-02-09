@@ -43,7 +43,7 @@
 
 // Use grid breakpoints to specify the size where the border will stop displaying
 @each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
+  @include media-breakpoint-down($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
     .b0#{$infix}  {border: none;}
   }
@@ -86,7 +86,7 @@
 .zi-1 { z-index: 1 }
 .zi-2 { z-index: 2 }
 
-@mixin banner__image($height, $url){
+@mixin banner__image($height, $url, $opacity){
   height: $height;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image_url($url);
+  background-image: linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), image_url($url);
 }
