@@ -1,4 +1,4 @@
-<%= render partial: "layouts/topper", locals: {type: "article", title: t(".header_title")} %>
+<%= render partial: "layouts/topper", locals: {type: "article", title: t(".header_title"), body: t(".header_body")} %>
 <section class="l-content l-content--white l-content--bordered l-content--md">
   <div class="container">
     <div class="row">
@@ -13,8 +13,8 @@
         <% end %>
       </div>
       <div class="col-lg-4 col-sm-12">
-        <div class="card">
-          <%= image_tag 'backgrounds/bg_9.jpg', class: "card-img-top w-100", alt: t("ayla_andrus") %>
+        <div class="card bg-light">
+          <%= image_tag 'backgrounds/portrait/smile.jpg', class: "card-img-top w-100", alt: t("ayla_andrus") %>
           <div class="card-body">
             <h4 class="card-title"><%= t(".about_the_author") %></h4>
             <p class="card-text text-muted">

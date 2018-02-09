@@ -1,4 +1,4 @@
-<%= render partial: "layouts/topper", locals: {type: "products", title: t(".header_title")} %>
+<%= render partial: "layouts/topper", locals: {type: "products", title: t(".header_title"), body: t(".header_body")} %>
 
 <section class="l-content l-content--light l-content--md bb">
   <div class="container text-center">
@@ -10,7 +10,7 @@
       <% end %>
     </div>
     <div class="row justify-content-center justify-content-center">
-      <div class="col-8">
+      <div class="col-md-8">
         <p class="text-muted mb-0"><%= t(".product_logos") %></p>
       </div>
     </div>
@@ -24,7 +24,7 @@
     </div>
     <div class="col-md-8">
       <div class="container">
-        <div class="my-4 px-5">
+        <div class="my-4 my-4 px-sm-5">
           <h4><%= t(".about_partnerships_title") %></h4>
           <p class="text-muted"><%= t(".about_partnerships_1") %></p>
           <p class="text-muted"><%= t(".about_partnerships_1") %></p>
@@ -41,10 +41,11 @@
     </div>
     <div class="col-md-8 order-sm-1">
       <div class="container">
-        <div class="my-4 px-5">
+        <div class="my-4 my-4 px-sm-5">
           <h4><%= t(".about_supplements_title") %></h4>
           <p class="text-muted"><%= t(".about_supplements_2") %></p>
           <p class="text-muted"><%= t(".about_supplements_2") %></p>
+          <a href="https://ca.fullscript.com/welcome/oakclinic" target="_blank" class="btn btn-primary"><%= t(".fullscript_cta") %></a>
         </div>
       </div>
     </div>
@@ -58,7 +59,7 @@
     </div>
     <div class="col-md-8">
       <div class="container">
-        <div class="my-4 px-5">
+        <div class="my-4 my-4 px-sm-5">
           <h4><%= t(".about_dispensary_title") %></h4>
           <p class="text-muted"><%= t(".about_dispensary_1") %></p>
           <p class="text-muted"><%= t(".about_dispensary_2") %></p>

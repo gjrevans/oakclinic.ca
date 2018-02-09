@@ -1,0 +1,37 @@
+<!-- Hidden Fields to Help With JS Styling -->
+<span class="d-none text-dark"></span>
+<span class="d-none text-muted"></span>
+<span class="d-none text-primary"></span>
+<span class="d-none text-info"></span>
+<span class="d-none text-success"></span>
+<span class="d-none text-warning"></span>
+<span class="d-none text-danger"></span>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Get colors from the UI
+  function getColor(color) {
+    return color.slice(4, color.length - 1);
+  }
+
+  window.BRAND_COLORS = {
+    dark:    $(".text-dark").css("color"),
+    muted:   $(".text-muted").css("color"),
+    primary: $(".text-primary").css("color"),
+    info:    $(".text-info").css("color"),
+    success: $(".text-success").css("color"),
+    warning: $(".text-warning").css("color"),
+    danger:  $(".text-danger").css("color")
+  };
+
+  window.BRAND_COLOR_STRINGS = {
+    dark:    getColor(window.BRAND_COLORS.dark),
+    muted:   getColor(window.BRAND_COLORS.muted),
+    primary: getColor(window.BRAND_COLORS.primary),
+    info:    getColor(window.BRAND_COLORS.info),
+    success: getColor(window.BRAND_COLORS.success),
+    warning: getColor(window.BRAND_COLORS.warning),
+    danger:  getColor(window.BRAND_COLORS.danger)
+  };
+});
+</script>

@@ -49,10 +49,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), image_url("backgrounds/bg_2.jpg");
-  @include media-breakpoint-down(sm) {
-    height: 100vh;
-  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                    image_url("backgrounds/landscape/kitchen.jpg");
 }
 
 .l-content {
@@ -76,8 +74,16 @@
     @extend .box-shadow;
     width: 80%;
   }
+  &--pattern {
+    background: image_url("icons/oak_pattern_white.png");
+    background-repeat: repeat;
+  }
+  &--pattern-inverted {
+    background: image_url("icons/oak_pattern_green.png");
+    background-repeat: repeat;
+  }
   &--overlay {
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       margin-top: -9rem;
     }
   }
@@ -91,7 +97,7 @@
   }
   @each $color, $value in $theme-colors {
     &--#{$color} {
-      background: $value;
+      background-color: $value;
     }
   }
 }
@@ -166,22 +172,25 @@
   background-position: center;
   background-repeat: no-repeat;
   &--contact {
-    @include banner__image(30rem, "backgrounds/bg_3.jpg") ;
+    @include banner__image(30rem, "backgrounds/landscape/holding.jpg") ;
   }
   &--products {
-    @include banner__image(30rem, "backgrounds/bg_15.jpg") ;
+    // TODO: clinic_table
+    @include banner__image(30rem, "backgrounds/landscape/kitchen.jpg") ;
   }
   &--services {
-    @include banner__image(30rem, "backgrounds/bg_14.jpg") ;
+    // TODO: with_patient
+    @include banner__image(30rem, "backgrounds/landscape/chopping.jpg") ;
   }
   &--article {
-    @include banner__image(30rem, "backgrounds/bg_7.jpg") ;
+    // TODO: at_desk
+    @include banner__image(30rem, "backgrounds/landscape/swim.jpg") ;
   }
   &--faq-1 {
-    @include banner__image(30rem, "backgrounds/bg_13.jpg") ;
+    @include banner__image(30rem, "backgrounds/landscape/holding.jpg") ;
   }
   &--faq-2 {
-    @include banner__image(26rem, "backgrounds/bg_4.jpg") ;
+    @include banner__image(26rem, "backgrounds/landscape/stretch.jpg") ;
   }
 }
 
