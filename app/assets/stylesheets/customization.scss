@@ -6,3 +6,12 @@ $content-spacing: (
   lg: 4rem,
   xl: 5rem
 ) !default;
+
+.card-body--service {
+  min-height: 26rem;
+}
+.card-body--action {
+  @extend .bg-light, .bt, .lh-1, .rounded-bottom, .d-flex, .align-items-center, .justify-content-center;
+  text-align: center;
+  min-height: 5rem;
+}

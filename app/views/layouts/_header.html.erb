@@ -28,7 +28,7 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
             <%= link_to t(".faq"), faq_path, class: "#{'active' if current_page?(faq_path)}"  %>
           </li>
           <li class="mr-4 d-none d-sm-flex">
-            <%= link_to t(".book_now"), articles_path, class: "m-nav__button" %>
+            <%= link_to t(".book_now"), t("jane_link"), class: "m-nav__button", target: "_blank" %>
           </li>
         </ul>
       </div>

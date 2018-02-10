@@ -184,10 +184,10 @@
   }
   &--article {
     // TODO: at_desk
-    @include banner__image(30rem, "backgrounds/landscape/swim.jpg", 0.2) ;
+    @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.2) ;
   }
   &--faq-1 {
-    @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.2) ;
+    @include banner__image(30rem, "backgrounds/landscape/kitchen.jpg", 0.2) ;
   }
   &--faq-2 {
     @include banner__image(26rem, "backgrounds/landscape/stretch.jpg", 0.2) ;

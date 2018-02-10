@@ -13,7 +13,8 @@ class PagesController < ApplicationController
   end
 
   def services
-    @services = JSON.parse(File.read('public/json/services.json'))
+    @primary_services = JSON.parse(File.read('public/json/primary_services.json'))
+    @secondary_services = JSON.parse(File.read('public/json/secondary_services.json'))
   end
 
   def products
