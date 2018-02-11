@@ -1,0 +1,12 @@
+.card-body--service {
+  @extend .py-0;
+  @include media-breakpoint-up(md) {
+    min-height: 20rem;
+  }
+}
+
+.card-body--action {
+  @extend .bg-light, .bt, .lh-1, .rounded-bottom, .d-flex, .align-items-center, .justify-content-center;
+  text-align: center;
+  min-height: 5rem;
+}

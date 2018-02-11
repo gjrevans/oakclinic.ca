@@ -94,7 +94,9 @@ en:
       intro_body: "We've made booking easy with our online form. Simply select a service above or click the link below to begin our simple booking process."
       initial_apt_title: "Initial Appointments"
       follow_up_title: "Follow Up Appointments"
-      not_bookable: "This service is not directly bookable, it will be prescribed as part of a treatment plan."
+      not_bookable: "This service is not directly bookable. It may be prescribed as part of a treatment plan."
+      about_coverage: "Naturopathic Medicine is a protected and tightly regulated medical profession and therefore, most extended health care plans will cover some, if not all, of your visits with a Naturopathic Doctor."
+      coverage_cta: "Learn More"
     products:
       header_title: "Products & Partners"
       header_body: "We offer professional products in house and through our various local and online partnerships."
