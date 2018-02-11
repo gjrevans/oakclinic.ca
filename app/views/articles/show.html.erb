@@ -1,64 +1,46 @@
 <!-- Style Override for Background Image -->
 <style media="screen">
-    .m-banner--article { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(<%= @article.image %>); }
+.m-banner--article { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(<%= @article.image %>); }
 </style>
 
 <section class="m-banner m-banner--article">
-    <div class="container-fluid">
-        <div class="m-header">
-            <div class="m-header__content">
-                <h1 class="m-header__title--md"><%= @article.title %></h1>
-            </div>
-        </div>
-    </div>
+  <h1 class="text-white"><%= @article.title %></h1>
 </section>
 <section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="breadcrumb mb-0 mt-3">
-                    <%= link_to t("brand_long"), root_path, class: "breadcrumb-item" %>
-                    <%= link_to t("layouts.header.articles"), articles_path, class: "breadcrumb-item" %>
-                    <%= link_to @article.user.first_name + ' ' + @article.user.last_name, "#", class: "breadcrumb-item active" %>
-                </nav>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="breadcrumb mb-0 mt-3">
+          <%= link_to t("brand_long"), root_path, class: "breadcrumb-item" %>
+          <%= link_to t("layouts.header.articles"), articles_path, class: "breadcrumb-item" %>
+          <%= link_to @article.created_at.to_formatted_s(:long), "#", class: "breadcrumb-item active" %>
+        </nav>
+      </div>
     </div>
+  </div>
 </section>
 <section class="l-content l-content--white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="l-content__body">
-                    <h3 class="l-content__title"><%= @article.title %></h3>
-                    <h6 class="text-muted"><%= @article.created_at.to_formatted_s(:long) %></h6>
-                    <hr>
-                    <p><%= @article.body.html_safe %></p>
-                </div>
-                <div class="l-content__outline">
-                    <p><%= t('.call_to_action') %></p>
-                    <%= button_tag t('.call_to_action_button'), class: "btn btn-primary px-5", data: {toggle:"modal", target:"#mailingList"}, type: "button" %>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="l-content__body">
+          <h3 class="l-content__title"><%= @article.title %></h3>
+          <p><%= simple_format(@article.body) %></p>
         </div>
+      </div>
     </div>
-</section>
-<section class="l-content l-content--grey l-content--bordered">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="l-content__title"><%= t(".related_articles") %></h3>
-            </div>
-        </div>
-        <div class="row">
-            <%= render partial: "article_card_small" %>
-        </div>
-    </div>
+  </div>
 </section>
 
+<!-- Add Mailing List -->
+<%= render partial: "layouts/mailing_list" %>
+
+<!-- Add Recent Articles -->
+<%= render partial: "articles/recent_articles" %>
+
 <script type="text/javascript">
-    $(document).ready(function(){
-        // Add Responsive Class
-        $("#articleDescription img").addClass("img-fluid");
-    });
+$(document).ready(function(){
+  // Add Responsive Class
+  $("#articleDescription img").addClass("img-fluid");
+});
 </script>

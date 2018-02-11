@@ -1,0 +1,17 @@
+<section class="l-content l-content--light l-content--bordered l-content--xl">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+          <h4><%= t('.title') %></h4>
+          <div class="row justify-content-center text-center">
+            <div class="col-md-8">
+              <p class="text-muted"><%= t('.body') %></p>
+            </div>
+          </div>
+          <%= button_tag t('.cta'), class: "btn btn-primary px-5", data: {toggle:"modal", target:"#mailingList"}, type: "button" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

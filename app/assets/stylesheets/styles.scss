@@ -1,264 +1,319 @@
-/* -- Navigation -- */
-.nav__link {
+/* Layouts */
+.l-session {
+  padding: 4rem 0 10rem 0;
+}
+
+.l-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0,0,0,0.9);
+  z-index: $zindex-navbar + 1;
+  &__content {
+    font-size: 2rem;
+    line-height: 4rem;
+    text-align: center;
+    position: relative;
+  }
+  &__link a {
     @extend .transition;
-    color: $transparent-white;
+    color: $white;
     text-decoration: none;
     &:hover,
     &:active,
     &:focus {
-        text-decoration: none;
-        color: $brand-primary;
+      text-decoration: none;
+      color: $primary;
     }
-}
-
-.m-nav {
-    padding: 1rem 0;
-    &.m-nav__top {
-        position: fixed;
-        top: 0;
-        z-index: $zindex-navbar;
-        background: transparent;
-        width: 100%;
-    }
-    &.m-nav__root {
-        -webkit-transition: all .8s;
-        transition: all .8s;
-    }
-    .m-nav__logo {
-        @extend .logo__text;
-        @extend .transition;
-        color: #FFF;
-        float: left;
-        padding-left: 0;
-        font-size: 2rem;
-        padding-top: 0.75rem;
-    }
-    .m-nav__list {
-        float: right;
-        padding-left: 0;
-        padding-top: 1rem;
-        position: relative;
-        .m-nav__link {
-            display: block;
-            float: left;
-            a, i {
-                @extend .cursor;
-                @extend .transition;
-                @extend .nav__link;
-                margin: 0 0 0 2em;
-            }
-            &:first-child > a {
-                margin-left: 0;
-            }
-            &--active a{
-                color: #FFF;
-            }
-        }
-    }
-    &--inverse {
-        &.m-nav__top {
-            background: #FFF;
-            border-bottom: 1px solid $gray-lighter;
-        }
-        .m-nav__logo {
-            color: $brand-primary;
-        }
-        .m-nav__list {
-            .m-nav__link {
-                a, i {
-                    color: $brand-primary;
-                }
-                &--active a{
-                    color: $brand-primary;
-                }
-            }
-        }
-    }
-}
-
-/* Layouts */
-.l-session {
-    padding: 4rem 0 10rem 0;
-}
-
-.l-navigation {
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background: rgba(0,0,0,0.9);
-    z-index: $zindex-navbar + 1;
-    &__content {
-        font-size: 2rem;
-        line-height: 4rem;
-        text-align: center;
-        position: relative;
-    }
-    &__link a {
-        @extend .transition;
-        @extend .nav__link;
-    }
-    &__close {
-        @extend .transition;
-        @extend .nav__link;
-        position: absolute;
-        top: 2em;
-        right: 1em;
-    }
+  }
+  &--close {
+    position: absolute;
+    top: 2em;
+    right: 1em;
+  }
 }
 
 .l-home {
-    @extend .vh;
-    @extend .transition;
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-center;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  @extend .transition;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                    image_url("backgrounds/landscape/reviewing.jpg");
 }
 
 .l-content {
-    padding: 1.5rem 0;
-    &--white {
-        background: #FFF;
+  padding: 1.5rem 0;
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__offset {
+    padding-top: 7rem;
+  }
+  &__body {
+    line-height: 2rem;
+  }
+  &__outline {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px dashed rgba($primary, 0.3);
+  }
+  &__image {
+    @extend .box-shadow;
+    width: 80%;
+  }
+  &--pattern {
+    background: image_url("icons/oak_pattern_white.png");
+    background-repeat: repeat;
+  }
+  &--pattern-inverted {
+    background: image_url("icons/oak_pattern_green.png");
+    background-repeat: repeat;
+  }
+  &--overlay {
+    @include media-breakpoint-up(md) {
+      margin-top: -9rem;
     }
-    &--grey {
-        background: $gray-lightest;
+  }
+  &--bordered {
+    border-bottom: 1px solid $border-color;
+  }
+  @each $size, $value in $content-spacing {
+    &--#{$size} {
+      padding: $value 0 ;
     }
-    &--bordered {
-        border-bottom: 1px solid $gray-lighter;
+  }
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      background-color: $value;
     }
-    &__title {
-        margin-bottom: 1.5rem;
-    }
-    &__offset {
-        padding-top: 7rem;
-    }
-    &__body {
-        line-height: 2rem;
-    }
-    &__outline {
-        padding: 2rem;
-        text-align: center;
-        border-radius: 4px;
-        border: 1px dashed rgba($brand-primary, 0.3);
-    }
-    &__image {
-        @extend .box-shadow;
-        width: 80%;
-    }
+  }
 }
 
 /* Modules */
-.m-page-header {
-    padding: 1rem 0;
-}
-.m-banner {
-    @extend .transition;
-    @extend .d-flex;
-    @extend .align-items-center;
-    @extend .justify-content-center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    &--about {
-        @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/oak.jpg') ;
+.m-nav {
+  @extend .transition;
+  padding: 1.5rem 0;
+  &__top {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: $zindex-navbar;
+  }
+  &__logo {
+    @extend .logo__text;
+    transition: color 0.25s, font-size 0.25s;
+    color: $white;
+    font-size: 2rem;
+  }
+  &--transparent {
+    .m-nav__top {
+      background: transparent;
     }
-    &--medicine {
-        @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/dandi.jpg') ;
+    a, i {
+      @extend .cursor;
+      @extend .transition;
+      text-decoration: none;
+      color: rgba($white, 0.75);
+      &:hover,
+      &:active,
+      &.active {
+        color: $white;
+      }
     }
-    &--article {
-        @include banner__image(20rem, 'https://s3.amazonaws.com/oakclinic.ca/dandi.jpg') ;
+    .m-nav__button {
+      @extend .btn, .btn-outline-white;
     }
+  }
+  &--white {
+    &.m-nav__top {
+      background: $white;
+      border-bottom: 1px solid $border-color;
+    }
+    .m-nav__logo {
+      color: $primary;
+      font-size: 1.5rem;
+    }
+    a, i {
+      @extend .cursor;
+      @extend .transition;
+      text-decoration: none;
+      color: rgba($primary, 0.75);
+      &:hover,
+      &:active,
+      &.active {
+        color: $primary;
+      }
+    }
+    .m-nav__button {
+      @extend .btn, .btn-primary;
+    }
+  }
 }
 
-.m-header {
-    color: #FFF;
-    text-align: center;
-    max-width: 30rem;
-    &__title {
-        @extend .logo__text;
-        font-size: 4rem;
-        &--md {
-            @extend .logo__text;
-            font-size: 3rem;
-        }
-        &--sm {
-            @extend .logo__text;
-            font-size: 2rem;
-        }
+.m-banner {
+  @extend .transition;
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &--contact {
+    @include banner__image(30rem, "backgrounds/landscape/computer.jpg", 0.2) ;
+  }
+  &--services {
+    // TODO: with_patient
+    @include banner__image(30rem, "backgrounds/landscape/explaining.jpg", 0.3) ;
+  }
+  &--products {
+    // TODO: clinic_table
+    @include banner__image(30rem, "backgrounds/landscape/herbs.jpg", 0.4) ;
+  }
+  &--article {
+    // TODO: at_desk
+    @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.2) ;
+  }
+  &--faq-1 {
+    @include banner__image(30rem, "backgrounds/landscape/kitchen.jpg", 0.2) ;
+  }
+  &--faq-2 {
+    @include banner__image(26rem, "backgrounds/landscape/stretch.jpg", 0.2) ;
+  }
+}
+
+.m-floater {
+  @extend .box-shadow;
+  color: white;
+  font-size: 85%;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem 5rem;
+  background: rgba($primary, 0.8);
+  &__section {
+    margin: 2rem 0;
+    padding: 0 2rem;
+    &:not(:last-child) {
+      @include media-breakpoint-up(lg) {
+        border-right: 1px solid rgba($white, 0.3);
+      }
     }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      @extend .d-flex, .justify-content-between;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 1rem;
+    color: $gray-700;
+    box-shadow: none;
+    background: $white;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    .text-white-muted {
+      color: $gray-600;
+    }
+    .btn {
+      display: none;
+    }
+    &__section {
+      padding-bottom: 2rem;
+      &:not(:last-child) {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
 }
 
 .m-article {
-    margin-bottom: 1.5rem;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: #fff;
-    border: 1px solid $gray-lighter;
-    border-radius: 0.25rem;
-    &__image {
-        max-width: 100%;
-        padding: 1.2rem 0;
-    }
-    &__block {
-        padding: 1.25rem;
-        flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        -webkit-box-flex: 1;
-    }
-    &__link:hover {
-        text-decoration: none;
-    }
-    &__user-meta {
-        font-size: 0.8rem;
-    }
-    &__user-image {
-        @extend .mr-3;
-        border: 1px solid $gray-lighter;
-        width: 2.5rem;
-    }
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  border-radius: 0.25rem;
+  &__image {
+    max-width: 100%;
+    padding: 1.2rem 0;
+  }
+  &__block {
+    padding: 1.25rem;
+    flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+  }
+  &__link:hover {
+    text-decoration: none;
+  }
+  &__user-meta {
+    font-size: 0.8rem;
+  }
+  &__user-image {
+    @extend .mr-3;
+    border: 1px solid $border-color;
+    width: 2.5rem;
+  }
+  &:hover {
+    @extend .transition;
+    @extend .box-shadow;
+  }
+}
+
+.m-footer {
+  &__title {
+    @extend .text-uppercase, .text-muted, .mb-3;
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+  &__icon {
+    @extend .mb-3;
+    width: 3.5rem;
+  }
+  .list-inline li {
+    margin: 0 0.75rem;
+  }
 }
 
 /* -- Bootstrap -- */
 .btn {
-    font-family: $font-family-sans-serif;
-    @extend .transition;
+  @extend .transition;
+  font-family: $font-family-sans-serif;
 }
 
-.btn.btn-main {
-    @extend .btn;
-    color: $brand-main;
-    background: transparent;
-    border: 2px solid $brand-main;
-    border-radius: $border-radius;
-    &:hover {
-        color: $brand-primary;
-        background: $brand-main;
-    }
+.card {
+  @extend .transition;
+  &-hover:hover {
+    @extend .box-shadow;
+  }
 }
-
 .card-img-top {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .navbar-transparent .navbar-nav .nav-link {
-    color: #FFF;
-    @extend .transition;
+  @extend .transition;
+  color: #FFF;
 }

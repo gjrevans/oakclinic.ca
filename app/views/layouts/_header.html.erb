@@ -1,32 +1,63 @@
 <% safe_id = params[:id] || 0 %>
-<div class="m-nav m-nav__top m-nav__root <%= current_page?(articles_path) ||
-                                             current_page?(edit_user_registration_path) ||
-                                             current_page?(controller: "/articles", action: "new") ||
-                                             current_page?(controller: "/articles", action: "edit", id: safe_id) ?
-                                             'm-nav--inverse' : 'm-nav__transition' %>">
-    <div class="container">
-        <div class="row flex-items-sm-middle">
-            <div class="col-4">
-                <%= link_to root_path do %>
-                    <h2 class="m-nav__logo"><%= t("brand")%></h2>
-                <% end %>
-            </div>
-            <div class="col-8">
-                <ul class="m-nav__list">
-                    <li class="m-nav__link hidden-xs-down <%= 'm-nav__link--active' if current_page?(about_path) %>">
-                        <%= link_to t(".about"), about_path %>
-                    </li>
-                    <li class="m-nav__link hidden-xs-down <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
-                        <%= link_to t(".naturopathic_medicine"), naturopathic_medicine_path %>
-                    </li>
-                    <li class="m-nav__link hidden-xs-down <%= 'm-nav__link--active' if current_page?(naturopathic_medicine_path) %>">
-                        <%= link_to t(".articles"), articles_path %>
-                    </li>
-                    <li class="m-nav__link js-toggle-navigation">
-                        <i class="fa fa-bars fa-fw"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<div class="m-nav m-nav__top <%= current_page?(edit_user_registration_path) ||
+current_page?(controller: "/articles", action: "new") ||
+current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--white" : "m-nav--transparent" %>">
+<div class="container">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <div class="d-block">
+        <%= link_to root_path do %>
+        <h2 class="m-nav__logo mb-0"><%= t("brand_long")%></h2>
+        <% end %>
+      </div>
+      <div class="d-none d-md-block">
+        <ul class="list-unstyled mb-0 d-flex align-items-center">
+          <li class="mr-4">
+            <%= link_to t(".services"), services_path, class: "#{'active' if current_page?(services_path)}" %>
+          </li>
+          <li class="mr-4 d-none d-sm-flex">
+            <%= link_to t(".products"), products_path, class: "#{'active' if current_page?(products_path)}" %>
+          </li>
+          <li class="mr-4 d-none d-sm-flex">
+            <%= link_to t(".news"), articles_path, class: "#{'active' if current_page?(articles_path)}" %>
+          </li>
+          <li class="mr-4 d-none d-sm-flex">
+            <%= link_to t(".contact"), contact_path, class: "#{'active' if current_page?(contact_path)}" %>
+          </li>
+          <li class="mr-4 d-none d-sm-flex">
+            <%= link_to t(".faq"), faq_path, class: "#{'active' if current_page?(faq_path)}"  %>
+          </li>
+          <li class="mr-4 d-none d-sm-flex">
+            <%= link_to t(".book_now"), t("jane_link"), class: "m-nav__button", target: "_blank" %>
+          </li>
+        </ul>
+      </div>
+      <div class="d-md-none">
+        <ul class="list-unstyled mb-0 d-flex align-items-center">
+          <li class="js-toggle-navigation">
+            <%= icon("fas", "bars") %>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Minipulate navigation style based on position
+  <% unless current_page?(edit_user_registration_path) ||
+  current_page?(controller: "/articles", action: "new") ||
+  current_page?(controller: "/articles", action: "edit", id: safe_id) %>
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    if (scroll <= 100) {
+      $(".m-nav").removeClass("m-nav--white").addClass("m-nav--transparent");
+    } else if (scroll >= 100) {
+      $(".m-nav").addClass("m-nav--white").removeClass("m-nav--transparent");
+    }
+  });
+  <% end %>
+});
+</script>

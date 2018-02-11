@@ -1,0 +1,37 @@
+<%= render partial: "layouts/topper", locals: {type: "faq-1", title: t(".header_title"), body: t(".header_body")} %>
+
+<section class="l-content l-content--white l-content--bordered l-content--lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="l-content__body">
+          <h4><%= t('.s_one_title_one') %></h4>
+          <p><%= t('.s_one_body_one').gsub(/\n/, '<br/>').html_safe %></p>
+          <br>
+          <h4><%= t('.s_one_title_two') %></h4>
+          <p><%= t('.s_one_body_two').gsub(/\n/, '<br/>').html_safe %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render partial: "layouts/topper", locals: {type: "faq-2", title: nil, body: nil} %>
+
+<section class="l-content l-content--white l-content--bordered l-content--lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="l-content__body">
+          <h4><%= t('.s_one_title_three') %></h4>
+          <p><%= t('.s_one_body_three').gsub(/\n/, '<br/>').html_safe %></p>
+          <%= image_tag 'logos/insurance.png', class: "w-100 my-5", alt: t("insurance") %>
+
+          <br>
+          <h4><%= t('.s_one_title_four') %></h4>
+          <p><%= t('.s_one_body_four').gsub(/\n/, '<br/>').html_safe %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

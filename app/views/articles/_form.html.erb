@@ -2,75 +2,66 @@
 <% image_url = @article.image || "http://via.placeholder.com/1200x800?text=Select%20An%20Image" %>
 
 <style media="screen">
-    .m-banner--article { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(<%= image_url %>); }
+.m-banner--article { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(<%= image_url %>); }
 </style>
 
 <%= form_for(article) do |f| %>
 <div class="row">
-    <div class="col-md-8">
-        <div class="form-group">
-            <%= f.label :title %>
-            <%= f.text_field :title, class: "form-control", required: true %>
-        </div>
+  <div class="col-md-8">
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control", required: true %>
     </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <%= f.label :status %>
-            <%= f.select :status, Article.statuses.keys, {}, {class: "form-control"} %>
-        </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= f.label :status %>
+      <%= f.select :status, Article.statuses.keys, {}, {class: "form-control"} %>
     </div>
+  </div>
 </div>
 
 <!-- WYSIWYG EDITOR -->
 <div class="row">
-    <div class="col-md-12">
-        <div class="form-group">
-            <%= f.label :body %>
-            <%= f.text_area :body, class: "form-control", id: "summernote", required: true %>
-        </div>
+  <div class="col-md-12">
+    <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, class: "form-control", id: "summernote", required: true %>
     </div>
+  </div>
 </div>
 
 <!-- Image -->
 <div class="row">
-    <div class="col-md-12">
-        <%= f.label :image %>
-        <div class="m-banner m-banner--article js-image-preview mb-3">
-            <div class="m-header">
-                <div class="m-header__content">
-                    <h1 class="m-header__title--md"><%= @article.title %></h1>
-                </div>
-            </div>
-        </div>
+  <div class="col-md-12">
+    <%= f.label :image %>
+    <div class="m-banner m-banner--article js-image-background mb-3">
+      <h1 class="text-white"><%= @article.title %></h1>
     </div>
+  </div>
 </div>
 
 
 <div class="row">
-    <div class="col-md-4 offset-md-4 text-center">
-        <div class="form-group">
-            <%= f.filepicker_field :image, mimetypes:'image/*', onchange: 'onPhotoUpload(event)', required: true  %>
-        </div>
+  <div class="col-md-4 offset-md-4 text-center">
+    <div class="form-group">
+      <%= filestack_picker_element t(".upload_an_image"), "onPhotoUpload", mimetypes: "image/*", class: "btn btn-primary" %>
+      <%= f.text_field :image, class: "js-image-url", hidden: true, required: true %>
     </div>
+  </div>
 </div>
 
 <!-- Buttons -->
 <hr>
 <div class="row">
-    <div class="col-md-12">
-        <div class="text-center">
-            <%= link_to 'Back', articles_path, class: "btn btn-outline-primary px-5" %>
-            <%= f.submit "Save", class: "btn btn-primary px-5", required: true %>
-        </div>
+  <div class="col-md-12">
+    <div class="text-center">
+      <%= link_to 'Back', articles_path, class: "btn btn-outline-primary px-5" %>
+      <%= f.submit "Save", class: "btn btn-primary px-5", required: true %>
     </div>
+  </div>
 </div>
 <% end %>
-
-<script type="text/javascript">
-function onPhotoUpload(event) {
-  $('.js-image-preview').css("background-image", "url(" + event.fpfile.url + ")");
-}
-</script>
 
 <script type="text/javascript">
 $(document).on('turbolinks:load', function() {

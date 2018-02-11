@@ -1,0 +1,20 @@
+[
+  {
+    "image": "icons/friends.svg",
+    "title": "Naturopathic Consultation",
+    "price": "$220.00",
+    "target": "naturopathic_consultation",
+    "about": "Initial consultations are 75 minutes long and consist of a detailed intake, complaint oriented physical exam and any necessary lab requisitions.",
+    "about_more": "From your initial appointment you can expect a treatment plan to get started, along with any forms or lab work that needs to be completed. After your initial appointment, Ayla does an in-depth assessment of your case, along with any new lab work and compares it to the latest research. A full detailed and specific treatment plan is offered on the second appointment.",
+    "link": "https://oakclinic.janeapp.com/#/staff_member/1/treatment/1"
+  },
+  {
+    "image": "icons/face.svg",
+    "title": "Facial Rejuvenation Acupuncture",
+    "price": "$220.00",
+    "target": "facial_acupuncture",
+    "about": "Rejuvenation acupuncture is a natural alternative for younger, firmer and healthier skin. Initial consultations are 120 minutes long and follow up treatments are 75 minutes long.",
+    "about_more": "If you have never had acupuncture before, feel free to contact the clinic for a complimentary 4-5 needle trial, otherwise, your first appointment will include an intake and a full treatment.",
+    "link": "https://oakclinic.janeapp.com/#/staff_member/2/treatment/4"
+  }
+]
