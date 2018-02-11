@@ -26,7 +26,8 @@ gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
 gem 'figaro'
 gem 'gibbon'
-gem 'filestack-rails'
+gem "unirest", git: "https://github.com/Kong/unirest-ruby"
+gem "filestack-rails", "~> 3.1"
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -42,6 +43,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'rails_real_favicon'
 end
 
 group :production do
