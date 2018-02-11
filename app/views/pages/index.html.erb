@@ -28,9 +28,7 @@
           <div class="text-white-muted mb-4">
               <%= t(".appointment_body") %>
           </div>
-          <a href="#" class="btn btn-white btn-block text-primary">
-            <%= t(".appointment_cta") %>
-          </a>
+          <%= link_to t(".appointment_cta"), t("jane_link"), class: "btn btn-white btn-block text-primary", target: "_blank" %>
         </div>
 
         <div class="col-lg-4 m-floater__section">

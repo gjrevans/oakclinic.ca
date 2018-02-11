@@ -172,22 +172,22 @@
   background-position: center;
   background-repeat: no-repeat;
   &--contact {
-    @include banner__image(30rem, "backgrounds/landscape/computer.jpg", 0.2) ;
+    @include banner__image(30rem, "backgrounds/landscape/computer.jpg", 0.2);
   }
   &--services {
     // TODO: with_patient
-    @include banner__image(30rem, "backgrounds/landscape/explaining.jpg", 0.3) ;
+    @include banner__image(30rem, "backgrounds/landscape/explaining.jpg", 0.3);
   }
   &--products {
     // TODO: clinic_table
-    @include banner__image(30rem, "backgrounds/landscape/herbs.jpg", 0.4) ;
+    @include banner__image(30rem, "backgrounds/landscape/herbs.jpg", 0.4);
   }
   &--article {
     // TODO: at_desk
-    @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.2) ;
+    @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.2);
   }
   &--faq-1 {
-    @include banner__image(30rem, "backgrounds/landscape/kitchen.jpg", 0.2) ;
+    @include banner__image(30rem, "backgrounds/landscape/kitchen_2.jpg", 0.2);
   }
   &--faq-2 {
     @include banner__image(26rem, "backgrounds/landscape/stretch.jpg", 0.2) ;
