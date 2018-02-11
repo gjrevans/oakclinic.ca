@@ -1,17 +1,27 @@
 [
   {
-    "image": "logos/premcore.png",
-    "name": "Premcore",
-    "link": "https://google.com"
+    "image": "logos/fullscript.png",
+    "name": "Fullscript",
+    "link": "https://ca.fullscript.com/welcome/oakclinic"
   },
   {
-    "image": "logos/bioceuticals.png",
-    "name": "Bioceuticals",
-    "link": "https://google.com"
+    "image": "logos/perfect_herbs.png",
+    "name": "Perfect Herbs",
+    "link": "http://perfectherbs.ca/"
   },
   {
     "image": "logos/nfh.png",
     "name": "NFH",
-    "link": "https://google.com"
+    "link": "http://www.nfh.ca/"
+  },
+  {
+    "image": "logos/mediherb.png",
+    "name": "Premcore",
+    "link": "https://www.mediherb.com/"
+  },
+  {
+    "image": "logos/cytomatrix.png",
+    "name": "Cytomatrix",
+    "link": "http://www.cyto-matrix.com/"
   }
 ]
