@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
     # Page Routes
     root to: 'pages#index'
+    get 'about', to: redirect("/")
     get 'contact', to: 'pages#contact', as: 'contact'
     get 'products', to: 'pages#products', as: 'products'
     get 'services', to: 'pages#services', as: 'services'
