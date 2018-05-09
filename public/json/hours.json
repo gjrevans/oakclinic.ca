@@ -1,6 +1,14 @@
 [
   {
-    "name": "monday - wednesday",
+    "name": "monday",
+    "hours": "1pm - 8pm"
+  },
+  {
+    "name": "tuesday",
+    "hours": "1pm - 8pm"
+  },
+  {
+    "name": "wednesday",
     "hours": "1pm - 8pm"
   },
   {
