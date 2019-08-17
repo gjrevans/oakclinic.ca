@@ -113,10 +113,9 @@
     z-index: $zindex-navbar;
   }
   &__logo {
-    @extend .logo__text;
-    transition: color 0.25s, font-size 0.25s;
-    color: $white;
-    font-size: 2rem;
+    width: 10rem;
+    transition: width 0.25s;
+    fill: $white;
   }
   &--transparent {
     .m-nav__top {
@@ -143,8 +142,8 @@
       border-bottom: 1px solid $border-color;
     }
     .m-nav__logo {
-      color: $primary;
-      font-size: 1.5rem;
+      fill: $primary;
+      width: 7rem;
     }
     a, i {
       @extend .cursor;
