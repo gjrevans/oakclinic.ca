@@ -113,6 +113,9 @@
     z-index: $zindex-navbar;
   }
   &__logo {
+    @include media-breakpoint-down(sm) {
+      width: 8rem;
+    }
     width: 10rem;
     transition: width 0.25s;
     fill: $white;
