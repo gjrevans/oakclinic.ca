@@ -50,7 +50,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                    image_url("backgrounds/landscape/reviewing.jpg");
+                    image_url("backgrounds/temp/ayla_desk_2.jpg");
 }
 
 .l-content {
@@ -70,9 +70,25 @@
     border-radius: 4px;
     border: 1px dashed rgba($primary, 0.3);
   }
+  &__number {
+    @extend .rounded-circle, .border, .text-white, .bg-primary, .mx-auto, .d-flex, .justify-content-center, .align-items-center, .mb-4;
+    font-size: 2.5rem;
+    width: 6rem;
+    height: 6rem;
+  }
   &__image {
     @extend .box-shadow;
     width: 80%;
+  }
+  &__section__image {
+    width: 100%;
+    height: 40rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include media-breakpoint-down(sm) {
+      height: 18rem;
+    }
   }
   &--pattern {
     background: image_url("icons/oak_pattern_white.png");
@@ -177,15 +193,18 @@
     @include banner__image(30rem, "backgrounds/landscape/computer.jpg", 0.2);
   }
   &--services {
-    // TODO: with_patient
     @include banner__image(30rem, "backgrounds/landscape/explaining.jpg", 0.3);
   }
   &--products {
-    // TODO: clinic_table
     @include banner__image(30rem, "backgrounds/landscape/herbs.jpg", 0.4);
   }
+  &--iv-therapy {
+    @include banner__image(30rem, "backgrounds/temp/iv-therapy-2.jpg", 0.4);
+  }
+  &--injections {
+    @include banner__image(30rem, "backgrounds/temp/injections.jpg", 0.4);
+  }
   &--article {
-    // TODO: at_desk
     @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.2);
   }
   &--faq-1 {

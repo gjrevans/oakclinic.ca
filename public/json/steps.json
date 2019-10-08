@@ -1,0 +1,22 @@
+[
+  {
+    "number": 1,
+    "title": "Initial Consultation",
+    "description": "Book a 15 minute initial consultation with our Naturopathic Doctors to determine if IV therapy is right for you."
+  },
+  {
+    "number": 2,
+    "title": "Blood Work",
+    "description": "Specific blood work needs to be completed at Life Labs in Dawson Creek to ensure your safety before IV therapy is initiated."
+  },
+  {
+    "number": 3,
+    "title": "Schedule Treatment Protocol",
+    "description": "Once your bloodwork has been reviewed and approved, we will work with you to schedule a treatment protocol."
+  },
+  {
+    "number": 4,
+    "title": "Attend IV Therapy Sessions",
+    "description": "Come to your appointment hydrated, fed and ready to relax. Drips typically take 30-45 minutes."
+  }
+]

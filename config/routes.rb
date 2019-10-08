@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get 'contact', to: 'pages#contact', as: 'contact'
     get 'products', to: 'pages#products', as: 'products'
     get 'services', to: 'pages#services', as: 'services'
+    get 'iv_therapy', to: 'pages#iv_therapy', as: 'iv_therapy'
+    get 'injections', to: 'pages#injections', as: 'injections'
     get 'faq', to: 'pages#faq', as: 'faq'
 
     # Article Routes
