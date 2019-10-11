@@ -9,12 +9,12 @@
     "link": "https://oakclinic.janeapp.com/#/staff_member/1/treatment/1"
   },
   {
-    "image": "icons/face.svg",
-    "title": "Facial Rejuvenation Acupuncture",
-    "price": "$220.00",
-    "target": "facial_acupuncture",
-    "about": "Rejuvenation acupuncture is a natural alternative for younger, firmer and healthier skin. Initial consultations are 120 minutes long and follow up treatments are 75 minutes long.",
-    "about_more": "If you have never had acupuncture before, feel free to contact the clinic for a complimentary 4-5 needle trial, otherwise, your first appointment will include an intake and a full treatment.",
-    "link": "https://oakclinic.janeapp.com/#/staff_member/2/treatment/4"
+    "image": "icons/natural.svg",
+    "title": "IV Therapy & Vitamin Injection Consultation",
+    "price": "$60.00",
+    "target": "iv_therapy_and_vitamin_injection",
+    "about": "Initial consultations are 15 minutes long and consist of a brief intake, review of systems, discussion of goals and addressing any risk factors.",
+    "about_more": "From your initial appointment you can expect a requisition for lab work and tailored IV plan. After your initial appointment, Dr. Ayla will review the lab results and approve you for the IV therapy. Once you’ve been approved we can book your IV drop as listed below.",
+    "link": "https://oakclinic.janeapp.com/#/discipline/3/treatment/11"
   }
 ]

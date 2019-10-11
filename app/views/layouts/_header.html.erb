@@ -2,21 +2,27 @@
 <div class="m-nav m-nav__top <%= current_page?(edit_user_registration_path) ||
 current_page?(controller: "/articles", action: "new") ||
 current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--white" : "m-nav--transparent" %>">
-<div class="container">
+<nav class="container">
   <div class="row">
     <div class="col-12 d-flex justify-content-between align-items-center">
-      <div class="d-block">
+      <div class="lh-0">
         <%= link_to root_path do %>
-        <h2 class="m-nav__logo mb-0"><%= t("brand_long")%></h2>
+          <%= image_tag 'logos/oak_full.svg', class: "m-nav__logo", alt: t("Oak Clinic") %>
         <% end %>
       </div>
-      <div class="d-none d-md-block">
+      <div class="d-none d-lg-block">
         <ul class="list-unstyled mb-0 d-flex align-items-center">
           <li class="mr-4">
             <%= link_to t(".services"), services_path, class: "#{'active' if current_page?(services_path)}" %>
           </li>
           <li class="mr-4 d-none d-sm-flex">
             <%= link_to t(".products"), products_path, class: "#{'active' if current_page?(products_path)}" %>
+          </li>
+          <li class="mr-4 d-none d-sm-flex">
+            <%= link_to t(".iv_therapy"), iv_therapy_path, class: "#{'active' if current_page?(iv_therapy_path)}" %>
+          </li>
+          <li class="mr-4 d-none d-sm-flex">
+            <%= link_to t(".injections"), injections_path, class: "#{'active' if current_page?(injections_path)}" %>
           </li>
           <li class="mr-4 d-none d-sm-flex">
             <%= link_to t(".news"), articles_path, class: "#{'active' if current_page?(articles_path)}" %>
@@ -32,7 +38,7 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
           </li>
         </ul>
       </div>
-      <div class="d-md-none">
+      <div class="d-lg-none">
         <ul class="list-unstyled mb-0 d-flex align-items-center">
           <li class="js-toggle-navigation">
             <%= icon("fas", "bars") %>
@@ -42,7 +48,7 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
     </div>
   </div>
 </div>
-</div>
+</nav>
 
 <script type="text/javascript">
 $(document).ready(function() {

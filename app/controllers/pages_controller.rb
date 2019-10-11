@@ -13,6 +13,14 @@ class PagesController < ApplicationController
     @secondary_services = JSON.parse(File.read('public/json/secondary_services.json'))
   end
 
+  def iv_therapy
+    @steps = JSON.parse(File.read('public/json/steps.json'))
+  end
+
+  def injections
+    @logos = JSON.parse(File.read('public/json/logos.json'))
+  end
+
   def products
     @logos = JSON.parse(File.read('public/json/logos.json'))
   end

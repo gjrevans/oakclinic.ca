@@ -8,17 +8,33 @@
     "link": "https://oakclinic.janeapp.com/#/staff_member/1/treatment/3"
   },
   {
+    "image": "icons/natural.svg",
+    "title": "IV Vitamin Therapy",
+    "price": "$140.00",
+    "about": "Intravenous drips offer high dose vitamin therapy, at levels unattainable through food or supplementation. IV drips typically last 30-45 minutes. Enjoy your drip while kicking back in a reclining chair, sipping a tea and staying warm by our fireplace.",
+    "bookable": true,
+    "link": "https://oakclinic.janeapp.com/#/discipline/3/treatment/12"
+  },
+  {
+    "image": "icons/clinic.svg",
+    "title": "Prescription Renewal",
+    "price": "$60.00",
+    "about": "Patient’s under the care of a practictioner may occasionally be prescribed pharmaceuticals. Such plans may require regular monitoring and/or the renewal of a pharmaceutical prescription. This appointmet option provides you with a 15 minute check-in to review your current strategy and renew your exisiting prescription.",
+    "bookable": true,
+    "link": "https://oakclinic.janeapp.com/#/discipline/1/treatment/9"
+  },
+  {
     "image": "icons/face.svg",
     "title": "Follow Up Facial Acupuncture",
-    "price": "$150.00",
-    "about": "Results can been seen as soon as your first appointment. However we've found that longer lasting and more drastic results are usually seen after 6 sessions and full results can be achieved after 12 sessions.",
-    "bookable": true,
-    "link": "https://oakclinic.janeapp.com/#/staff_member/2/treatment/5"
+    "price": "$120.00",
+    "about": "Rejuvenation acupuncture is a natural alternative for younger, firmer and healthier skin. Results can been seen as soon as your first appointment. However we've found that longer lasting and more drastic results are usually seen after 6 sessions and full results can be achieved after 12 sessions.",
+    "bookable": false,
+    "link": ""
   },
   {
     "image": "icons/acupuncture.svg",
     "title": "Acupuncture",
-    "price": "$500.00 for 6",
+    "price": "$80.00",
     "about": "Your follow up appointment may already include acupuncture as a part of your treatment plan. If required, stand alone acupuncture appointments may be arranged after the initial intake. Acupuncture is not a requirement, as patient comfort is our number one priority, please voice any reservations you may have.",
     "bookable": false,
     "link": ""
@@ -27,15 +43,7 @@
     "image": "icons/testing.svg",
     "title": "Lab Testing",
     "price": "Pricing Varies",
-    "about": "We offer various lab testing through Lifelabs in Dawson Creek, Rocky Mountain Analytical and Precision Analytical. Let the practitioner know, on your intake form, if you are interested in any specific testing. We will always discuss the necessity, pros and cons of lab testing based on your specific needs.",
-    "bookable": false,
-    "link": ""
-  },
-  {
-    "image": "icons/natural.svg",
-    "title": "IV Therapy",
-    "price": "Coming Soon",
-    "about": "Intravenous Drips will be offered by Dr. Ayla once she has completed her Prescriptive Authority examination. If you are seeking IV Therapy before this time, we can assess your need and refer you accordingly.",
+    "about": "We offer various lab testing through Lifelabs in Dawson Creek, Rocky Mountain Analytical, Doctor’s Data, SIBO Canada and Precision Analytical. Let the practitioner know, on your intake form, if you are interested in any specific testing. We will always discuss the necessity, pros and cons of lab testing based on your specific needs.",
     "bookable": false,
     "link": ""
   }

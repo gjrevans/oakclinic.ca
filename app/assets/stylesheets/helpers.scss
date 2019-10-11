@@ -28,6 +28,9 @@
   visibility: hidden;
 }
 
+.text-sm {
+  font-size: 87.5%;
+}
 /* -- Borders -- */
 // Use grid breakpoints to specify the size where the border will start to display
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -78,6 +81,7 @@
   color: rgba($white, 0.8);
 }
 
+.lh-0 { line-height: 0; }
 .lh-1 { line-height: 100%; }
 .lh-2 { line-height: 150%; }
 .lh-3 { line-height: 200%; }
@@ -89,4 +93,10 @@
 @mixin banner__image($height, $url, $opacity){
   height: $height;
   background-image: linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), image_url($url);
+}
+
+@each $color, $value in $theme-colors {
+  .fill-#{$color} {
+    fill: $value;
+  }
 }
