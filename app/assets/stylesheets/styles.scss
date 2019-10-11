@@ -50,7 +50,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                    image_url("backgrounds/temp/ayla_desk_2.jpg");
+                    image_url("backgrounds/landscape/ayla-at-desk.jpg");
 }
 
 .l-content {
@@ -199,10 +199,10 @@
     @include banner__image(30rem, "backgrounds/landscape/herbs.jpg", 0.4);
   }
   &--iv-therapy {
-    @include banner__image(30rem, "backgrounds/temp/iv-therapy-2.jpg", 0.4);
+    @include banner__image(30rem, "backgrounds/landscape/iv-lounge.jpg", 0.4);
   }
   &--injections {
-    @include banner__image(30rem, "backgrounds/temp/injections.jpg", 0.4);
+    @include banner__image(30rem, "backgrounds/landscape/injections.jpg", 0.4);
   }
   &--article {
     @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.2);
