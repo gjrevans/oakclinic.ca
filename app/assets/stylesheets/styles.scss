@@ -51,6 +51,10 @@
   background-repeat: no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
                     image_url("backgrounds/landscape/ayla-at-desk.jpg");
+
+  @include media-breakpoint-down(md) {
+    background-position: 70%;
+  }
 }
 
 .l-content {
