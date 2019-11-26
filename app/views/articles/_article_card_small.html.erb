@@ -9,10 +9,10 @@
           <span class="text-muted"><%= article.created_at.to_formatted_s(:long) %></span>
         </div>
       </div>
-      <%= link_to article_path(article), class: "m-article__link" do%>
+      <%= link_to article_path(article), class: "m-article__link" do %>
       <%= image_tag article.image, class: "m-article__image", alt: article.title %>
       <h4 class="m-article__title"><%= article.title %></h4>
-      <p class="m-article__body text-muted"><%= ActionView::Base.full_sanitizer.sanitize(article.body.truncate(200)) %></p>
+      <p class="m-article__body text-muted"><%= strip_tags(article.body).truncate(200) %></p>
       <% end %>
 
       <!-- Link to Edit -->
