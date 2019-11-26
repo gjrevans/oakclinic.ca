@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get 'iv_therapy', to: 'pages#iv_therapy', as: 'iv_therapy'
     get 'injections', to: 'pages#injections', as: 'injections'
     get 'faq', to: 'pages#faq', as: 'faq'
+    get 'team', to: 'pages#team', as: 'team'
 
     # Article Routes
     resources :articles

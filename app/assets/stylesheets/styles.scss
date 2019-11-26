@@ -93,6 +93,12 @@
     @include media-breakpoint-down(sm) {
       height: 18rem;
     }
+    &--practitioner {
+      height: 45rem;
+      @include media-breakpoint-down(sm) {
+        height: 20rem;
+      }
+    }
   }
   &--pattern {
     background: image_url("icons/oak_pattern_white.png");
@@ -328,14 +334,43 @@
 }
 
 .card {
+  $root: &;
   @extend .transition;
-  &-hover:hover {
+  overflow: hidden;
+  &__image {
+    width: 100%;
+    height: 16rem;
+    background-position: center;
+    background-size: cover;
+  }
+  &__body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: $spacer;
+    &--service {
+      @extend .py-0;
+      @include media-breakpoint-up(md) {
+        min-height: 20rem;
+      }
+    }
+  }
+  &__footer {
+    @extend .bg-light, .bt, .lh-1, .rounded-bottom;
+    padding: $spacer;
+    text-align: center;
+  }
+  &--hover:hover {
     @extend .box-shadow;
   }
-}
-.card-img-top {
-  max-width: 100%;
-  max-height: 100%;
+  &--team {
+    height: 100%;
+    overflow: hidden;
+  }
+  &--practitioner {
+    #{$root}__body {
+      height: 16rem;
+    }
+  }
 }
 
 .navbar-transparent .navbar-nav .nav-link {

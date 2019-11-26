@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def index
     @articles = Article.where(status: :published).order("created_at DESC").limit(3)
     @hours = JSON.parse(File.read('public/json/hours.json'))
+    @team_members = JSON.parse(File.read('public/json/team_members.json'))
   end
 
   def faq
@@ -23,6 +24,10 @@ class PagesController < ApplicationController
 
   def products
     @logos = JSON.parse(File.read('public/json/logos.json'))
+  end
+
+  def team
+    @team_members = JSON.parse(File.read('public/json/team_members.json'))
   end
 
   def contact
