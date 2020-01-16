@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= t("brand_long") %></title>
-  <meta name="author" content="Gordon Evans">
-
   <meta charset="UTF-8">
-  <meta name="description" content="<%= t("brand_long") %>">
+  <%
+    safe_id = params[:id] || 0
+    page_title = t('brand_long')
+    page_description = t('brand_description')
+    page_image = "https://s3.amazonaws.com/oakclinic.ca/sharing.jpg"
+    page_type = "website"
+
+    if current_page?(controller: "/articles", action: "show", id: safe_id)
+      page_title = @article.title
+      page_description = strip_tags(@article.body).truncate(200)
+      page_image = image_path(@article.image)
+      page_type = "article"
+    end
+  %>
+
+  <title><%= page_title %></title>
+  <meta name="author" content="Oak Clinic">
+  <meta name="description" content="<%= page_description %>">
   <meta name="keywords" content="Dawson Creek Naturopathic Clinic Doctor">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#FFF">
+  <meta name="theme-color" content="#2F7D49">
 
   <!-- =================
   FAV AND TOUCH ICONS
@@ -18,16 +32,16 @@
   <!-- =================
   FACEBOOK OPENGRAPH
   ====================== -->
-  <meta property="og:url"                content="https://oakclinic.ca">
-  <meta property="og:type"               content="website">
-  <meta property="og:title"              content="Oak Naturopathic Clinic">
-  <meta property="og:description"        content="Providing Dawson Creek and surrounding area with Naturopathic Care">
+
+  <meta property="og:url"                content="<%= "#{t('base_url')}#{request.env['PATH_INFO']}" %>">
+  <meta property="og:type"               content="<%= page_type %>">
+  <meta property="og:title"              content="<%= page_title %>">
+  <meta property="og:description"        content="<%= page_description %>">
 
   <!-- NOTE: Remember to come back and update these for sharing cards -->
-  <meta property="og:image"              content="https://s3.amazonaws.com/oakclinic.ca/sharing.jpg">
-  <meta property="og:image:url"          content="https://s3.amazonaws.com/oakclinic.ca/sharing.jpg">
-  <meta property="og:image:secure_url"   content="https://s3.amazonaws.com/oakclinic.ca/sharing.jpg">
-
+  <meta property="og:image"              content="<%= page_image %>">
+  <meta property="og:image:url"          content="<%= page_image %>">
+  <meta property="og:image:secure_url"   content="<%= page_image %>">
   <!-- =================
   GOOGLE ANALYTICS
   ====================== -->

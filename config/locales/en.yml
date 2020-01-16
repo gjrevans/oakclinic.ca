@@ -1,6 +1,8 @@
 en:
   brand: "Oak"
   brand_long: "Oak Clinic"
+  brand_description: "A Naturopathic Practice bringing new wellness opportunities to the Peace Country."
+  base_url: https://oakclinic.ca
   ayla_andrus: "Ayla Andrus"
   about_ayla: "Ayla"
   address: "Address"
