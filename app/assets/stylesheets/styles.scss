@@ -206,10 +206,10 @@
   background-position: center;
   background-repeat: no-repeat;
   &--contact {
-    @include banner__image(30rem, "backgrounds/landscape/computer.jpg", 0.2);
+    @include banner__image(30rem, "backgrounds/landscape/computer.jpg", 0.4);
   }
   &--services {
-    @include banner__image(30rem, "backgrounds/landscape/explaining.jpg", 0.3);
+    @include banner__image(30rem, "backgrounds/landscape/explaining.jpg", 0.5);
   }
   &--products {
     @include banner__image(30rem, "backgrounds/landscape/herbs.jpg", 0.4);
@@ -221,13 +221,13 @@
     @include banner__image(30rem, "backgrounds/landscape/injections.jpg", 0.4);
   }
   &--article {
-    @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.2);
+    @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.4);
   }
   &--faq-1 {
-    @include banner__image(30rem, "backgrounds/landscape/kitchen.jpg", 0.2);
+    @include banner__image(30rem, "backgrounds/landscape/kitchen.jpg", 0.4);
   }
   &--faq-2 {
-    @include banner__image(26rem, "backgrounds/landscape/stretch.jpg", 0.2) ;
+    @include banner__image(26rem, "backgrounds/landscape/stretch.jpg", 0.4) ;
   }
 }
 

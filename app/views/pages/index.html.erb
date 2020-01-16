@@ -79,7 +79,7 @@
       </div>
     </div>
     <div class="row text-center justify-content-center">
-      <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+      <div class="col-lg-5 col-md-6 mb-4">
         <div class="card card--hover">
           <div class="card__body d-flex align-items-center justify-content-center mb-4 mt-5">
             <%= image_tag("icons/stomach.svg") %>
@@ -90,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-6">
+      <div class="col-lg-5 col-md-6 mb-4">
         <div class="card card--hover">
           <div class="card__body d-flex align-items-center justify-content-center mb-4 mt-5">
             <%= image_tag("icons/female.svg") %>
@@ -98,6 +98,28 @@
           <div class="card__body">
             <h5><%= t(".special_title_2") %></h5>
             <p class="text-muted"><%= t(".special_2") %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <div class="card card--hover">
+          <div class="card__body d-flex align-items-center justify-content-center mb-4 mt-5">
+            <%= image_tag("icons/lyme_disease.svg") %>
+          </div>
+          <div class="card__body">
+            <h5><%= t(".special_title_3") %></h5>
+            <p class="text-muted"><%= t(".special_3") %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 mb-4">
+        <div class="card card--hover">
+          <div class="card__body d-flex align-items-center justify-content-center mb-4 mt-5">
+            <%= image_tag("icons/cancer.svg") %>
+          </div>
+          <div class="card__body">
+            <h5><%= t(".special_title_4") %></h5>
+            <p class="text-muted"><%= t(".special_4") %></p>
           </div>
         </div>
       </div>
@@ -120,7 +142,7 @@
             <div class="card card--hover card--practitioner card-team mb-3 text-center">
               <div class="card__image" style="background-image: url('<%= image_url(team_member['banner']) %>')"></div>
               <div class="card__body">
-                <h4 class="mb-0 font-weight-bold"><%= team_member['name'] %></h4>
+                <h4 class="mb-0"><%= team_member['name'] %></h4>
                 <span class="text-primary"><%= team_member['role'] %></span>
                 <p class="text-muted"><%= team_member['practice'] %></p>
               </div>

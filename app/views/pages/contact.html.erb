@@ -1,3 +1,6 @@
+<% content_for(:title) { t(".header_title") } %>
+<% content_for(:description) { t(".header_body") } %>
+
 <%= render partial: "layouts/topper", locals: {type: "contact", title: t(".header_title"), body: t(".header_body")} %>
 
 <!-- Location -->

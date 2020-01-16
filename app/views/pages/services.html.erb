@@ -1,3 +1,6 @@
+<% content_for(:title) { t(".header_title") } %>
+<% content_for(:description) { t(".header_body") } %>
+
 <%= render partial: "layouts/topper", locals: {type: "services", title: t(".header_title"), body: t(".header_body")} %>
 
 <section class="l-content l-content--white l-content--bordered l-content--md">

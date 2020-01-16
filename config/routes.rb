@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     # Article Routes
     resources :articles
 
+    # Sitemap
+    resource :sitemap, only: :show
+
     # Mailer Routes
     post 'create_contact', to: 'contacts#create', as: 'create_contact'
 end
