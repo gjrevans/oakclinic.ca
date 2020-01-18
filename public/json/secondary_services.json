@@ -19,7 +19,7 @@
     "image": "icons/clinic.svg",
     "title": "Prescription Renewal",
     "price": "$60.00",
-    "about": "Patient’s under the care of a practictioner may occasionally be prescribed pharmaceuticals. Such plans may require regular monitoring and/or the renewal of a pharmaceutical prescription. This appointmet option provides you with a 15 minute check-in to review your current strategy and renew your exisiting prescription.",
+    "about": "Patient’s under the care of a practitioner may occasionally be prescribed pharmaceuticals. Such plans may require regular monitoring and/or the renewal of a pharmaceutical prescription. This appointmet option provides you with a 15 minute check-in to review your current strategy and renew your exisiting prescription.",
     "bookable": true,
     "link": "https://oakclinic.janeapp.com/#/discipline/1/treatment/9"
   },

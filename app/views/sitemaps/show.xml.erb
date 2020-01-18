@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc><%= root_url %></loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc><%= contact_url %></loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc><%= faq_url %></loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc><%= injections_url %></loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc><%= iv_therapy_url %></loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc><%= products_url %></loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc><%= services_url %></loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc><%= team_url %></loc>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <% Article.all.each do |article| %>
+    <url>
+      <loc><%= article_url(article) %></loc>
+      <lastmod><%= article.updated_at.strftime('%Y-%m-%d') %></lastmod>
+      <changefreq>weekly</changefreq>
+    </url>
+  <% end %>
+</urlset>

@@ -15,7 +15,7 @@
       <%= t("layouts.header.products")%>
       <% end %>
     </div>
-    <div class="l-navigation__link animated fadeInRight">
+    <div class="l-navigation__link animated fadeInLeft">
       <%= link_to iv_therapy_path do %>
       <%= t("layouts.header.iv_therapy")%>
       <% end %>
@@ -31,11 +31,16 @@
       <% end %>
     </div>
     <div class="l-navigation__link animated fadeInRight">
+      <%= link_to team_path do %>
+      <%= t("layouts.header.team")%>
+      <% end %>
+    </div>
+    <div class="l-navigation__link animated fadeInLeft">
       <%= link_to articles_path do %>
       <%= t("layouts.header.news")%>
       <% end %>
     </div>
-    <div class="l-navigation__link animated fadeInLeft">
+    <div class="l-navigation__link animated fadeInRight">
       <%= link_to faq_path do %>
       <%= t("layouts.header.faq")%>
       <% end %>

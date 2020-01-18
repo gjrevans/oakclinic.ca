@@ -17,10 +17,12 @@
     end
   %>
 
-  <title><%= page_title %></title>
+  <title><%= content_for?(:title) ? "#{content_for(:title)} | #{page_title}" : page_title %></title>
   <meta name="author" content="Oak Clinic">
-  <meta name="description" content="<%= page_description %>">
+  <meta name="description" content="<%= content_for?(:description) ? content_for(:description) : page_description %>">
   <meta name="keywords" content="Dawson Creek Naturopathic Clinic Doctor">
+  <link rel="canonical" href="<%= t('base_url') %>" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#2F7D49">
 
