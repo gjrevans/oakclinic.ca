@@ -364,6 +364,9 @@
     height: 16rem;
     background-position: center;
     background-size: cover;
+    @include media-breakpoint-down(md) {
+      height: 11rem;
+    }
   }
   &__icon {
     width: 100%;
