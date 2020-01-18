@@ -10,7 +10,7 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
           <%= image_tag 'logos/oak_full.svg', class: "m-nav__logo", alt: t("Oak Clinic") %>
         <% end %>
       </div>
-      <div class="d-none d-lg-block">
+      <div class="d-none d-xl-block">
         <ul class="list-unstyled mb-0 d-flex align-items-center">
           <li class="mr-4">
             <%= link_to t(".services"), services_path, class: "#{'active' if current_page?(services_path)}" %>
@@ -31,6 +31,9 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
             <%= link_to t(".contact"), contact_path, class: "#{'active' if current_page?(contact_path)}" %>
           </li>
           <li class="mr-4 d-none d-sm-flex">
+            <%= link_to t(".team"), team_path, class: "#{'active' if current_page?(team_path)}" %>
+          </li>
+          <li class="mr-4 d-none d-sm-flex">
             <%= link_to t(".faq"), faq_path, class: "#{'active' if current_page?(faq_path)}"  %>
           </li>
           <li class="mr-4 d-none d-sm-flex">
@@ -38,7 +41,7 @@ current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--wh
           </li>
         </ul>
       </div>
-      <div class="d-lg-none">
+      <div class="d-xl-none">
         <ul class="list-unstyled mb-0 d-flex align-items-center">
           <li class="js-toggle-navigation">
             <%= icon("fas", "bars") %>

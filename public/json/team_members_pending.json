@@ -1,8 +1,8 @@
 [
   {
     "is_practitioner": true,
-    "image": "team/portrait/ayla.jpg",
-    "banner": "team/banner/dr-ayla-andrus-nd.jpg",
+    "image": "team/ayla.jpg",
+    "banner": "team/ayla.jpg",
     "name": "Dr. Ayla Andrus",
     "role": "Naturopathic Doctor",
     "practice": "Dr. Ayla Andrus is available for all appoinments.",
@@ -13,8 +13,8 @@
   },
   {
     "is_practitioner": true,
-    "image": "team/portrait/anouk.jpg",
-    "banner": "team/banner/dr-anouk-chaumont-nd.jpg",
+    "image": "team/anouk.jpg",
+    "banner": "team/anouk.jpg",
     "name": "Dr. Anouk Charlmont",
     "role": "Naturopathic Doctor",
     "practice": "Dr. Anouk Charlmont is available specifically for Lyme Disease and Cancer Therapy appointments.",
@@ -22,5 +22,39 @@
     "specialties": ["Cancer Therapy", "Lyme Disease", "Naturopathic Medicine"],
     "schedule": "https://oakclinic.janeapp.com",
     "profile": "anouk"
+  },
+  {
+    "is_practitioner": false,
+    "image": "team/nina.jpg",
+    "banner": "team/nina.jpg",
+    "name": "Nina King",
+    "role": "Registered Nurse",
+    "practice": "Nina manages our IV lounge. If you've already had your initial consultation with once of our doctors click below to book your IV session.",
+    "about": "Ayla Graduated from the College of Naturopathic Medicine in 2017.",
+    "specialties": ["IV Therapy"],
+    "schedule": "https://oakclinic.janeapp.com",
+    "profile": "nina"
+  },
+  {
+    "is_practitioner": false,
+    "image": "team/ayla.jpg",
+    "banner": "team/ayla.jpg",
+    "name": "Gordon Evans",
+    "role": "Certified Nutritionist & Trainer",
+    "about": "Gordon is smart.",
+    "specialties": ["Nutrition Planning", "Weight Loss", "Coaching"],
+    "schedule": "https://oakclinic.janeapp.com",
+    "profile": "gordon"
+  },
+  {
+    "is_practitioner": false,
+    "image": "team/ayla.jpg",
+    "banner": "team/ayla.jpg",
+    "name": "Violet Andrus",
+    "role": "Receptionist",
+    "about": "Ayla Graduated from the College of Naturopathic Medicine in 2017.",
+    "specialties": ["IV Therapy"],
+    "schedule": false,
+    "profile": "violet"
   }
 ]
