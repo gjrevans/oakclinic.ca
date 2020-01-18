@@ -28,7 +28,7 @@
           <div class="text-white-muted mb-4">
               <%= t(".appointment_body") %>
           </div>
-          <%= link_to t(".appointment_cta"), t("jane_link"), class: "btn btn-white btn-block text-primary", target: "_blank" %>
+          <%= link_to t(".appointment_cta"), t("jane_link"), class: "btn btn-white btn-block text-primary animated infinite pulse", target: "_blank" %>
         </div>
 
         <div class="col-lg-4 m-floater__section">
@@ -78,52 +78,64 @@
         <p class="text-muted"><%= t(".special_intro_body") %></p>
       </div>
     </div>
-    <div class="row text-center justify-content-center">
-      <div class="col-lg-5 col-md-6 mb-4">
-        <div class="card card--hover">
-          <div class="card__body d-flex align-items-center justify-content-center mb-4 mt-5">
-            <%= image_tag("icons/stomach.svg") %>
+    <div class="accordion" id="specialties">
+      <% @specialties.each_with_index do |specialty, index| %>
+        <div class="card">
+          <div class="card-body card-body--hover" data-toggle="collapse" data-target="#<%= "item_#{index}" %>" aria-expanded="true" aria-controls="<%= "item_#{index}" %>">
+            <h4 class="mb-0">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                  <div class="mr-3 w-3 h-3">
+                    <%= image_tag(specialty["icon"], class: "w-100 h-100") %>
+                  </div>
+                  <%= t(specialty["title"]) %>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </div>
+
+            </h4>
           </div>
-          <div class="card__body">
-            <h5><%= t(".special_title_1") %></h5>
-            <p class="text-muted"><%= t(".special_1") %></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <div class="card card--hover">
-          <div class="card__body d-flex align-items-center justify-content-center mb-4 mt-5">
-            <%= image_tag("icons/female.svg") %>
-          </div>
-          <div class="card__body">
-            <h5><%= t(".special_title_2") %></h5>
-            <p class="text-muted"><%= t(".special_2") %></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <div class="card card--hover">
-          <div class="card__body d-flex align-items-center justify-content-center mb-4 mt-5">
-            <%= image_tag("icons/lyme_disease.svg") %>
-          </div>
-          <div class="card__body">
-            <h5><%= t(".special_title_3") %></h5>
-            <p class="text-muted"><%= t(".special_3") %></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5 col-md-6 mb-4">
-        <div class="card card--hover">
-          <div class="card__body d-flex align-items-center justify-content-center mb-4 mt-5">
-            <%= image_tag("icons/cancer.svg") %>
-          </div>
-          <div class="card__body">
-            <h5><%= t(".special_title_4") %></h5>
-            <p class="text-muted"><%= t(".special_4") %></p>
+
+          <div id="<%= "item_#{index}" %>" class="collapse <%= "show" if index === 0 %>" aria-labelledby="<%= specialty["name"] %>" data-parent="#specialties">
+            <div class="card-body bt">
+              <p><%= t(specialty["description"]) %></p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-6">
+                      <%= link_to t(".book_now"), t(specialty["book"]), class: "btn btn-primary btn-block"%>
+                    </div>
+                    <div class="col-6">
+                      <%= link_to t(".learn_more"), specialty["learn_more"], class: "btn btn-primary btn-block" if specialty["learn_more"].present? %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
+
+    <!-- <div class="l-content__scroll row">
+      <% @specialties.each_with_index do |specialty| %>
+        <div class="col-xl-3 col-lg-6 col-10 mb-sm-4">
+          <div class="card card--hover card--specialty text-center">
+            <div class="card__icon d-flex align-items-center justify-content-center">
+              <%= image_tag(specialty["icon"]) %>
+            </div>
+            <div class="card__body">
+              <h5><%= t(specialty["title"]) %></h5>
+              <p class="text-muted"><%= t(specialty["description"]) %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="text-center d-sm-none font-italic text-primary">
+      <%= t(".scroll_for_more") %>
+      <i class="fa fa-arrow-right animated pulse infinite ml-3"></i>
+    </div> -->
   </div>
 </section>
 
@@ -135,24 +147,24 @@
         <p class="text-muted"><%= t(".about_team_body") %></p>
       </div>
     </div>
-    <div class="row">
+    <div class="l-content__scroll row">
       <% @team_members.each_with_index do |team_member, index| %>
         <% if team_member["is_practitioner"] %>
-          <div class="col-lg-4">
-            <div class="card card--hover card--practitioner card-team mb-3 text-center">
+          <div class="col-lg-6 col-10">
+            <div class="card card--hover card--practitioner card-team mb-sm-3 text-center">
               <div class="card__image" style="background-image: url('<%= image_url(team_member['banner']) %>')"></div>
               <div class="card__body">
                 <h4 class="mb-0"><%= team_member['name'] %></h4>
-                <span class="text-primary"><%= team_member['role'] %></span>
-                <p class="text-muted"><%= team_member['practice'] %></p>
+                <span class="text-primary font-weight-bold"> - <%= team_member['role'] %> - </span>
+                <p class="text-muted"><%= String(team_member['about']).truncate(250) %></p>
               </div>
               <div class="card__footer container-fluid">
                 <div class="row">
-                  <div class="col-md-6 mb-3 mb-md-0">
+                  <div class="col-6">
                     <%= link_to t(".view_schedule"), team_member['schedule'], class: "btn btn-primary btn-block", target: "_blank" %>
                   </div>
-                  <div class="col-md-6">
-                    <%= link_to t(".learn_more"), team_member['profile'], class: "btn btn-primary btn-block", target: "_blank" %>
+                  <div class="col-6">
+                    <%= link_to t(".learn_more"), team_path(anchor: team_member['profile']), class: "btn btn-primary btn-block", target: "_blank" %>
                   </div>
                 </div>
               </div>
@@ -160,6 +172,10 @@
           </div>
         <% end %>
       <% end %>
+    </div>
+    <div class="text-center d-sm-none font-italic text-primary">
+      <%= t(".scroll_for_more") %>
+      <i class="fa fa-arrow-right animated pulse infinite ml-3"></i>
     </div>
   </div>
 </section>

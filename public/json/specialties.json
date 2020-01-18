@@ -1,0 +1,40 @@
+[
+  {
+    "icon": "icons/stomach.svg",
+    "title": ".special_title_1",
+    "description": ".special_1",
+    "book": "ayla_jane_link"
+  },
+  {
+    "icon": "icons/female.svg",
+    "title": ".special_title_2",
+    "description": ".special_2",
+    "book": "ayla_jane_link"
+  },
+  {
+    "icon": "icons/lyme_disease.svg",
+    "title": ".special_title_3",
+    "description": ".special_3",
+    "book": "anouk_jane_link"
+  },
+  {
+    "icon": "icons/cancer.svg",
+    "title": ".special_title_4",
+    "description": ".special_4",
+    "book": "anouk_jane_link"
+  },
+  {
+    "icon": "icons/natural.svg",
+    "title": ".special_title_5",
+    "description": ".special_5",
+    "learn_more": "/iv_therapy",
+    "book": "anouk_jane_link"
+  },
+  {
+    "icon": "icons/injections.svg",
+    "title": ".special_title_6",
+    "description": ".special_6",
+    "learn_more": "/injections",
+    "book": "anouk_jane_link"
+  }
+]

@@ -49,7 +49,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
                     image_url("backgrounds/landscape/ayla-at-desk.jpg");
 
   @include media-breakpoint-down(md) {
@@ -97,6 +97,21 @@
       height: 45rem;
       @include media-breakpoint-down(sm) {
         height: 20rem;
+      }
+    }
+  }
+  &__scroll {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: $spacer 0;
+      &__card {
+        padding-right: 0;
+      }
+      &__spacer {
+        flex: 0 0 1rem;
       }
     }
   }
@@ -168,7 +183,7 @@
       }
     }
     .m-nav__button {
-      @extend .btn, .btn-outline-white;
+      @extend .btn, .btn-primary;
     }
   }
   &--white {
@@ -279,6 +294,7 @@
 }
 
 .m-article {
+  height: 100%;
   margin-bottom: 1.5rem;
   position: relative;
   display: flex;
@@ -349,6 +365,10 @@
     background-position: center;
     background-size: cover;
   }
+  &__icon {
+    width: 100%;
+    height: 13rem;
+  }
   &__body {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -360,6 +380,15 @@
       }
     }
   }
+  &-body {
+    &--hover {
+      @extend .transition;
+      cursor: pointer;
+      &:hover {
+        background: lighten($primary, 50%);
+      }
+    }
+  }
   &__footer {
     @extend .bg-light, .bt, .lh-1, .rounded-bottom;
     padding: $spacer;
@@ -368,14 +397,16 @@
   &--hover:hover {
     @extend .box-shadow;
   }
+  &--specialty {
+    height: 100%;
+    overflow: hidden;
+  }
   &--team {
     height: 100%;
     overflow: hidden;
   }
   &--practitioner {
-    #{$root}__body {
-      height: 16rem;
-    }
+    height: 100%;
   }
 }
 

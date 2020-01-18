@@ -4,7 +4,7 @@
 <%= render partial: "layouts/topper", locals: {type: "services", title: t(".header_title"), body: t(".header_body")} %>
 
 <% @team_members.each_with_index do |team_member, index| %>
-  <section class="l-content l-content--xx l-content--white l-content--bordered">
+  <section class="l-content l-content--xx l-content--white l-content--bordered" id="<%= team_member["profile"] %>">
     <div class="row no-gutters align-items-center">
       <div class="col-md-6 col-lg-4 <%= "order-md-12" if index.even? %>">
         <div style='background-image: url("<%= image_path(team_member["image"]) %>");' class="l-content__section__image l-content__section__image--practitioner"></div>
