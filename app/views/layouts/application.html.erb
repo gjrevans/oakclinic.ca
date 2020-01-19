@@ -6,14 +6,20 @@
     safe_id = params[:id] || 0
     page_title = t('brand_long')
     page_description = t('brand_description')
-    page_image = "https://s3.amazonaws.com/oakclinic.ca/sharing.jpg"
+    brand_image = "https://s3.amazonaws.com/oakclinic.ca/sharing.jpg"
+    page_image = brand_image
+    page_url = "#{t('base_url')}#{request.env['PATH_INFO']}"
     page_type = "website"
 
-    if current_page?(controller: "/articles", action: "show", id: safe_id)
+    if @article.present?
       page_title = @article.title
       page_description = strip_tags(@article.body).truncate(200)
       page_image = image_path(@article.image)
       page_type = "article"
+    end
+
+    if current_page?(controller: "/pages", action: "index")
+      page_title = "#{t('brand_long')} | #{t('city')}"
     end
   %>
 
@@ -35,7 +41,7 @@
   FACEBOOK OPENGRAPH
   ====================== -->
 
-  <meta property="og:url"                content="<%= "#{t('base_url')}#{request.env['PATH_INFO']}" %>">
+  <meta property="og:url"                content="<%= page_url %>">
   <meta property="og:type"               content="<%= page_type %>">
   <meta property="og:title"              content="<%= page_title %>">
   <meta property="og:description"        content="<%= page_description %>">
@@ -62,6 +68,58 @@
 
   <%= javascript_include_tag :modernizr %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <!-- =================
+  GOOGLE STRUCTURED DATA
+  ====================== -->
+  <% if current_page?(controller: "/pages", action: "index") %>
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "LocalBusiness",
+    "name" : "<%= t("brand_long") %>",
+    "description" : "<%= t('brand_description') %>",
+    "image" : "<%= brand_image %>",
+    "telephone" : "<%= t("phone_number") %>",
+    "faxNumber" : "<%= t("fax_number") %>",
+    "email" : "<%= t("email_address") %>",
+    "openingHours" : ["Mo-Tu 12:00-18:00", "We-Th 09:00-15:00", "Fr 09:00-03:00"],
+    "currenciesAccepted": "CAD",
+    "paymentAccepted" : "Cash, Credit Card",
+    "url": "<%= t('base_url') %>",
+    "address" : {
+      "@type" : "PostalAddress",
+      "streetAddress" : "10212 17 Street",
+      "addressLocality" : "Dawson Creek",
+      "addressRegion" : "Peace Country",
+      "addressCountry" : "Canada",
+      "postalCode" : "V1G 4C2"
+    }
+  }
+  </script>
+  <% end %>
+
+  <% if @article.present? %>
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Article",
+    "name" : "<%= page_title %>",
+    "author" : {
+      "@type" : "Person",
+      "name" : "<%= @article.user.first_name %> <%= @article.user.last_name %>"
+    },
+    "datePublished" :"<%=  @article.created_at %>",
+    "image" : "<%= page_image %>",
+    "articleBody" : "<%= strip_tags(@article.body) %>"
+    "url" : "<%= page_url %>",
+    "publisher" : {
+      "@type" : "Organization",
+      "name" : "<%= t("brand_long") %>"
+    }
+  }
+  </script>
+  <% end %>
 </head>
 
 <body>

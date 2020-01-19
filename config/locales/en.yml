@@ -1,10 +1,12 @@
 en:
   brand: "Oak"
-  brand_long: "Oak Clinic"
+  brand_short: "Oak Clinic"
+  brand_long: "Oak Naturopathic Clinic"
   brand_description: "A Naturopathic Practice bringing new wellness opportunities to the Peace Country."
   base_url: https://oakclinic.ca
   ayla_andrus: "Ayla Andrus"
   about_ayla: "Ayla"
+  city: "Dawson Creek"
   address: "Address"
   street_address_1: "10212 17 Street"
   street_address_2: "Dawson Creek, BC, V1G 4C2, Canada"

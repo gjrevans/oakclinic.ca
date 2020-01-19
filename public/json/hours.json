@@ -1,11 +1,19 @@
 [
   {
-    "name": "monday - tuesday",
-    "hours": "9pm - 3pm"
+    "name": "monday",
+    "hours": "9am - 3pm"
   },
   {
-    "name": "wednesday - thursday",
-    "hours": "12am - 6pm"
+    "name": "tuesday",
+    "hours": "9am - 3pm"
+  },
+  {
+    "name": "wednesday",
+    "hours": "12pm - 6pm"
+  },
+  {
+    "name": "wednesday",
+    "hours": "12pm - 6pm"
   },
   {
     "name": "fridays",
