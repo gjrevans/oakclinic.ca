@@ -31,6 +31,10 @@ class PagesController < ApplicationController
     @team_members = JSON.parse(File.read('public/json/team_members.json'))
   end
 
+  def conditions_treated
+    @team_members = JSON.parse(File.read('public/json/conditions.json'))
+  end
+
   def contact
     @hours = JSON.parse(File.read('public/json/hours.json'))
   end

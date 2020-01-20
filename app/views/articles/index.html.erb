@@ -8,7 +8,7 @@
     <div class="row">
         <% if @articles.length > 0 %>
           <% @articles.each do |article| %>
-            <%= render partial: "article_card", locals: {article: article} %>
+            <%= render partial: "article_card", locals: {article: article, extra_class: "mb-3"} %>
           <% end %>
         <% else %>
         <div class="col-md-8 col-sm-12">
