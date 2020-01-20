@@ -55,6 +55,9 @@
   @include media-breakpoint-down(md) {
     background-position: 70%;
   }
+  &__title {
+    font-size: 2rem;
+  }
 }
 
 .l-content {
