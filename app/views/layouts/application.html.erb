@@ -109,14 +109,22 @@
       "@type" : "Person",
       "name" : "<%= @article.user.first_name %> <%= @article.user.last_name %>"
     },
-    "datePublished" :"<%=  @article.created_at %>",
+    "datePublished" : "<%=  @article.created_at %>",
+    "dateModified" : "<%=  @article.updated_at %>",
     "image" : "<%= page_image %>",
     "articleBody" : "<%= strip_tags(@article.body) %>",
     "url" : "<%= page_url %>",
     "headline" : "<%= page_title %>",
     "publisher" : {
       "@type" : "Organization",
-      "name" : "<%= t("brand_long") %>"
+      "name" : "<%= t("brand_long") %>",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "<%= image_url("logos/oak-publisher-logo.png")%>",
+        "width": 600,
+        "height": 60
+      }
+      "logo" :
     }
   }
   </script>

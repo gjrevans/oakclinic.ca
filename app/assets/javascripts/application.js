@@ -19,5 +19,4 @@
 //= require pace/pace
 //= require bootstrap-notify
 //= require summernote/summernote-bs4
-//= require wow
 //= require_tree .

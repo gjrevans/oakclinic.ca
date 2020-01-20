@@ -33,9 +33,6 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
-// Initialize Wow JS
-// new WOW().init();
-
 // Handle Filepicker Uploads
 function onPhotoUpload(data) {
   url = data.filesUploaded[0].url;
