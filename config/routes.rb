@@ -6,13 +6,16 @@ Rails.application.routes.draw do
     # Page Routes
     root to: 'pages#index'
     get 'about', to: redirect("/")
-    get 'contact', to: 'pages#contact', as: 'contact'
-    get 'products', to: 'pages#products', as: 'products'
-    get 'services', to: 'pages#services', as: 'services'
-    get 'iv_therapy', to: 'pages#iv_therapy', as: 'iv_therapy'
-    get 'injections', to: 'pages#injections', as: 'injections'
-    get 'faq', to: 'pages#faq', as: 'faq'
-    get 'team', to: 'pages#team', as: 'team'
+    get 'contact', to: 'pages#contact'
+    get 'products', to: 'pages#products'
+    get 'services', to: 'pages#services'
+    get 'iv-therapy', to: 'pages#iv_therapy'
+    get 'injections', to: 'pages#injections'
+    get 'faq', to: 'pages#faq'
+    get 'team', to: 'pages#team'
+
+    # Redirect List
+    get 'iv_therapy', to: redirect("iv-therapy"), status: 301
 
     # Article Routes
     resources :articles
