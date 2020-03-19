@@ -1,7 +1,5 @@
 <% safe_id = params[:id] || 0 %>
-<div class="m-nav m-nav__top <%= current_page?(edit_user_registration_path) ||
-current_page?(controller: "/articles", action: "new") ||
-current_page?(controller: "/articles", action: "edit", id: safe_id) ? "m-nav--white" : "m-nav--transparent" %>">
+<div class="m-nav m-nav__top m-nav--white">
 <nav class="container">
   <div class="row">
     <div class="col-12 d-flex justify-content-between align-items-center">
@@ -62,9 +60,9 @@ $(document).ready(function() {
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll <= 100) {
-      $(".m-nav").removeClass("m-nav--white").addClass("m-nav--transparent");
+      $(".js-fixed-nav").removeClass("m-nav--white").addClass("m-nav--transparent");
     } else if (scroll >= 100) {
-      $(".m-nav").addClass("m-nav--white").removeClass("m-nav--transparent");
+      $(".js-fixed-nav").addClass("m-nav--white").removeClass("m-nav--transparent");
     }
   });
   <% end %>

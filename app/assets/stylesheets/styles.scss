@@ -156,12 +156,12 @@
 .m-nav {
   @extend .transition;
   padding: 1.5rem 0;
-  &__top {
-    top: 0;
-    width: 100%;
-    position: fixed;
-    z-index: $zindex-navbar;
-  }
+  // &__top {
+  //   top: 0;
+  //   width: 100%;
+  //   position: fixed;
+  //   z-index: $zindex-navbar;
+  // }
   &__logo {
     @include media-breakpoint-down(sm) {
       width: 8rem;

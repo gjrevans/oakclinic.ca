@@ -135,6 +135,15 @@
   <% safe_id = params[:id] || 0 %>
 
   <!-- RENDER CONTENT -->
+  <section class="l-content l-content--primary w-100 p-4 text-white">
+    <div class="container">
+      <h4 class="font-weight-bold"><%= t("alerts.covid.title") %></h4>
+      <p><%= raw(t("alerts.covid.body")) %></p>
+      <a href="tel:<%= t("phone_number") %>" class="text-white"><%= t("phone_number") %></a>
+      <span class="mx-3">|</span>
+      <a href="mailto:<%= t("email_address") %>" class="text-white"><%= t("email_address") %></a>
+    </div>
+  </section>
   <%= render partial: "layouts/notify", flash: flash %>
   <%= render partial: "layouts/navigation" %>
   <%= render partial: "layouts/header" %>
