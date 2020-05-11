@@ -23,8 +23,16 @@
                 <% end %>
               </div>
             <% end %>
-            <p class="text-muted"><%=  simple_format(team_member["about"]) %></p>
-            <%= link_to t(".book_now"), team_member["schedule"], class: "btn btn-primary px-5" %>
+            <p class="text-muted">
+              <%= simple_format(team_member["about"]) %>
+            </p>
+
+            <%# Booking Options %>
+            <% if team_member["bookable"] %>
+              <%= link_to t(".book_now"), team_member["schedule"], class: "btn btn-primary", target: "_blank" %>
+            <% else %>
+              <%= raw(t(".book_team_member", name: team_member["name"], email: mail_to(team_member["email"]), phone: team_member["phone"])) %>
+            <% end %>
           </div>
         </div>
       </div>

@@ -164,11 +164,15 @@
               </div>
               <div class="card__footer container-fluid">
                 <div class="row">
-                  <div class="col-6">
-                    <%= link_to t(".view_schedule"), team_member['schedule'], class: "btn btn-primary btn-block", target: "_blank" %>
+                  <div class="col-12 mb-3">
+                    <%= link_to t(".view_profile"), team_path(anchor: team_member['profile']), class: "btn btn-primary btn-block", target: "_blank" %>
                   </div>
-                  <div class="col-6">
-                    <%= link_to t(".learn_more"), team_path(anchor: team_member['profile']), class: "btn btn-primary btn-block", target: "_blank" %>
+                  <div class="col-12">
+                    <% if team_member["bookable"] %>
+                      <%= link_to t(".view_schedule"), team_member['schedule'], class: "btn btn-primary btn-block", target: "_blank" %>
+                    <% else %>
+                      <%= raw(t(".book_team_member", name: team_member["name"], email: mail_to(team_member['email']), phone: team_member['phone'])) %>
+                    <% end %>
                   </div>
                 </div>
               </div>

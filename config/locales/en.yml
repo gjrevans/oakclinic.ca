@@ -80,6 +80,7 @@ en:
       call_to_action_button: "Register Today"
   pages:
     index:
+      book_team_member: "To book an appointment with %{name} please email %{email} or call %{phone}."
       header_body: "A Naturopathic Practice bringing new wellness opportunities to the Peace Country."
       button_text: "Register"
       intro_title: "About Us"
@@ -113,8 +114,8 @@ en:
       about_ayla_3: "Ayla has connected with and shadowed many of the Peace Region’s local physicians and healthcare professionals to understand how she can best service the local community. She is eager to engage with residents and local businesses through her integrative approach to healthcare. Ayla believes that tasty food, exercise and love should reside at the core of any health plan. She is excited to share her personal practices and beliefs with local Dawson Creek-ers and inspire wellness across her community."
       about_team_title: "Our Practitioners"
       about_team_body: "Meeting our growing team of care practitioners."
-      view_schedule: "Schedule"
-      learn_more: "Learn More"
+      view_schedule: "Book Now"
+      view_profile: "View Profile"
     services:
       header_title: "Services"
       header_body: "Learn about the services available at Oak Clinic including Naturopathic Consultations, I.V. Therapy, Vitamin Injections, Accupuncture, Prescription Renewals, Lab Testing and More."
@@ -185,3 +186,4 @@ en:
     team:
       header_title: "Team"
       header_body: "Meet our team of Naturopathic Doctors, Care Practioners, Specialists and General Staff."
+      book_team_member: "To book an appointment with %{name} please email %{email} or call %{phone}."
