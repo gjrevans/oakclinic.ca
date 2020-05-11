@@ -39,7 +39,7 @@ en:
   alerts:
     covid:
       title: "COVID 19 Update"
-      body: "Due to the current risk of COVID-19, also known as the Coronavirus, we will only be offering <strong>online consultations</strong>. You will receive an email before you appointment with information to access our online meeting platform. Please contact the clinic if you have any questions."
+      body: "Due to the current risk of COVID-19, also known as the Coronavirus, we will only be offering <strong>online consultations</strong>. You will receive an email before your appointment with information to access our online meeting platform. Please contact the clinic if you have any questions."
     subscribe_success: "You have successfully subscribed to our mailing list!"
     subscribe_failure_missing_fields: "Uh Oh, looks like something's missing. Please include email, first name and last name."
   layouts:
