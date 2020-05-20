@@ -101,18 +101,33 @@
               <div id="<%= "item_#{index}" %>" class="collapse <%= "show" if index === 0 %>" aria-labelledby="<%= specialty["name"] %>" data-parent="#specialties">
                 <div class="card-body bt">
                   <p><%= t(specialty["description"]) %></p>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="row">
-                        <div class="col-6">
-                          <%= link_to t(".book_now"), t(specialty["book"]), class: "btn btn-primary btn-block"%>
-                        </div>
-                        <div class="col-6">
-                          <%= link_to t(".learn_more"), specialty["learn_more"], class: "btn btn-primary btn-block" if specialty["learn_more"].present? %>
+                  <% if specialty["bookable"] %>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="row">
+                          <div class="col-6">
+                            <%= link_to t(".book_now"), t(specialty["book"]), class: "btn btn-primary btn-block"%>
+                          </div>
+                          <div class="col-6">
+                            <%= link_to t(".learn_more"), specialty["learn_more"], class: "btn btn-primary btn-block" if specialty["learn_more"].present? %>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  <% else %>
+                    <p>
+                      <%=
+                        raw(
+                          t(".special_non_bookable",
+                            topic: t(specialty["title"]),
+                            phone: @team_members.second["phone"],
+                            email: mail_to(@team_members.second["email"])
+                            )
+                          )
+                        %>
+                      </p>
+                  <% end %>
                 </div>
               </div>
             </div>
@@ -160,7 +175,7 @@
               <div class="card__body">
                 <h4 class="mb-0"><%= team_member['name'] %></h4>
                 <span class="text-primary font-weight-bold"> - <%= team_member['role'] %> - </span>
-                <p class="text-muted"><%= String(team_member['about']).truncate(160) %></p>
+                <p class="text-muted"><%= String(team_member['practice']) %></p>
               </div>
               <div class="card__footer container-fluid">
                 <div class="row">
