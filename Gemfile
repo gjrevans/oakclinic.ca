@@ -1,9 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.6.3'
-
+ruby '2.6.6'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'puma', '~> 4.3'
-gem 'sass-rails'
+gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
@@ -13,7 +12,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'popper_js', '~> 1.14.3'
 gem 'ionicons-rails'
 gem 'modernizr-rails'
-gem 'font-awesome-sass', '~> 5.0.13'
+gem 'font-awesome-sass', '~> 5.5.0.1'
 gem 'sprockets', '~> 3.7.2'
 gem 'animate-rails'
 gem 'tether-rails'
@@ -37,7 +36,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.7'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
