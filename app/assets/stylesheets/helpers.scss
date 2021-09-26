@@ -110,9 +110,9 @@
 .zi-1 { z-index: 1 }
 .zi-2 { z-index: 2 }
 
-@mixin banner__image($height, $url, $opacity){
+@mixin banner__image($height, $url){
   height: $height;
-  background-image: linear-gradient(rgba(0, 0, 0, $opacity), rgba(0, 0, 0, $opacity)), image_url($url);
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1)), image_url($url);
 }
 
 @each $color, $value in $theme-colors {

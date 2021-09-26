@@ -16,18 +16,18 @@
       <% end %>
     </div>
     <div class="l-navigation__link animated fadeInLeft">
+      <%= link_to naturopathy_path do %>
+      <%= t("layouts.header.naturopathy")%>
+      <% end %>
+    </div>
+    <div class="l-navigation__link animated fadeInRight">
       <%= link_to iv_therapy_path do %>
       <%= t("layouts.header.iv_therapy")%>
       <% end %>
     </div>
-    <div class="l-navigation__link animated fadeInRight">
+    <div class="l-navigation__link animated fadeInLeft">
       <%= link_to nst_path do %>
       <%= t("layouts.header.nst")%>
-      <% end %>
-    </div>
-    <div class="l-navigation__link animated fadeInLeft">
-      <%= link_to contact_path do %>
-      <%= t("layouts.header.contact")%>
       <% end %>
     </div>
     <div class="l-navigation__link animated fadeInRight">
@@ -41,10 +41,9 @@
       <% end %>
     </div>
     <div class="l-navigation__link animated fadeInRight">
-      <%= link_to naturopathy_path do %>
-      <%= t("layouts.header.naturopathy")%>
+      <%= link_to contact_path do %>
+      <%= t("layouts.header.contact")%>
       <% end %>
     </div>
-
   </div>
 </div>
