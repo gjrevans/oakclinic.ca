@@ -1,10 +1,9 @@
 <section class="l-home">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 text-center text-sm-left mt-5">
-        <h1 class="text-white lh-2 l-home__title">
-          <%= t(".header_body") %>
-        </h1>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h1 class="l-home__title"><%= t(".header_title") %></h1>
+        <p class="l-home__body"><%= t(".header_body") %></p>
         <!-- Bouncy mc'bounceface -->
         <i data-feather="chevron-down" class=" mt-5 text-white d-sm-none animated infinite bounce"></i>
       </div>
@@ -50,27 +49,6 @@
 </section>
 
 <section class="l-content l-content--white l-content--lg l-content--bordered">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8 text-center">
-        <h4 class="text-primary"><%= t(".intro_title") %></h4>
-        <p>
-          <%=
-            t(".intro_1",
-              products: link_to(t(".products"), products_path),
-              services: link_to(t(".services"), services_path),
-              iv_therapy: link_to(t(".iv_therapy"), iv_therapy_path),
-              injections: link_to(t(".injections"), injections_path),
-            ).html_safe
-            %>
-          </p>
-        <a href="mailto:hello@oakclinic.ca" class="btn btn-outline-primary px-4"><%= t(".contact_us") %></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="l-content l-content--light l-content--lg">
   <div class="container">
     <div class="row text-center justify-content-center">
       <div class="col-md-6 col-12 text-center">
@@ -135,6 +113,27 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="l-content l-content--light l-content--bordered l-content--lg">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <h4 class="text-primary"><%= t(".intro_title") %></h4>
+        <p><%= t(".intro_1") %></p>
+        <p><%= t(".intro_2") %></p>
+        <p><%= t(".intro_3") %></p>
+        <div class="row">
+          <div class="col-md-6">
+            <%= link_to t(".appointment_cta"), t("jane_link"), class: "btn btn-primary btn-block", target: "_blank" %>
+          </div>
+          <div class="col-md-6">
+            <a href="mailto:hello@oakclinic.ca" class="btn btn-outline-primary btn-block"><%= t(".contact_us") %></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- <div class="l-content__scroll row">
       <% @specialties.each_with_index do |specialty| %>
@@ -169,7 +168,7 @@
     <div class="l-content__scroll row">
       <% @team_members.each_with_index do |team_member, index| %>
         <% if team_member["is_practitioner"] %>
-          <div class="col-lg-6 col-10">
+          <div class="col-lg-4 col-md-6 col-10">
             <div class="card card--hover card--practitioner card-team mb-sm-3 text-center">
               <div class="card__image" style="background-image: url('<%= image_url(team_member['banner']) %>')"></div>
               <div class="card__body">

@@ -8,7 +8,7 @@
     "practice": "Dr. Ayla is our full-time Naturopathic Doctor, seeing patients Monday through Thursday. She runs a general clinic but does focus her time on digestive and hormone concerns.",
     "about": "Ayla was born and raised in Dawson Creek. She obtained her Bachelor of Science, in Anatomy and Cell Biology, from the University of Saskatchewan and then went on to complete her Doctor of Naturopathy Degree at the Canadian College of Naturopathic Medicine.\n\nAyla is a Fully Licensed Registrant and Practicing Naturopathic Doctor, in the Province of British Columbia. She is also certified in Prescriptive Authority, Intravenous & Injection Therapy, Traditional Oriental Acupuncture and Facial Rejuvenation Acupuncture.\n\nAyla has connected with and shadowed many of the Peace Region’s local physicians and healthcare professionals to understand how she can best service the local community. She is eager to engage with residents and local businesses through her integrative approach to healthcare. Ayla believes that tasty food, exercise and love should reside at the core of any health plan. She is excited to share her personal practices and beliefs with local Dawson Creek-ers and inspire wellness across her community.",
     "specialties": ["Digestive Concerns", "Female Heath & Reproduction", "IV Therapy", "Naturopathic Medicine"],
-    "schedule": "https://oakclinic.janeapp.com",
+    "schedule": "https://oakclinic.janeapp.com/#/staff_member/1",
     "profile": "ayla",
     "bookable": true,
     "email": "ayla@oakclinic.ca",
@@ -23,10 +23,25 @@
     "practice": "Dr. Anouk is in our office on Fridays and mainly treats patients with Cancer or Lyme Disease. She is an active member of ILADS and LDAA. Due to her additional training fees may vary.",
     "about": "Dr. Anouk Chaumont graduated from the Canadian College of Naturopathic Medicine in 2005 and practiced naturopathic medicine in Eastern Ontario for 9 years before deciding to move to Grande Prairie, Alberta. During her career as a naturopathic doctor, she has had a special interest in naturopathic oncology as well as injection therapy for musculoskeletal problems.\n\nIn the recent years, after her husband got bitten by a tick in Northern Alberta and contracted Lyme disease and Babesiosis (a co-infection often transmitted by ticks), Dr Chaumont has decided to focus her career in helping patients suffering from Lyme disease and associated tick-borne infections. Although she still practices general family naturopathic medicine, the main focus of her practice is in the proper diagnosis and treatment of Lyme disease as well as naturopathic oncology support.\n\nShe uses functional medicine as well as botanical medicine as her foundational therapeutic approach. Most of her therapeutic recommendations are highly science-based and are usually accompanied by individualized lifestyle and nutritional modifications. Finding the underlying root cause of disease is her passion and fixing it with the least amount of pharmaceuticals as possible is her goal.",
     "specialties": ["Cancer Therapy", "Lyme Disease", "Naturopathic Medicine"],
-    "schedule": "https://oakclinic.janeapp.com",
+    "schedule": "https://oakclinic.janeapp.com/#/staff_member/5",
     "profile": "anouk",
     "bookable": false,
     "email": "anouk@oakclinic.ca",
     "phone": "(780) 513-6633"
+  },
+  {
+    "is_practitioner": true,
+    "image": "team/portrait/emma.jpg",
+    "banner": "team/banner/emma-carpenter-cmp.jpg",
+    "name": "Emma Carpenter",
+    "role": "Certified Massage Professional",
+    "practice": "Emma is our full time Massage Professional and has additional training in Neurostructural Integration and Osteopathy.",
+    "about": "Emma is Certified Massage Professional registered with the Canadian Massage Manual Osteopathic Therapists Association (CMMOTA). Emma primarily focuses on helping her clients achieve body balance aimed at decreasing pain that accumulates from day-to-day activities and settling the nervous system to achieve optimal function. Emma is keen to educate her patients and ensure they leave each appointment with a structured plan to maintain wellness, mobility and pain relief in the days and weeks after their time together. \n\n Emma has been in practice since July 2020 in Dawson Creek.  She completed her first and second year of Massage Therapy training at MCG Career College in Red Deer where she obtained her diploma in Advanced Therapeutic Massage and a Lensen Osteopath certificate.  In August, 2021 Emma began an in-clinic mentorship with Tracy Heartt to study Neurostructural Integration Therapy (NST). Upon completing her mentorship Emma will have a combination of treatment modalities including massage, osteopathy and NST, making sessions with her unique and client specific.",
+    "specialties": ["Massage Therapy", "Neurostructural Integration Technique (NST)", "Pain Management"],
+    "schedule": "https://oakclinic.janeapp.com/#/staff_member/7",
+    "profile": "emma",
+    "bookable": true,
+    "email": "emma@oakclinic.ca",
+    "phone": "(250) 719-4900"
   }
 ]
