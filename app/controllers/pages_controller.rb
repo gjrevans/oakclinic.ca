@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @team_members = JSON.parse(File.read('public/json/team_members.json'))
   end
 
-  def faq
+  def naturopathy
     @treatments = JSON.parse(File.read('public/json/treatments.json'))
   end
 
@@ -19,8 +19,7 @@ class PagesController < ApplicationController
     @steps = JSON.parse(File.read('public/json/steps.json'))
   end
 
-  def injections
-    @logos = JSON.parse(File.read('public/json/logos.json'))
+  def nst
   end
 
   def products

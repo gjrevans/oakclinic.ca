@@ -3,18 +3,24 @@
     "image": "icons/friends.svg",
     "title": "Naturopathic Consultation",
     "price": "$220.00",
-    "target": "naturopathic_consultation",
     "about": "Initial consultations are 75 minutes long and consist of a detailed intake, complaint oriented physical exam and any necessary lab requisitions.",
-    "about_more": "From your initial appointment you can expect a treatment plan to get started, along with any forms or lab work that needs to be completed. After your initial appointment, Ayla does an in-depth assessment of your case, along with any new lab work and compares it to the latest research. A full detailed and specific treatment plan is offered on the second appointment.",
+    "about_more": "From your initial appointment you can expect a treatment plan to get started, along with any forms or lab work that needs to be completed.",
     "link": "https://oakclinic.janeapp.com/#/staff_member/1/treatment/1"
   },
   {
     "image": "icons/natural.svg",
-    "title": "IV Therapy & Vitamin Injection Consultation",
+    "title": "IV Therapy Consultation",
     "price": "$60.00",
-    "target": "iv_therapy_and_vitamin_injection",
     "about": "Initial consultations are 15 minutes long and consist of a brief intake, review of systems, discussion of goals and addressing any risk factors.",
-    "about_more": "From your initial appointment you can expect a requisition for lab work and tailored IV plan. After your initial appointment, Dr. Ayla will review the lab results and approve you for the IV therapy. Once you’ve been approved we can book your IV drop as listed below.",
+    "about_more": "From your initial appointment you can expect a requisition for lab work and tailored IV plan lab results and approve you for the IV therapy.",
     "link": "https://oakclinic.janeapp.com/#/discipline/3/treatment/11"
+  },
+  {
+    "image": "icons/pain_management.svg",
+    "title": "Massage Therapy",
+    "price": "$100.00 - 140.00",
+    "about": "We offer 60 and 90 minute massage appointments.",
+    "about_more": "Our practitioner will collaborate on which therapies are going to be the most beneficial for your specific needs, combining massage, NST and osteopathy along with some take home information to maintain their wellness.",
+    "link": "https://oakclinic.janeapp.com/#/staff_member/7"
   }
 ]

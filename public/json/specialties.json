@@ -36,11 +36,11 @@
     "book": "ayla_jane_link"
   },
   {
-    "icon": "icons/injections.svg",
+    "icon": "icons/pain_management.svg",
     "title": ".special_title_6",
     "description": ".special_6",
-    "learn_more": "/injections",
+    "learn_more": "/neurostructural-integration-technique",
     "bookable": true,
-    "book": "ayla_jane_link"
+    "book": "emma_jane_link"
   }
 ]

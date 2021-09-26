@@ -1,0 +1,66 @@
+<% content_for(:title) { t(".header_title") } %>
+<% content_for(:description) { t(".header_body") } %>
+
+<%= render partial: "layouts/topper", locals: {type: "nst", title: t(".header_title"), body: t(".header_body")} %>
+
+<section class="l-content l-content--xx l-content--white l-content--bordered">
+  <div class="row no-gutters align-items-center">
+    <div class="col-md-6 col-lg-4 order-sm-12">
+      <div style='background-image: url("<%= image_path('team/portrait/emma.jpg') %>");' class="l-content__section__image"></div>
+    </div>
+    <div class="col-md-6 col-lg-8 order-sm-1">
+      <div class="container">
+        <div class="my-4 my-4 px-sm-5">
+          <h4><%= t(".about_nst_title") %></h4>
+          <p class="text-muted"><%= t(".about_nst_body") %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="l-content l-content--xx l-content--white l-content--bordered">
+  <div class="row no-gutters align-items-center">
+    <div class="col-md-6 col-lg-4">
+      <div style='background-image: url("<%= image_path('backgrounds/portrait/massage-2.jpg') %>");' class="l-content__section__image"></div>
+    </div>
+    <div class="col-md-6 col-lg-8">
+      <div class="container">
+        <div class="my-4 my-4 px-sm-5">
+          <h4><%= t(".benefits_of_nst_title") %></h4>
+          <p class="text-muted"><%= simple_format(t(".benefits_of_nst_body")) %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="l-content l-content--xx l-content--white l-content--bordered">
+  <div class="row no-gutters align-items-center">
+    <div class="col-md-6 col-lg-4 order-sm-12">
+      <div style='background-image: url("<%= image_path('backgrounds/portrait/massage-1.jpg') %>");' class="l-content__section__image"></div>
+    </div>
+    <div class="col-md-6 col-lg-8 order-sm-1">
+      <div class="container">
+        <div class="my-4 my-4 px-sm-5">
+          <h4><%= t(".what_to_expect_title") %></h4>
+          <p class="text-muted"><%= t(".what_to_expect_body") %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="l-content l-content--lg l-content--white l-content--bordered">
+  <div class="row no-gutters justify-content-center text-center">
+    <div class="col-md-6 col-lg-8">
+      <div class="container">
+        <div class="my-4 my-4 px-sm-5">
+          <h4><%= t(".nst_appointments_title") %></h4>
+          <p class="text-muted"><%= t(".nst_appointments_body") %></p>
+          <%= link_to t(".book_now"), t("emma_jane_link"), class: "btn btn-primary px-4", target: "_blank" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

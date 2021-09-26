@@ -49,14 +49,18 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
-                    image_url("backgrounds/landscape/ayla-at-desk.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1)),
+                    image_url("backgrounds/landscape/family.jpg");
 
   @include media-breakpoint-down(md) {
     background-position: 70%;
   }
   &__title {
-    font-size: 2rem;
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+  &__body {
+    font-size: 1.5rem;
   }
 }
 
@@ -99,7 +103,7 @@
     &--practitioner {
       height: 45rem;
       @include media-breakpoint-down(sm) {
-        height: 20rem;
+        height: 30rem;
       }
     }
   }
@@ -229,22 +233,25 @@
   &--services {
     @include banner__image(30rem, "backgrounds/landscape/explaining.jpg", 0.5);
   }
+  &--team {
+    @include banner__image(30rem, "backgrounds/landscape/team.jpg", 0.5);
+  }
   &--products {
     @include banner__image(30rem, "backgrounds/landscape/herbs.jpg", 0.4);
   }
   &--iv-therapy {
     @include banner__image(30rem, "backgrounds/landscape/iv-lounge.jpg", 0.4);
   }
-  &--injections {
-    @include banner__image(30rem, "backgrounds/landscape/injections.jpg", 0.4);
+  &--nst {
+    @include banner__image(30rem, "backgrounds/landscape/neurostructural-integration-technique.jpg", 0.4);
   }
   &--article {
     @include banner__image(30rem, "backgrounds/landscape/holding.jpg", 0.4);
   }
-  &--faq-1 {
+  &--naturopathy-1 {
     @include banner__image(30rem, "backgrounds/landscape/kitchen.jpg", 0.4);
   }
-  &--faq-2 {
+  &--naturopathy-2 {
     @include banner__image(26rem, "backgrounds/landscape/stretch.jpg", 0.4) ;
   }
 }
