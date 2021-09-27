@@ -3,6 +3,10 @@
   padding: 4rem 0 10rem 0;
 }
 
+.l-main {
+  padding-top: $navbar-height;
+}
+
 .l-navigation {
   display: flex;
   align-items: center;
@@ -160,12 +164,13 @@
 .m-nav {
   @extend .transition;
   padding: 1.5rem 0;
-  // &__top {
-  //   top: 0;
-  //   width: 100%;
-  //   position: fixed;
-  //   z-index: $zindex-navbar;
-  // }
+  height: $navbar-height;
+  &__top {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: $zindex-navbar;
+  }
   &__logo {
     @include media-breakpoint-down(sm) {
       width: 8rem;
@@ -360,12 +365,22 @@
 }
 
 .m-zestea {
-  &--content{
+  &--content {
     @include media-breakpoint-up(md) {
+      padding: 3rem;
       border-left: 1px solid $border-color;
     }
     @include media-breakpoint-down(md) {
+      padding: 1rem;
       border-top: 1px solid $border-color;
+    }
+  }
+  &--image {
+    margin: auto;
+    display: block;
+    width: 25%;
+    @include media-breakpoint-down(md) {
+        width: 50%;
     }
   }
 }
