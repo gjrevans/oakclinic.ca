@@ -359,6 +359,17 @@
   }
 }
 
+.m-zestea {
+  &--content{
+    @include media-breakpoint-up(md) {
+      border-left: 1px solid $border-color;
+    }
+    @include media-breakpoint-down(md) {
+      border-top: 1px solid $border-color;
+    }
+  }
+}
+
 /* -- Bootstrap -- */
 .btn {
   @extend .transition;
