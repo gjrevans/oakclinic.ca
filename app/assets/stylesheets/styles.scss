@@ -367,11 +367,11 @@
 .m-zestea {
   &--content {
     @include media-breakpoint-up(md) {
-      padding: 3rem;
+      padding: 0 3rem;
       border-left: 1px solid $border-color;
     }
     @include media-breakpoint-down(md) {
-      padding: 1rem;
+      padding: 0 1rem;
       border-top: 1px solid $border-color;
     }
   }
