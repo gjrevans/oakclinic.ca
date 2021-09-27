@@ -15,6 +15,7 @@ en:
   ayla_jane_link: "https://oakclinic.janeapp.com/#/staff_member/1"
   anouk_jane_link: "https://oakclinic.janeapp.com/#/staff_member/5"
   emma_jane_link: "https://oakclinic.janeapp.com/#/staff_member/7"
+  zestea_link: "https://zestea.oakclinic.ca"
   get_directions: "Get Directions"
   phone_number: "250-719-4900"
   fax_number: "844-810-8862"
@@ -117,6 +118,11 @@ en:
       about_team_body: "Meet our growing team of care practitioners."
       view_schedule: "Book Now"
       view_profile: "View Profile"
+      zestea:
+        introducing: "Introducing"
+        by_oak: "by Oak Clinic"
+        about: "Good for your mouth, for your body and for the earth...\n\nAfter experiencing the incredible results her tea's were having both in her own life and in the lives of her patients at Oak Naturopathic Clinic, Dr. Andrus wanted to make these blends available to the masses and Zestea was born.\n\nOur Zesteas are responsibly sourced, Medicinal Teas made from the highest quality ingredients and yeah... we gave them fun names to help get the point across."
+        visit: "Shop Now"
     services:
       header_title: "Services"
       header_body: "Learn about the services available at Oak Clinic including Naturopathic Consultations, I.V. Therapy, Vitamin nst, Accupuncture, Prescription Renewals, Lab Testing and More."

@@ -72,7 +72,6 @@
                     </div>
                     <i class="fas fa-angle-down"></i>
                   </div>
-
                 </h4>
               </div>
 
@@ -202,6 +201,28 @@
   </div>
 </section>
 
+<section class="l-content l-content--light l-content--bordered l-content--md" id="zestea">
+  <div class="container">
+    <div class="row text-center justify-content-center">
+      <div class="col-md-12 text-center bg-white p-5 border rounded">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <%= image_tag("zestea/zestea-cup.jpg", class: "w-75 mb-5") %>
+          </div>
+          <div class="col-md-6 p-5 border-left">
+            <div class="mb-3">
+              <small class="text-uppercase">Introducing</small>
+              <%= image_tag("zestea/logo.png", class: "d-block m-auto w-25") %>
+              <small class="text-uppercase">by Oak Clinic</small>
+            </div>
+            <%= simple_format(t(".zestea.about")) %>
+            <%= link_to t(".zestea.visit"), t("zestea_link"), class: "btn btn-primary btn-block", target: "_blank" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- Add Mailing List -->
 <%= render partial: "layouts/mailing_list" %>
 
