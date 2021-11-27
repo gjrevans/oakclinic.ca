@@ -1,0 +1,20 @@
+[
+  {
+    "image": "team/banner/violet-andrus.jpg",
+    "name": "Violet Andrus",
+    "role": "Office Manager",
+    "profile": "megan"
+  },
+  {
+    "image": "team/banner/megan-graw.jpg",
+    "name": "Megan Graw",
+    "role": "Office Administrator",
+    "profile": "megan"
+  },
+  {
+    "image": "team/banner/abby-spenst.jpg",
+    "name": "Abby Spenst",
+    "role": "Registered Nurse",
+    "profile": "abby"
+  } 
+]

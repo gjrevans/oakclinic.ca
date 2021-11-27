@@ -27,59 +27,65 @@
   </div>
 </section>
 
-<section class="l-content l-content--xx l-content--white l-content--bordered">
-  <div class="row no-gutters align-items-center">
-    <div class="col-md-6 col-lg-4">
-      <div style='background-image: url("<%= image_path('backgrounds/landscape/iv-application.jpg') %>");' class="l-content__section__image"></div>
-    </div>
-    <div class="col-md-6 col-lg-8">
-      <div class="container">
-        <div class="my-4 my-4 px-sm-5">
-          <h4><%= t(".about_iv_therapy_title") %></h4>
-          <p class="text-muted"><%= t(".about_iv_therapy_body") %></p>
-          <%= link_to t(".learn_more"), "http://theiv.ca/iv-therapy/", class: "btn btn-primary px-4", target: "_blank" %>
+<section class="l-content l-content--md l-content--white l-content--bordered">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-lg-4 text-center">
+        <%= image_tag('backgrounds/portrait/iv-therapy-1.jpg', class: "l-content__section__image") %>
+      </div>
+      <div class="col-md-6 col-lg-8">
+        <div class="container">
+          <div class="my-4 my-4">
+            <h4><%= t(".about_iv_therapy_title") %></h4>
+            <p class="text-muted"><%= t(".about_iv_therapy_body") %></p>
+            <%= link_to t(".learn_more"), "http://theiv.ca/iv-therapy/", class: "btn btn-primary px-4", target: "_blank" %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="l-content l-content--xx l-content--white l-content--bordered">
-  <div class="row no-gutters align-items-center">
-    <div class="col-md-6 col-lg-4 order-sm-12">
-      <div style='background-image: url("<%= image_path('backgrounds/landscape/injections.jpg') %>");' class="l-content__section__image"></div>
-    </div>
-    <div class="col-md-6 col-lg-8 order-sm-1">
-      <div class="container">
-        <div class="my-4 my-4 px-sm-5">
-          <h4><%= t(".iv_therapy_benefits_title") %></h4>
-          <p class="text-muted"><%= t(".iv_therapy_benefits_body") %></p>
+<section class="l-content l-content--md l-content--white l-content--bordered">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-lg-4 text-center order-sm-12">
+        <%= image_tag('backgrounds/portrait/iv-therapy-2.jpg', class: "l-content__section__image") %>
+      </div>
+      <div class="col-md-6 col-lg-8 order-sm-1">
+        <div class="container">
+          <div class="my-4 my-4">
+            <h4><%= t(".iv_therapy_benefits_title") %></h4>
+            <p class="text-muted"><%= t(".iv_therapy_benefits_body") %></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="l-content l-content--xx l-content--white l-content--bordered">
-  <div class="row no-gutters align-items-center">
-    <div class="col-md-6 col-lg-4">
-      <div style='background-image: url("<%= image_path('backgrounds/landscape/iv-bag.jpg') %>");' class="l-content__section__image"></div>
-    </div>
-    <div class="col-md-6 col-lg-8">
-      <div class="container">
-        <div class="my-4 my-4 px-sm-5">
-          <h4><%= t(".iv_therapy_appointments_title") %></h4>
-          <p class="text-muted"><%= t(".iv_therapy_appointments_body") %></p>
-          <div class="row">
-            <div class="col-md-9">
-              <div class="alert alert-primary">
-                <h6 class="text-uppercase font-weight-bold"><%= t(".booking_note_title") %></h6>
-                <div class="text-sm"><%= t(".booking_note_description") %></div>
+<section class="l-content l-content--md l-content--white l-content--bordered">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-lg-4 text-center">
+        <%= image_tag('backgrounds/portrait/iv-therapy-3.jpg', class: "l-content__section__image") %>
+      </div>
+      <div class="col-md-6 col-lg-8">
+        <div class="container">
+          <div class="my-4 my-4">
+            <h4><%= t(".iv_therapy_appointments_title") %></h4>
+            <p class="text-muted"><%= t(".iv_therapy_appointments_body") %></p>
+            <div class="row">
+              <div class="col-md-12 col-lg-9">
+                <div class="alert alert-primary">
+                  <h6 class="text-uppercase font-weight-bold"><%= t(".booking_note_title") %></h6>
+                  <div class="text-sm"><%= t(".booking_note_description") %></div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <%= link_to t(".book_now"), "#{t("jane_link")}/#/iv-vitamin-therapy-and-nst", class: "btn btn-primary px-4", target: "_blank" %>
+            <%= link_to t(".book_now"), "#{t("jane_link")}/#/iv-vitamin-therapy-and-nst", class: "btn btn-primary px-4", target: "_blank" %>
+          </div>
         </div>
       </div>
     </div>

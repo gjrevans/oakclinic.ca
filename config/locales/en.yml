@@ -133,10 +133,6 @@ en:
       not_bookable: "To book this service please contact us at %{email}."
       about_coverage: "The cost of Naturopathic or Massage services and products are partially or fully covered by many extended health plans. Please check with your plan administrator."
       coverage_cta: "Learn More"
-    products:
-      header_title: "Products"
-      header_body: "Oak Clinic carries a wide variety of professional supplements and products in house and through our various local and online partnerships."
-      product_logos: "Oak Clinic has partnered with top brands to provide you with the highest quality supplement."
       about_supplements_title: "Professional Supplements"
       about_supplements_1: "When choosing supplements we look for third party testing, ensuring purity, bioavailability and potency. We offer a variety of professional brands in house and have access to 300+ professional brands through our Fullscript account."
       about_supplements_2: "Every supplement you take needs to serve a purpose. Ideally, that purpose is to rebalance an individual's natural rhythm and can be discontinued after its treatment course is complete."
@@ -146,6 +142,7 @@ en:
       about_dispensary_title: "Herbal Dispensary"
       about_dispensary_1: "Oak Clinic carries a small dispensary of tincture and teas, with huge therapeutic action. A tincture is a highly concentrated herb or herbal formula that has been extracted using alcohol. These alcohol extractions have been made in small batches and each batch has been third party tested to ensure highest potency and quality."
       about_dispensary_2: "Having a herbal dispensary allows us to make a personalized tincture or tea in quantities and ratios that best fit your therapeutic needs. Some herbs can only be found in therapeutic doses from clinical dispensaries, such as ours."
+
     iv_therapy:
       how_it_works: "How It Works"
       header_title: "IV Therapy"

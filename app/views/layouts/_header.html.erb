@@ -14,9 +14,6 @@
             <%= link_to t(".services"), services_path, class: "#{'active' if current_page?(services_path)}" %>
           </li>
           <li class="mr-3 d-none d-sm-flex">
-            <%= link_to t(".products"), products_path, class: "#{'active' if current_page?(products_path)}" %>
-          </li>
-          <li class="mr-3 d-none d-sm-flex">
             <%= link_to t(".naturopathy"), naturopathy_path, class: "#{'active' if current_page?(naturopathy_path)}"  %>
           </li>
           <li class="mr-3 d-none d-sm-flex">
@@ -27,9 +24,6 @@
           </li>
           <li class="mr-3 d-none d-sm-flex">
             <%= link_to t(".zestea"), "/#zestea", class: "#{'active' if current_page?(nst_path)}" %>
-          </li>
-          <li class="mr-3 d-none d-sm-flex">
-            <%= link_to t(".news"), articles_path, class: "#{'active' if current_page?(articles_path)}" %>
           </li>
           <li class="mr-3 d-none d-sm-flex">
             <%= link_to t(".team"), team_path, class: "#{'active' if current_page?(team_path)}" %>

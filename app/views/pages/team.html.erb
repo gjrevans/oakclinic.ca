@@ -2,40 +2,59 @@
 <% content_for(:description) { t(".header_body") } %>
 
 <%= render partial: "layouts/topper", locals: {type: "team", title: t(".header_title"), body: t(".header_body")} %>
-
 <% @team_members.each_with_index do |team_member, index| %>
-  <section class="l-content l-content--xx l-content--white l-content--bordered" id="<%= team_member["profile"] %>">
-    <div class="row no-gutters align-items-center">
-      <div class="col-md-6 col-lg-4 <%= "order-md-12" if index.even? %>">
-        <div style='background-image: url("<%= image_path(team_member["image"]) %>");' class="l-content__section__image l-content__section__image--practitioner"></div>
-      </div>
-      <div class="col-md-6 col-lg-8">
-        <div class="container">
-          <div class="my-4 my-4 px-sm-5">
-            <h4 class="mb-0 text-primary"><%= team_member["name"] %></h4>
-            <p class="mb-0"><%= team_member["role"] %></p>
-            <% if team_member['specialties'] %>
-              <div class="d-block">
-                <% team_member['specialties'].each do |item| %>
-                  <div class="badge badge-pill badge-primary px-2 py-1">
-                    <%= item %>
-                  </div>
-                <% end %>
-              </div>
-            <% end %>
-            <p class="text-muted">
-              <%= simple_format(team_member["about"]) %>
-            </p>
+  <section class="l-content l-content--md l-content--white l-content--bordered">
+    <div class="container-fluid">
+      <div class="row align-items-center" id="<%= team_member["profile"] %>">
+        <div class="col-md-6 col-lg-4 text-center <%= "order-md-12" if index.even? %>">
+          <%= image_tag(team_member["image"], class: "l-content__section__image mx-auto") %>
+        </div>
+        <div class="col-md-6 col-lg-8">
+          <div class="container">
+            <div class="my-4">
+              <h4 class="mb-0 text-primary"><%= team_member["name"] %></h4>
+              <p class="mb-0 text-uppercase"><%= team_member["role"] %></p>
+              <% if team_member['specialties'] %>
+                <div class="d-block">
+                  <% team_member['specialties'].each do |item| %>
+                    <div class="badge badge-pill badge-primary px-2 py-1">
+                      <%= item %>
+                    </div>
+                  <% end %>
+                </div>
+              <% end %>
+              <p class="text-muted">
+                <%= simple_format(team_member["about"]) %>
+              </p>
 
-            <%# Booking Options %>
-            <% if team_member["bookable"] %>
-              <%= link_to t(".book_now"), team_member["schedule"], class: "btn btn-primary", target: "_blank" %>
-            <% else %>
-              <%= raw(t(".book_team_member", name: team_member["name"], email: mail_to(team_member["email"]), phone: team_member["phone"])) %>
-            <% end %>
+              <%# Booking Options %>
+              <% if team_member["bookable"] %>
+                <%= link_to t(".book_now"), team_member["schedule"], class: "btn btn-primary", target: "_blank" %>
+              <% else %>
+                <%= raw(t(".book_team_member", name: team_member["name"], email: mail_to(team_member["email"]), phone: team_member["phone"])) %>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 <% end %>
+
+<section class="l-content l-content--xl l-content--light l-content--bordered">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <% @team_members_secondary.each_with_index do |team_member, index| %>
+        <div class="col-md-4">
+          <div class="m-member">
+              <%= image_tag(team_member["image"], class: "m-member__image") %>
+              <div class="m-member__title">
+                <h4 class="text-primary mb-1"><%= team_member["name"] %></h4>
+                <p class="text-uppercase"><%= team_member["role"] %></p>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
