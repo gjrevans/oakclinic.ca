@@ -59,7 +59,7 @@
 
   @include media-breakpoint-down(md) {
     margin-top: 0;
-    height: 40vh;
+    height: 27rem;
     background-position: center;
   }
   &__title {
@@ -423,6 +423,9 @@
       @include media-breakpoint-up(md) {
         min-height: 20rem;
       }
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
   &-body {
@@ -449,12 +452,6 @@
   &--team {
     height: 100%;
     overflow: hidden;
-  }
-  &--service {
-    @include media-breakpoint-down(md) {
-      height: 100%;
-      overflow: hidden;
-    }
   }
   &--practitioner {
     height: 100%;
