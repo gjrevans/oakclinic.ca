@@ -28,6 +28,8 @@ class PagesController < ApplicationController
 
   def team
     @team_members = JSON.parse(File.read('public/json/team_members.json'))
+    @team_members_secondary = JSON.parse(File.read('public/json/team_members_secondary.json'))
+
   end
 
   def conditions_treated

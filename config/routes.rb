@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     root to: 'pages#index'
     get 'about', to: redirect("/")
     get 'contact', to: 'pages#contact'
-    get 'products', to: 'pages#products'
     get 'services', to: 'pages#services'
     get 'iv-therapy', to: 'pages#iv_therapy'
     get 'neurostructural-integration-technique', to: 'pages#nst', as: 'nst'
@@ -15,6 +14,7 @@ Rails.application.routes.draw do
     get 'team', to: 'pages#team'
 
     # Redirect List
+    get 'products', to: redirect("services"), status: 301
     get 'iv_therapy', to: redirect("iv-therapy"), status: 301
     get 'faq', to: redirect("naturopathy"), status: 301
 
